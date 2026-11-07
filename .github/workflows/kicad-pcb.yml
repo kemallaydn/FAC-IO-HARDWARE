@@ -1,0 +1,45 @@
+name: KiCad PCB DRC
+on:
+  push:
+    paths:
+      - 'hardware/**/*.kicad_pcb'
+      - '.github/workflows/kicad-pcb.yml'
+  pull_request:
+    paths:
+      - 'hardware/**/*.kicad_pcb'
+      - '.github/workflows/kicad-pcb.yml'
+  workflow_dispatch:
+jobs:
+  pcb-drc:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install KiCad
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y kicad
+      - name: Export PCB DRC reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/facio-pcb-validation
+          shopt -s nullglob
+          boards=(hardware/*.kicad_pcb)
+          if [ "${#boards[@]}" -eq 0 ]; then
+            echo "::error::No PCB files"
+            exit 1
+          fi
+          for board in "${boards[@]}"; do
+            name="$(basename "${board%.kicad_pcb}")"
+            echo "Running KiCad DRC on $board"
+            if ! kicad-cli pcb drc --all-track-errors --severity-all -o "/tmp/facio-pcb-validation/$name.drc.txt" "$board"; then
+              echo "::warning file=$board::PCB DRC violations or parsing failure. NOT PRODUCTION READY."
+            fi
+          done
+      - name: Upload DRC reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-pcb-drc-reports
+          path: /tmp/facio-pcb-validation/
+          if-no-files-found: warn
