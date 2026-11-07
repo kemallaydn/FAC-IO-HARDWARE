@@ -9,6 +9,7 @@ on:
       - 'hardware/**/*.kicad_pcb'
       - '.github/workflows/kicad-pcb.yml'
   workflow_dispatch:
+
 jobs:
   pcb-drc:
     runs-on: ubuntu-24.04
@@ -18,28 +19,39 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y kicad
-      - name: Export PCB DRC reports
+          kicad-cli version
+      - name: Validate all PCB drafts
         shell: bash
         run: |
-          set -euo pipefail
-          mkdir -p /tmp/facio-pcb-validation
+          set -uo pipefail
+          mkdir -p "$GITHUB_WORKSPACE/kicad-reports/pcb"
           shopt -s nullglob
           boards=(hardware/*.kicad_pcb)
           if [ "${#boards[@]}" -eq 0 ]; then
-            echo "::error::No PCB files"
+            echo "::error::No PCB files found"
             exit 1
           fi
+          failures=0
           for board in "${boards[@]}"; do
             name="$(basename "${board%.kicad_pcb}")"
-            echo "Running KiCad DRC on $board"
-            if ! kicad-cli pcb drc --all-track-errors --severity-all -o "/tmp/facio-pcb-validation/$name.drc.txt" "$board"; then
-              echo "::warning file=$board::PCB DRC violations or parsing failure. NOT PRODUCTION READY."
+            echo "::group::DRC $name"
+            kicad-cli pcb drc --all-track-errors --severity-all \
+              -o "$GITHUB_WORKSPACE/kicad-reports/pcb/$name.drc.txt" "$board"
+            status=$?
+            if [ "$status" -ne 0 ]; then
+              echo "::error file=$board::KiCad DRC failed with exit code $status"
+              failures=$((failures + 1))
             fi
+            echo "::endgroup::"
           done
-      - name: Upload DRC reports
+          if [ "$failures" -gt 0 ]; then
+            echo "::error::$failures PCB(s) failed KiCad DRC. Manufacturing blocked."
+            exit 1
+          fi
+      - name: Upload PCB DRC reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kicad-pcb-drc-reports
-          path: /tmp/facio-pcb-validation/
+          path: kicad-reports/pcb/
           if-no-files-found: warn
