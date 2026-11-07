@@ -1,0 +1,23 @@
+name: Firmware host unit tests
+on:
+  push:
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware-host-tests.yml'
+  pull_request:
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware-host-tests.yml'
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and execute pure C++ tests
+        run: |
+          set -eu
+          for source in firmware/test/test_*.cpp; do
+            binary="/tmp/$(basename "$source" .cpp)"
+            g++ -std=c++17 -Wall -Wextra -Werror -pedantic "$source" -o "$binary"
+            "$binary"
+          done
