@@ -13,12 +13,14 @@ on:
 jobs:
   pcb-drc:
     runs-on: ubuntu-24.04
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - name: Install KiCad
         run: |
-          sudo apt-get update
-          sudo apt-get install -y kicad
+          sudo timeout 240 apt-get update -o Acquire::Retries=2
+          sudo DEBIAN_FRONTEND=noninteractive timeout 600 apt-get install -y --no-install-recommends kicad
+          command -v kicad-cli
           kicad-cli version
       - name: Validate all PCB drafts
         shell: bash
