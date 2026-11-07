@@ -1,0 +1,36 @@
+name: KiCad schematic syntax validation
+on:
+  push:
+    paths:
+      - 'hardware/**/*.kicad_sch'
+      - '.github/workflows/kicad-schematic.yml'
+  pull_request:
+    paths:
+      - 'hardware/**/*.kicad_sch'
+      - '.github/workflows/kicad-schematic.yml'
+jobs:
+  schematic-open:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install KiCad CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y kicad
+      - name: Parse all KiCad schematics by exporting SVG
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/facio-kicad-svg
+          shopt -s nullglob
+          files=(hardware/*.kicad_sch)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No KiCad schematic files found"
+            exit 1
+          fi
+          for file in "${files[@]}"; do
+            echo "Checking $file"
+            kicad-cli sch export svg -o /tmp/facio-kicad-svg/ "$file"
+          done
+      - name: Warning
+        run: echo "Parsing/export does NOT mean electrical correctness or manufacturing approval."
