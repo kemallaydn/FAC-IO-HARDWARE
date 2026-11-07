@@ -1,0 +1,15 @@
+Designator,Quantity,Function,Part family / candidate,Status,Notes
+U1,1,Microcontroller,ESP32-C3-WROOM-02 family,UNCONFIRMED,Exact variant and pins TBD
+U2,1,Ethernet controller,W5500,UNCONFIRMED,Reference circuit and footprint TBD
+J1,1,Ethernet connector,10/100 RJ45 with compatible magnetics,UNCONFIRMED,Magnetics ratio and pinout critical
+K1 K2,2,Relay,12V SPDT signal/power relay,UNCONFIRMED,Select contact rating for dry contact input
+Q1 Q2,2,Relay driver,Logic-level MOSFET,UNCONFIRMED,Gate pulldown and flyback required
+D1 D2,2,Relay coil suppression,Flyback diode,UNCONFIRMED,Size for coil current
+U3,1,Logic power supply,12V to 3.3V buck regulator,UNCONFIRMED,Check load and noise
+J2,1,DC power terminal,2-position screw terminal,UNCONFIRMED,12V polarity marked
+J3 J4,2,Relay terminals,3-position screw terminal,UNCONFIRMED,NO COM NC labelled
+J5,1,Programming port,USB-C receptacle,UNCONFIRMED,CC and ESD required
+D3,1,Input transient protection,TVS diode,UNCONFIRMED,Select from supply tolerance
+F1,1,Input protection,Fuse or PTC,UNCONFIRMED,Coordinate with regulator and source
+D4,1,Reverse polarity protection,Ideal diode or series diode,UNCONFIRMED,Power loss check
+Y1,1,W5500 clock,25MHz crystal per reference design,UNCONFIRMED,Load capacitors per crystal
