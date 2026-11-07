@@ -1,0 +1,27 @@
+name: Manufacturing release gate
+on:
+  push:
+    paths:
+      - 'manufacturing/**'
+      - 'tests/test_release_check.py'
+      - '.github/workflows/manufacturing-gate.yml'
+  pull_request:
+    paths:
+      - 'manufacturing/**'
+      - 'tests/test_release_check.py'
+      - '.github/workflows/manufacturing-gate.yml'
+jobs:
+  verify-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests (release check itself)
+        run: python3 -m unittest discover -s tests -p test_release_check.py -v
+      - name: Detect premature release marker
+        shell: bash
+        run: |
+          if [ -e manufacturing/release/APPROVED.txt ]; then
+            python3 manufacturing/release_check.py
+          else
+            echo "Draft project: no manufacturing release claimed."
+          fi
