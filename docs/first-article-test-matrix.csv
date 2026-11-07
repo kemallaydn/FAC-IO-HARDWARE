@@ -1,0 +1,17 @@
+ID,Area,Test,Pass criterion,Status
+PWR-01,Power,12V current-limited startup,No short and all rails in tolerance,NOT_RUN
+PWR-02,Power,Reverse polarity applied with protected setup,No unsafe damage or heating,NOT_RUN
+PWR-03,Power,Simultaneous relay energization,Supply stable and within thermal limits,NOT_RUN
+USB-01,Programming,USB-C flash and recovery,Firmware flashes and recovery works,NOT_RUN
+ETH-01,Ethernet,W5500 SPI identity,Chip detected reliably,NOT_RUN
+ETH-02,Ethernet,DHCP and link flaps,IP recovery without spurious pulse,NOT_RUN
+RLY-01,Relay,Cold boot repeated 100x,No unintended contact closure,NOT_RUN
+RLY-02,Relay,Reset and brownout repeated,No unintended contact closure,NOT_RUN
+RLY-03,Relay,Timed pulse on relay 1,NO COM closure only for commanded duration,NOT_RUN
+RLY-04,Relay,Timed pulse on relay 2,NO COM closure only for commanded duration,NOT_RUN
+RLY-05,Relay,Loss of power during pulse,Contact returns to safe inactive state,NOT_RUN
+SEC-01,Security,Unauthenticated command,No relay activation,NOT_RUN
+SEC-02,Security,Duplicate request ID,No second pulse,NOT_RUN
+SEC-03,Security,Invalid duration,No relay activation,NOT_RUN
+MFG-01,Manufacturing,ERC and DRC,No unreviewed errors,NOT_RUN
+MFG-02,Manufacturing,Gerber viewer and assembly drawing,Independent inspection approved,NOT_RUN
