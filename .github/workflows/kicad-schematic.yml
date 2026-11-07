@@ -1,4 +1,4 @@
-name: KiCad schematic syntax validation
+name: KiCad schematic validation
 on:
   push:
     paths:
@@ -8,8 +8,9 @@ on:
     paths:
       - 'hardware/**/*.kicad_sch'
       - '.github/workflows/kicad-schematic.yml'
+  workflow_dispatch:
 jobs:
-  schematic-open:
+  schematic-validation:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -17,20 +18,47 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y kicad
-      - name: Parse all KiCad schematics by exporting SVG
+      - name: Check drafts with real KiCad
         shell: bash
         run: |
-          set -euo pipefail
-          mkdir -p /tmp/facio-kicad-svg
+          set -uo pipefail
+          mkdir -p /tmp/facio-kicad/svg /tmp/facio-kicad/erc /tmp/facio-kicad/netlists
           shopt -s nullglob
           files=(hardware/*.kicad_sch)
           if [ "${#files[@]}" -eq 0 ]; then
-            echo "No KiCad schematic files found"
+            echo "::error::No KiCad schematics found"
             exit 1
           fi
+          parse_fail=0
           for file in "${files[@]}"; do
-            echo "Checking $file"
-            kicad-cli sch export svg -o /tmp/facio-kicad-svg/ "$file"
+            name="$(basename "${file%.kicad_sch}")"
+            echo "::group::KiCad: $name"
+            if ! kicad-cli sch export svg -o /tmp/facio-kicad/svg/ "$file"; then
+              echo "::error file=$file::KiCad could not parse/export this schematic"
+              parse_fail=1
+            fi
+            if ! kicad-cli sch export netlist -o "/tmp/facio-kicad/netlists/$name.net" "$file"; then
+              echo "::warning file=$file::Netlist export failed (draft)"
+            fi
+            if ! kicad-cli sch erc --severity-all --exit-code-violations -o "/tmp/facio-kicad/erc/$name.rpt" "$file"; then
+              echo "::warning file=$file::ERC violations exist; draft is NOT production-ready"
+            fi
+            echo "::endgroup::"
           done
-      - name: Warning
-        run: echo "Parsing/export does NOT mean electrical correctness or manufacturing approval."
+          exit "$parse_fail"
+      - name: Upload schematic validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-draft-validation
+          path: /tmp/facio-kicad/
+          if-no-files-found: warn
+      - name: Production ERC gate
+        if: hashFiles('manufacturing/release/APPROVED.txt') != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          # This gate must eventually target the single integrated, approved schematic.
+          # Until it exists, a release marker is forbidden.
+          echo "::error::Approved manufacturing release requires an integrated, reviewed KiCad project"
+          exit 1
