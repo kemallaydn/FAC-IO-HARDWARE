@@ -1,0 +1,10 @@
+# KiCad generated artifacts
+*-backups/
+*.lck
+*.kicad_prl
+_autosave-*
+# Local build outputs
+build/
+dist/
+.pio/
+.DS_Store
