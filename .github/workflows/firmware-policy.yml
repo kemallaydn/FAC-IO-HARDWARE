@@ -1,0 +1,19 @@
+name: Firmware policy tests
+on:
+  push:
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware-policy.yml'
+  pull_request:
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware-policy.yml'
+jobs:
+  policy-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and run host tests
+        run: |
+          g++ -std=c++17 -Wall -Wextra -Werror -pedantic firmware/test/test_pulse_policy.cpp -o /tmp/facio-policy-test
+          /tmp/facio-policy-test
