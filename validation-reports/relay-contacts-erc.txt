@@ -1,0 +1,75 @@
+ERC report (2026-11-07T23:58:42, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[pin_not_connected]: Pin not connected
+    ; error
+    @(77.38 mm, 130.00 mm): Symbol K2 Pin 11 [COM, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(92.62 mm, 59.92 mm): Symbol K1 Pin 12 [NC, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(92.62 mm, 70.08 mm): Symbol K1 Pin 14 [NO, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(92.62 mm, 124.92 mm): Symbol K2 Pin 12 [NC, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(92.62 mm, 135.08 mm): Symbol K2 Pin 14 [NO, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(142.38 mm, 59.92 mm): Symbol J1 Pin 1 [COM, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(142.38 mm, 65.00 mm): Symbol J1 Pin 2 [NO, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(142.38 mm, 70.08 mm): Symbol J1 Pin 3 [NC, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(142.38 mm, 124.92 mm): Symbol J2 Pin 1 [COM, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(142.38 mm, 130.00 mm): Symbol J2 Pin 2 [NO, Pasif, Yol]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(142.38 mm, 135.08 mm): Symbol J2 Pin 3 [NC, Pasif, Yol]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(72.30 mm, 65.00 mm): 'R1_COM' etiketi
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 65.00 mm): Symbol K1 Pin 11 [COM, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 65.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 130.00 mm): Symbol K2 Pin 11 [COM, Pasif, Yol]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(85.00 mm, 65.00 mm): SembollerK1 [SPDT_Contact]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(85.00 mm, 130.00 mm): SembollerK2 [SPDT_Contact]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(142.38 mm, 59.92 mm): Symbol J1 Pin 1 [COM, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(142.38 mm, 124.92 mm): Symbol J2 Pin 1 [COM, Pasif, Yol]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(150.00 mm, 65.00 mm): SembollerJ1 [Terminal_3]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(150.00 mm, 130.00 mm): SembollerJ2 [Terminal_3]
+
+ ** ERC messages: 21  Errors 11  Warnings 10
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

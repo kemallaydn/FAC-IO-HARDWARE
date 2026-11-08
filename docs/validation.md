@@ -31,4 +31,4 @@
 ## Release artifacts
 `hardware/*.kicad_sch`, `hardware/*.kicad_pcb`, `manufacturing/gerber/*.zip`, `manufacturing/bom/*.csv`, `manufacturing/position/*.csv`, revisioned test evidence.
 
-**Status: planning only; none of the above checks have been executed.**
+**Status: gates not passed.** Local KiCad 10.0.8 parsing, ERC and DRC were run on the existing drafts on 2026-11-07; the main schematic has 53 ERC violations and the partial PCB has 15 DRC violations, 6 unconnected items and 18 schematic-parity errors. These checks exposed draft errors; they do not validate an integrated circuit or manufacturing package. Exact commands and reports are in `PROJECT_STATUS.md` and `validation-reports/`.

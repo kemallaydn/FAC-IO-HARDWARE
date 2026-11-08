@@ -1,0 +1,144 @@
+ERC report (2026-11-08T00:00:29, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(47.30 mm, 65.00 mm): 'RELAY1_EN' etiketi
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(47.30 mm, 135.00 mm): 'RELAY2_EN' etiketi
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(52.38 mm, 65.00 mm): Symbol R1 Pin 1 [1, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(52.38 mm, 65.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(52.38 mm, 135.00 mm): Symbol R3 Pin 1 [1, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(52.38 mm, 135.00 mm): Yatay Yol, uzunluk 5.08 mm
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(60.00 mm, 65.00 mm): SembollerR1 [Resistor]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(60.00 mm, 135.00 mm): SembollerR3 [Resistor]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(67.62 mm, 65.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(67.62 mm, 135.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 85.00 mm): Symbol R2 Pin 1 [1, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 85.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 155.00 mm): Symbol R4 Pin 1 [1, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(77.38 mm, 155.00 mm): Yatay Yol, uzunluk 5.08 mm
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(85.00 mm, 85.00 mm): SembollerR2 [Resistor]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(85.00 mm, 155.00 mm): SembollerR4 [Resistor]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(92.62 mm, 85.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(92.62 mm, 155.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(97.38 mm, 65.00 mm): Symbol Q1 Pin 1 [G, Girdi, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(97.38 mm, 65.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(97.38 mm, 135.00 mm): Symbol Q2 Pin 1 [G, Girdi, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(97.38 mm, 135.00 mm): Yatay Yol, uzunluk 5.08 mm
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(105.00 mm, 65.00 mm): SembollerQ1 [N_MOSFET]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(105.00 mm, 135.00 mm): SembollerQ2 [N_MOSFET]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.62 mm, 62.46 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.62 mm, 67.54 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.62 mm, 132.46 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.62 mm, 137.54 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 65.00 mm): Symbol K1 Pin 1 [A1, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 65.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 85.00 mm): Symbol D1 Pin 1 [K, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 85.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 135.00 mm): Symbol K2 Pin 1 [A1, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 135.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 155.00 mm): Symbol D2 Pin 1 [K, Pasif, Yol]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(132.38 mm, 155.00 mm): Yatay Yol, uzunluk 5.08 mm
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(140.00 mm, 65.00 mm): SembollerK1 [Relay_Coil]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(140.00 mm, 85.00 mm): SembollerD1 [Diode]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(140.00 mm, 135.00 mm): SembollerK2 [Relay_Coil]
+[lib_symbol_issues]: Mevcut yapılandırma 'FAC' sembol kütüphanesini içermiyor
+    ; warning
+    @(140.00 mm, 155.00 mm): SembollerD2 [Diode]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(147.62 mm, 65.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(147.62 mm, 85.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(147.62 mm, 135.00 mm): Yatay Yol, uzunluk 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(147.62 mm, 155.00 mm): Yatay Yol, uzunluk 5.08 mm
+
+ ** ERC messages: 44  Errors 0  Warnings 44
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

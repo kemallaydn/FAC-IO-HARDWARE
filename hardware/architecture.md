@@ -1,6 +1,6 @@
 # FAC-IO Mini V1: Electrical architecture (pre-schematic)
 
-**Status: design specification only. No schematic, layout or Gerber exists.**
+**Status: design specification only. Block-level/experimental KiCad drafts exist, but there is no integrated electrical schematic, complete routed PCB or approved Gerber. See `PROJECT_STATUS.md` for actual KiCad check results.**
 
 ## Power tree
 12V_IN -> resettable fuse / protection -> reverse polarity protection -> TVS -> protected 12V rail.

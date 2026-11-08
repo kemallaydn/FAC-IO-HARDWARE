@@ -1,6 +1,6 @@
 # Relay driver electrical design, revision 0.2 (prototype candidate)
 
-**Status: engineering candidate, NOT validated, NOT approved for PCB manufacturing.**
+**Status: historical engineering candidate, NOT validated, NOT approved for PCB manufacturing.** The SONGLE relay choice below is superseded for the unknown low-current barrier OPEN input by the Omron `G6K-2P-Y DC12` candidate in `component-selection-v1.md`. The gate pulldown alone also does not enforce a finite pulse if firmware crashes with a high GPIO. Do not implement this file as-is; review the dual monostable timeout and actual contact-load evidence first.
 
 ## Exact candidate components
 

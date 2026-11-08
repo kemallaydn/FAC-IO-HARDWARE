@@ -31,6 +31,7 @@ jobs:
             exit 1
           fi
           parse_fail=0
+          erc_fail=0
           for file in "${files[@]}"; do
             name="$(basename "${file%.kicad_sch}")"
             echo "::group::KiCad: $name"
@@ -43,14 +44,20 @@ jobs:
               parse_fail=1
             fi
             if ! kicad-cli sch erc --severity-all --exit-code-violations -o "/tmp/facio-kicad/erc/$name.rpt" "$file"; then
-              echo "::warning file=$file::ERC violations exist; draft is NOT production-ready"
+              echo "::error file=$file::ERC violations exist; draft is NOT production-ready"
+              erc_fail=1
             fi
             echo "::endgroup::"
           done
           if [ "$parse_fail" -ne 0 ]; then
             echo "::error::Schematic parsing or netlist export failed. Fix before manufacturing."
           fi
-          exit "$parse_fail"
+          if [ "$erc_fail" -ne 0 ]; then
+            echo "::error::Schematic ERC failed. Manufacturing blocked."
+          fi
+          if [ "$parse_fail" -ne 0 ] || [ "$erc_fail" -ne 0 ]; then
+            exit 1
+          fi
       - name: Upload schematic validation artifacts
         if: always()
         uses: actions/upload-artifact@v4

@@ -1,0 +1,871 @@
+(export
+	(version "E")
+	(design
+		(source "/Users/furkan/Projeler/FAC-IO-HARDWARE/hardware/FAC-IO-Mini-V1.kicad_sch")
+		(date "2026-11-07T23:57:51")
+		(tool "Eeschema 10.0.8")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "FAC-IO Mini V1 - Functional Block Schematic")
+				(company)
+				(rev "0.1")
+				(date)
+				(source "FAC-IO-Mini-V1.kicad_sch")
+				(comment
+					(number "1")
+					(value "NOT an electrical schematic; functional placeholders only")
+				)
+				(comment
+					(number "2")
+					(value "NO ERC, no footprints, NO manufacturing release")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "K1")
+			(value "RELAY1_BLOCK")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "FAC_IO")
+				(part "RELAY1_BLOCK")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "Kök")
+			)
+			(property
+				(name "Sheetfile")
+				(value "hardware/FAC-IO-Mini-V1.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8a4c0000-0000-4000-8000-000000000072")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "K2")
+			(value "RELAY2_BLOCK")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "FAC_IO")
+				(part "RELAY2_BLOCK")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "Kök")
+			)
+			(property
+				(name "Sheetfile")
+				(value "hardware/FAC-IO-Mini-V1.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8a4c0000-0000-4000-8000-000000000091")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "MCU")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "FAC_IO")
+				(part "MCU")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "Kök")
+			)
+			(property
+				(name "Sheetfile")
+				(value "hardware/FAC-IO-Mini-V1.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8a4c0000-0000-4000-8000-000000000013")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "W5500_BLOCK")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "FAC_IO")
+				(part "W5500_BLOCK")
+				(description "")
+			)
+			(property
+				(name "Sheetname")
+				(value "Kök")
+			)
+			(property
+				(name "Sheetfile")
+				(value "hardware/FAC-IO-Mini-V1.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8a4c0000-0000-4000-8000-000000000047")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "FAC_IO")
+			(part "MCU")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "MCU")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ETH_SCK")
+					(type "output")
+				)
+				(pin
+					(num "2")
+					(name "ETH_MOSI")
+					(type "output")
+				)
+				(pin
+					(num "3")
+					(name "ETH_MISO")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "ETH_CS_N")
+					(type "output")
+				)
+				(pin
+					(num "5")
+					(name "ETH_INT_N")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "ETH_RST_N")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "RELAY1_EN")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "RELAY2_EN")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "USB_DP")
+					(type "bidirectional")
+				)
+				(pin
+					(num "10")
+					(name "USB_DM")
+					(type "bidirectional")
+				)
+				(pin
+					(num "11")
+					(name "3V3")
+					(type "power_in")
+				)
+				(pin
+					(num "12")
+					(name "GND")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "FAC_IO")
+			(part "RELAY1_BLOCK")
+			(fields
+				(field
+					(name "Reference") "K")
+				(field
+					(name "Value") "RELAY1_BLOCK")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "RELAY1_EN")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "12V_PROTECTED")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "R1_COM")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "R1_NO")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "R1_NC")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "FAC_IO")
+			(part "RELAY2_BLOCK")
+			(fields
+				(field
+					(name "Reference") "K")
+				(field
+					(name "Value") "RELAY2_BLOCK")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "RELAY2_EN")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "12V_PROTECTED")
+					(type "power_in")
+				)
+				(pin
+					(num "3")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "R2_COM")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "R2_NO")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "R2_NC")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "FAC_IO")
+			(part "W5500_BLOCK")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "W5500_BLOCK")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ETH_SCK")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "ETH_MOSI")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "ETH_MISO")
+					(type "output")
+				)
+				(pin
+					(num "4")
+					(name "ETH_CS_N")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "ETH_INT_N")
+					(type "output")
+				)
+				(pin
+					(num "6")
+					(name "ETH_RST_N")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "3V3")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "PHY_TO_MAGNETICS")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries)
+	(nets
+		(net
+			(code "1")
+			(name "/3V3")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "3V3_11")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "7")
+				(pinfunction "3V3_7")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "/12V_PROTECTED")
+			(class "Default")
+			(node
+				(ref "K1")
+				(pin "2")
+				(pinfunction "12V_PROTECTED_2")
+				(pintype "power_in")
+			)
+			(node
+				(ref "K2")
+				(pin "2")
+				(pinfunction "12V_PROTECTED_2")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "3")
+			(name "/ETH_CS_N")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "ETH_CS_N_4")
+				(pintype "output")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "ETH_CS_N_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "4")
+			(name "/ETH_INT_N")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "ETH_INT_N_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "ETH_INT_N_5")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "5")
+			(name "/ETH_MISO")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "ETH_MISO_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "ETH_MISO_3")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "6")
+			(name "/ETH_MOSI")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "ETH_MOSI_2")
+				(pintype "output")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "ETH_MOSI_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "7")
+			(name "/ETH_RST_N")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "ETH_RST_N_6")
+				(pintype "output")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "ETH_RST_N_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "8")
+			(name "/ETH_SCK")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "ETH_SCK_1")
+				(pintype "output")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "ETH_SCK_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "9")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "K1")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "power_in")
+			)
+			(node
+				(ref "K2")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "GND_12")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "10")
+			(name "/PHY_TO_MAGNETICS")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "9")
+				(pinfunction "PHY_TO_MAGNETICS_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "/R1_COM")
+			(class "Default")
+			(node
+				(ref "K1")
+				(pin "4")
+				(pinfunction "R1_COM_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "/R1_NC")
+			(class "Default")
+			(node
+				(ref "K1")
+				(pin "6")
+				(pinfunction "R1_NC_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "/R1_NO")
+			(class "Default")
+			(node
+				(ref "K1")
+				(pin "5")
+				(pinfunction "R1_NO_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/R2_COM")
+			(class "Default")
+			(node
+				(ref "K2")
+				(pin "4")
+				(pinfunction "R2_COM_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "/R2_NC")
+			(class "Default")
+			(node
+				(ref "K2")
+				(pin "6")
+				(pinfunction "R2_NC_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "/R2_NO")
+			(class "Default")
+			(node
+				(ref "K2")
+				(pin "5")
+				(pinfunction "R2_NO_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "/RELAY1_EN")
+			(class "Default")
+			(node
+				(ref "K1")
+				(pin "1")
+				(pinfunction "RELAY1_EN_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "RELAY1_EN_7")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "18")
+			(name "/RELAY2_EN")
+			(class "Default")
+			(node
+				(ref "K2")
+				(pin "1")
+				(pinfunction "RELAY2_EN_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "RELAY2_EN_8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "19")
+			(name "/USB_DM")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "USB_DM_10")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "20")
+			(name "/USB_DP")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "USB_DP_9")
+				(pintype "bidirectional")
+			)
+		)
+	)
+)

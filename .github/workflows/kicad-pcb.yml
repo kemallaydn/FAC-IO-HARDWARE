@@ -37,7 +37,7 @@ jobs:
           for board in "${boards[@]}"; do
             name="$(basename "${board%.kicad_pcb}")"
             echo "::group::DRC $name"
-            kicad-cli pcb drc --all-track-errors --severity-all \
+            kicad-cli pcb drc --all-track-errors --severity-all --exit-code-violations \
               -o "$GITHUB_WORKSPACE/kicad-reports/pcb/$name.drc.txt" "$board"
             status=$?
             if [ "$status" -ne 0 ]; then
