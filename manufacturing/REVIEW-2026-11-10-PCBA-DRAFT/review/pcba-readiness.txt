@@ -1,0 +1,29 @@
+PCBA package readiness check — 2026-11-10
+
+Current-source KiCad 10.0.8 exports were compared with the PCBA draft copied
+from DRAFT-1.2. Schematic BOM: 56 unique references; values, footprints and
+manufacturer MPNs match across the schematic export, source BOM, Robotistan
+BOM and assembly BOM. Pick & Place: 56 unique designators; coordinates,
+rotation and top-side placement match the fresh KiCad position export.
+
+The upload workbook bom/FAC-IO-Mini-V1.xlsx uses the supplied five-column
+default_bomlist template. It groups the 56 PCB placements by exact manufacturer
+MPN (33 rows), uses per-board counts, and adds WIZ850io EXT1 as a manual factory
+insertion item at J6/J7. Its 56 PCB references remain reconciled to the separate
+Pick & Place file; EXT1 is deliberately not a PCB centroid.
+
+RobotistanPro/LCSC catalog code missing for: C1, C2, L1, SW1, SW2. These exact
+MPNs are collected in bom/robotistan-component-sourcing-request.csv for
+Robotistan's component sourcing quotation. The other 51 catalog-code cells
+are populated, but current stock, Robotistan importability and assembly
+acceptance are unverified. All 56 MPN cells are populated.
+
+WIZnet WIZ850io is item EXT1, LCSC catalog code C134462. Factory PCBA must
+source it and install it into the J6/J7 sockets before shipment. A supplier
+instruction is included in bom/robotistan-assembly-notes.txt; Robotistan's
+acceptance of this manual final assembly operation is not yet confirmed.
+Firmware programming/security-key provisioning, independent electrical
+review, enclosure and physical first-article tests are also open.
+
+Disposition: useful for assembly review and quotation; NOT ready for PCBA
+production order. Do not generate or add an approval marker from this check.

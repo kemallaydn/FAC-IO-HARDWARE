@@ -1,0 +1,37 @@
+NEGATIVE CONTROL — pre-change 0.20 mm /12V_IN and /12V_FUSED tracks checked with the DRAFT-1.0 0.45 mm rule. Expected result: seven track-width violations. This report is not the current-board DRC.
+
+** Drc report for FAC-IO-Mini-V1.kicad_pcb **
+** Created on 2026-11-09T16:40:44 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 7 DRC violations **
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(107.0000 mm, 139.0000 mm): Yol [/12V_IN] F.Cu üzerinde, uzunluk 7.0711 mm
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(112.0000 mm, 134.0000 mm): Yol [/12V_IN] F.Cu üzerinde, uzunluk 3.8625 mm
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(127.0000 mm, 134.0000 mm): Yol [/12V_FUSED] F.Cu üzerinde, uzunluk 1.9202 mm
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(120.1375 mm, 134.0000 mm): Yol [/12V_FUSED] F.Cu üzerinde, uzunluk 1.2123 mm
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(120.1375 mm, 135.2123 mm): Yol [/12V_FUSED] F.Cu üzerinde, uzunluk 1.1496 mm
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(124.9748 mm, 136.0252 mm): Yol [/12V_FUSED] In2.Cu üzerinde, uzunluk 0.9438 mm
+[track_width]: Yol genişliği (kural 'Protected input path minimum width' min genişlik 0.4500 mm; gerçek 0.2000 mm)
+    Rule: Protected input path minimum width; error
+    @(119.3246 mm, 136.0252 mm): Yol [/12V_FUSED] In2.Cu üzerinde, uzunluk 5.6502 mm
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint doesn't match symbol's footprint filters
+
+** End of Report **

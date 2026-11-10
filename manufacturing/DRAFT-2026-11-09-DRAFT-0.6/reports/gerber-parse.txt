@@ -1,0 +1,22 @@
+Independent Gerber/Excellon parse — Gerbonara 1.6.3
+Package: DRAFT-2026-11-09-DRAFT-0.6
+
+FAC-IO-Mini-V1-B_Cu.gbr: objects=211, bbox=((100.5005, -174.4995), (209.4995, -100.4))
+FAC-IO-Mini-V1-B_Mask.gbr: objects=50, bbox=((103.4, -171.6), (206.6, -103.4))
+FAC-IO-Mini-V1-B_Paste.gbr: objects=0, bbox=None
+FAC-IO-Mini-V1-B_Silkscreen.gbr: objects=0, bbox=None
+FAC-IO-Mini-V1-Edge_Cuts.gbr: objects=8, bbox=((99.95, -175.05), (210.05, -97.95))
+FAC-IO-Mini-V1-F_Cu.gbr: objects=659, bbox=((101.2192, -171.5398), (196.26, -103.307))
+FAC-IO-Mini-V1-F_Mask.gbr: objects=209, bbox=((102.77499999999999, -171.6), (206.6, -103.4))
+FAC-IO-Mini-V1-F_Paste.gbr: objects=155, bbox=((102.77499999999999, -169.76999999999998), (195.675, -112.55))
+FAC-IO-Mini-V1-F_Silkscreen.gbr: objects=918, bbox=((101.92, -173.525339), (205.932142, -100.22981899999999))
+FAC-IO-Mini-V1-In1_Cu.gbr: objects=272, bbox=((100.5005, -174.4995), (209.4995, -100.4))
+FAC-IO-Mini-V1-In2_Cu.gbr: objects=231, bbox=((100.5005, -174.4995), (209.4995, -98.5005))
+FAC-IO-Mini-V1-NPTH.drl: hits=6, bbox=((103.4, -171.6), (206.6, -103.4))
+  WARNING: manufacturing/DRAFT-2026-11-09-DRAFT-0.6/drill/FAC-IO-Mini-V1-NPTH.drl:14 "G90": G90 header statement found after end of header
+FAC-IO-Mini-V1-PTH.drl: hits=181, bbox=((101.369, -171.39000000000001), (195.71, -103.457))
+  WARNING: manufacturing/DRAFT-2026-11-09-DRAFT-0.6/drill/FAC-IO-Mini-V1-PTH.drl:24 "G90": G90 header statement found after end of header
+
+Edge.Cuts envelope: 110.1 x 77.1 mm.
+Drill report: 181 plated hits including 4 slots; 6 non-plated hits.
+All 11 Gerber and both Excellon files parsed. Parser confirms syntax/geometry only; Robotistan CAM acceptance and visual layer-to-layer review remain open.

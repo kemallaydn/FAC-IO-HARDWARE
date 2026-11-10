@@ -1,0 +1,24 @@
+Excellon structural check — review package generated 2026-11-10
+
+Method: one-off structural audit of both Excellon files in
+manufacturing/REVIEW-2026-11-10-DRAFT/gerber/FAC-IO-Mini-V1.zip. Checked the M48
+tool table, METRIC units, post-header G90 absolute mode, G05 drill mode, tool
+selection, explicit decimal X/Y coordinate records, G85 routed slots, M30
+termination, and that every hit/slot endpoint falls inside the Edge.Cuts bounds.
+This is a syntax/structure cross-check, not a manufacturer CAM certification.
+
+PTH: tool table T1=0.300 mm, T2=0.300 mm, T3=0.600 mm, T4=0.850 mm,
+T5=1.020 mm, T6=1.100 mm, T7=1.600 mm. 177 round drill hits plus 4 G85 slots;
+0 coordinates outside the 110.10 x 77.10 mm Edge.Cuts envelope.
+
+NPTH: tool table T1=0.650 mm, T2=3.200 mm. 6 round drill hits; 0 coordinates
+outside Edge.Cuts.
+
+Gerbonara 1.6.3 warns that G90 is found after the header. KiCad places G90 in
+the file body after `%`; JLCPCB's published Excellon fragment also places G90
+after `%` (their sample has G05 then G90). The warning therefore does not by
+itself indicate malformed drill data. Robotistan CAM import and slot treatment
+remain unverified.
+
+Reference for the documented body-command placement:
+https://jlcpcb.com/help/article/dfm-drill-layer-format-adjustment

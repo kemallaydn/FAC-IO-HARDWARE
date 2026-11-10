@@ -1,0 +1,6 @@
+DRAFT-0.8 revision notes
+
+- Source revision: DRAFT-0.8.
+- Corrected D2 schematic symbol from generic bidirectional Device:D_TVS to unidirectional Device:D_Zener for the SMCJ15A MPN. KiCad netlist confirms D2 pin 1/K is on /12V_PROT and pin 2/A is on /GND. PCB pad/net assignments and board geometry are unchanged.
+- Refreshed schematic PDF, ERC, DRC and schematic-derived BOM. The Gerber/drill set is copied from DRAFT-0.7 because this correction changes only the schematic symbol semantics; PCB geometry and connectivity were not changed.
+- Package remains a DRAFT. Fabricator CAM acceptance and all open review/first-article gates remain outstanding.

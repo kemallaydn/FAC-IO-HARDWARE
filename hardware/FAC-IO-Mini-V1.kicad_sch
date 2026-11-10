@@ -1,8 +1,8 @@
 (kicad_sch (version 20231120) (generator "eeschema") (uuid "fb2ece97-2116-485d-9aec-c155ec193d83") (paper "A0")
-(title_block (title "FAC-IO Mini V1 - Integrated Electrical Schematic") (rev "DRAFT-0.2")
- (comment 1 "ENGINEERING DRAFT - ERC and bench validation required")
+(title_block (title "FAC-IO Mini V1 - Integrated Electrical Schematic") (rev "DRAFT-1.2")
+ (comment 1 "ENGINEERING DRAFT - production release blocked pending review and first article")
  (comment 2 "Low-voltage barrier controller dry-contact inputs only"))
-(lib_symbols (symbol "Connector_Generic:Conn_01x02"
+(lib_symbols (symbol "FAC_IO:TerminalBlock_CUI_1x02"
 		(pin_names
 			(offset 1.016)
 			(hide yes)
@@ -22,7 +22,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02"
+		(property "Value" "TerminalBlock_CUI_1x02"
 			(at 0 -5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -76,7 +76,7 @@
 				)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_1x??_*"
+		(property "ki_fp_filters" "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -87,7 +87,7 @@
 				)
 			)
 		)
-		(symbol "Conn_01x02_1_1"
+		(symbol "TerminalBlock_CUI_1x02_1_1"
 			(rectangle
 				(start -1.27 1.27)
 				(end 1.27 -3.81)
@@ -468,7 +468,7 @@
 			)
 		)
 )
-(symbol "Device:D_TVS"
+(symbol "Device:D_Zener"
 		(pin_numbers
 			(hide yes)
 		)
@@ -491,7 +491,7 @@
 				)
 			)
 		)
-		(property "Value" "D_TVS"
+		(property "Value" "D_Zener"
 			(at 0 -2.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -523,7 +523,7 @@
 				)
 			)
 		)
-		(property "Description" "Bidirectional transient-voltage-suppression diode"
+		(property "Description" "Zener diode"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -534,7 +534,7 @@
 				)
 			)
 		)
-		(property "ki_keywords" "diode TVS thyrector"
+		(property "ki_keywords" "diode"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -556,22 +556,10 @@
 				)
 			)
 		)
-		(symbol "D_TVS_0_1"
+		(symbol "D_Zener_0_1"
 			(polyline
 				(pts
-					(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
-				)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+					(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
 				)
 				(stroke
 					(width 0.254)
@@ -593,12 +581,24 @@
 					(type none)
 				)
 			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 		)
-		(symbol "D_TVS_1_1"
+		(symbol "D_Zener_1_1"
 			(pin passive line
 				(at -3.81 0 0)
 				(length 2.54)
-				(name "A1"
+				(name "K"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -616,7 +616,7 @@
 			(pin passive line
 				(at 3.81 0 180)
 				(length 2.54)
-				(name "A2"
+				(name "A"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5685,7 +5685,7 @@
 			)
 		)
 )
-(symbol "Connector_Generic:Conn_01x03"
+(symbol "FAC_IO:TerminalBlock_CUI_1x03"
 		(pin_names
 			(offset 1.016)
 			(hide yes)
@@ -5705,7 +5705,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "TerminalBlock_CUI_1x03"
 			(at 0 -5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5759,7 +5759,7 @@
 				)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_1x??_*"
+		(property "ki_fp_filters" "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-03_1x03_P5.08mm_Horizontal"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5770,7 +5770,7 @@
 				)
 			)
 		)
-		(symbol "Conn_01x03_1_1"
+		(symbol "TerminalBlock_CUI_1x03_1_1"
 			(rectangle
 				(start -1.27 3.81)
 				(end 1.27 -3.81)
@@ -5871,40 +5871,708 @@
 			)
 		)
 		(embedded_fonts no)
-	))
-(symbol (lib_id "Connector_Generic:Conn_01x02") (at 76.200 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8775236a-9d70-498c-b594-c5fd45e3794e")
+	)
+(symbol "FAC_IO:WIZ850io_HostHeader_1x06"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WIZ850io_HostHeader_1x06"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "FAC_IO:WIZ850io_Host_J1_Socket_1x06 FAC_IO:WIZ850io_Host_J2_Socket_1x06"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "WIZ850io_HostHeader_1x06_1_1"
+			(rectangle
+				(start -1.27 6.35)
+				(end 1.27 -8.89)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 5.207)
+				(end 0 4.953)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -7.493)
+				(end 0 -7.747)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 5.08 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -7.62 0)
+				(length 3.81)
+				(name "Pin_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
+(symbol "Device:D_Schottky"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "diode Schottky"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "D_Schottky_0_1"
+			(polyline
+				(pts
+					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_Schottky_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
+(symbol "Timer:LTC6993xS6-1"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -5.08 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LTC6993xS6-1"
+			(at 7.62 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/69931234fc.pdf"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TimerBlox Monostable Pulse Generator (One Shot), Rising-edge input, non-retriggerable, TSOT-23-6"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Timer TimerBlox monostable pulse"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TSOT*23*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LTC6993xS6-1_0_1"
+			(rectangle
+				(start -6.35 5.08)
+				(end 6.35 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LTC6993xS6-1_1_1"
+			(pin input line
+				(at -10.16 0 0)
+				(length 3.81)
+				(name "TRIG"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -2.54 0)
+				(length 3.81)
+				(name "SET"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 3.81)
+				(name "DIV"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 7.62 270)
+				(length 2.54)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 0 180)
+				(length 3.81)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+
+(symbol (lib_id "FAC_IO:WIZ850io_HostHeader_1x06") (at 802.640 381.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a8e98b04-78c0-4773-8f63-8e36075d5687")
+ (property "Reference" "J6" (at 812.800 374.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "SSQ-106-03-G-S" (at 812.800 377.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "FAC_IO:WIZ850io_Host_J1_Socket_1x06" (at 812.800 381.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "SSQ-106-03-G-S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J6") (unit 1)))))
+(symbol (lib_id "FAC_IO:WIZ850io_HostHeader_1x06") (at 853.440 381.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "21a363fd-fd7f-4701-9b49-e3ec49417941")
+ (property "Reference" "J7" (at 863.600 374.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "SSQ-106-03-G-S" (at 863.600 377.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "FAC_IO:WIZ850io_Host_J2_Socket_1x06" (at 863.600 381.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "SSQ-106-03-G-S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J7") (unit 1)))))
+(label "GND" (at 797.560 375.920 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8eefa19b-2f11-4b3d-aad6-925219b2af43"))
+(label "GND" (at 797.560 378.460 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f75cc167-6988-4733-b244-2c15ec39a38e"))
+(label "ETH_MOSI" (at 797.560 381.000 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d5cb0807-d1de-45bb-9902-fcb7220c2f88"))
+(label "ETH_SCK" (at 797.560 383.540 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a00c2e84-f10c-43fd-b560-503f30ed2805"))
+(label "ETH_CS_N" (at 797.560 386.080 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a2011562-cda7-4f27-ba4e-fc443990c730"))
+(label "ETH_INT_N" (at 797.560 388.620 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9be3e5f7-13ae-4070-873f-211a7e460140"))
+(label "GND" (at 848.360 375.920 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8aaa0aaa-a7a7-48d9-9b17-438b65809a86"))
+(label "3V3" (at 848.360 378.460 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e2ec632e-1f03-428d-9d9e-2faf2916ec5d"))
+(label "3V3" (at 848.360 381.000 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "4f2fab49-1b14-4162-a4b8-fd3cfa9e502b"))
+(no_connect (at 848.360 383.540) (uuid "45bb02df-47ee-4ebb-80ef-f6f585e0ba4b"))
+(label "ETH_RESET_N" (at 848.360 386.080 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7d51a6b0-3b5e-4418-bf47-9e92e1418371"))
+(label "ETH_MISO" (at 848.360 388.620 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "42e311eb-d380-4a83-826d-445144041d5b"))
+(symbol (lib_id "FAC_IO:TerminalBlock_CUI_1x02") (at 76.200 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8775236a-9d70-498c-b594-c5fd45e3794e")
  (property "Reference" "J1" (at 86.360 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "TB007-508-02BE" (at 86.360 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal" (at 86.360 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J1") (unit 1)))))
+  (property "MPN" "TB007-508-02BE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J1") (unit 1)))))
 (symbol (lib_id "Device:Fuse") (at 101.600 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "17c18641-883c-4971-9d8d-9e90ff20efcf")
- (property "Reference" "F1" (at 111.760 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "1812L050/30PR" (at 111.760 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Fuse:Fuse_1812_4532Metric" (at 111.760 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "F1") (unit 1)))))
+ (property "Reference" "F1" (at 111.760 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "1812L075/33DR" (at 111.760 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Fuse:Fuse_1812_4532Metric" (at 111.760 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "1812L075/33DR" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "F1") (unit 1)))))
 (symbol (lib_id "FAC_IO:SS34") (at 127.000 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "25fb6ea2-0c1e-4f28-8029-92e7159531ec")
  (property "Reference" "D1" (at 137.160 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "SS34" (at 137.160 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Diode_SMD:D_SMA" (at 137.160 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D1") (unit 1)))))
-(symbol (lib_id "Device:D_TVS") (at 152.400 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "90a1a801-df13-4b85-abbc-e55191ab0839")
- (property "Reference" "D2" (at 162.560 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "SMCJ15A" (at 162.560 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Diode_SMD:D_SMC" (at 162.560 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D2") (unit 1)))))
+  (property "MPN" "B340A-13-F" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D1") (unit 1)))))
+(symbol (lib_id "Device:D_Zener") (at 152.400 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "90a1a801-df13-4b85-abbc-e55191ab0839")
+ (property "Reference" "D2" (at 162.560 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "SMCJ15A-13-F" (at 162.560 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Diode_SMD:D_SMC" (at 162.560 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "SMCJ15A-13-F" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D2") (unit 1)))))
 (symbol (lib_id "Device:C") (at 177.800 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4cac8c86-027f-4198-b087-57069630f59b")
- (property "Reference" "C1" (at 187.960 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "10uF/25V" (at 187.960 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 187.960 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C1") (unit 1)))))
+ (property "Reference" "C1" (at 187.960 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "22uF/50V" (at 187.960 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 187.960 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "C3225X7R1H226M250AC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C1") (unit 1)))))
 (symbol (lib_id "Device:C") (at 203.200 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "aa05f1fc-7c81-4d18-a25f-c56aa47030df")
- (property "Reference" "C2" (at 213.360 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF/25V" (at 213.360 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 213.360 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C2") (unit 1)))))
+ (property "Reference" "C2" (at 213.360 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "10uF/50V" (at 213.360 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 213.360 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "CGA5L1X7R1H106K160AC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C2") (unit 1)))))
 (symbol (lib_id "Regulator_Switching:AP63203WU") (at 228.600 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "659d260e-5409-475a-8a5c-b6621e4760c8")
  (property "Reference" "U1" (at 238.760 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "AP63203WU-7" (at 238.760 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6" (at 238.760 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U1") (unit 1)))))
+  (property "MPN" "AP63203WU-7" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U1") (unit 1)))))
 (symbol (lib_id "Device:L") (at 254.000 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "85354394-0b95-460a-adb1-18d8c47fdb55")
  (property "Reference" "L1" (at 264.160 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "XAL5050-472MEC" (at 264.160 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Inductor_SMD:L_Coilcraft_XAL5050-XXX" (at 264.160 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "L1") (unit 1)))))
+  (property "MPN" "XAL5050-472MEC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "L1") (unit 1)))))
 (symbol (lib_id "Device:C") (at 279.400 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1cd8ca0d-2e46-48f9-a7a1-9f8f75396817")
- (property "Reference" "C3" (at 289.560 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF/16V" (at 289.560 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 289.560 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C3") (unit 1)))))
+ (property "Reference" "C3" (at 289.560 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF/50V" (at 289.560 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 289.560 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "C1608X7R1H104K080AA" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C3") (unit 1)))))
 (symbol (lib_id "Device:C") (at 304.800 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b2a420a4-1f37-4ecf-9584-4cc5074a21ab")
- (property "Reference" "C4" (at 314.960 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "22uF/6.3V" (at 314.960 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 314.960 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C4") (unit 1)))))
+ (property "Reference" "C4" (at 314.960 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "22uF/10V" (at 314.960 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 314.960 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "MPN" "GRM21BZ71A226ME15L" (at 304.800 76.200 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C4") (unit 1)))))
 (symbol (lib_id "Device:C") (at 330.200 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "177c091a-d36c-4db1-bdbd-a1915a97102d")
- (property "Reference" "C5" (at 340.360 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "22uF/6.3V" (at 340.360 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 340.360 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C5") (unit 1)))))
+ (property "Reference" "C5" (at 340.360 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "22uF/10V" (at 340.360 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 340.360 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+ (property "MPN" "GRM21BZ71A226ME15L" (at 330.200 76.200 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C5") (unit 1)))))
 (symbol (lib_id "power:PWR_FLAG") (at 76.200 101.600 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "468637d1-836d-423c-ae23-e2cbcc0c32be")
  (property "Reference" "PWR1" (at 86.360 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 86.360 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 86.360 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "PWR1") (unit 1)))))
@@ -5914,225 +6582,153 @@
 (symbol (lib_id "power:PWR_FLAG") (at 127.000 101.600 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "8b2ba136-a094-4e0c-bf80-eaea7387e16d")
  (property "Reference" "PWR3" (at 137.160 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 137.160 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 137.160 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "PWR3") (unit 1)))))
-(symbol (lib_id "power:PWR_FLAG") (at 152.400 101.600 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "c54f1f2a-6a2b-4193-9290-877746402148")
- (property "Reference" "PWR4" (at 162.560 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 162.560 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 162.560 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "PWR4") (unit 1)))))
+
 (symbol (lib_id "power:PWR_FLAG") (at 177.800 101.600 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid "22756eb5-2c04-4d70-889c-33fdaf02309e")
  (property "Reference" "PWR5" (at 187.960 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "PWR_FLAG" (at 187.960 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 187.960 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "PWR5") (unit 1)))))
 (symbol (lib_id "RF_Module:ESP32-C3-WROOM-02") (at 431.800 127.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "52360252-c532-4e72-a988-e9e90309663f")
  (property "Reference" "U2" (at 441.960 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "ESP32-C3-WROOM-02-N4" (at 441.960 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "FAC_IO:ESP32-C3-WROOM-02_0p3mmThermal" (at 441.960 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U2") (unit 1)))))
+  (property "MPN" "ESP32-C3-WROOM-02-N4" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U2") (unit 1)))))
 (symbol (lib_id "Device:R") (at 381.000 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0f84b592-816a-4326-ad3f-e524f52d2187")
  (property "Reference" "R1" (at 391.160 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "10k" (at 391.160 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 391.160 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R1") (unit 1)))))
+ (property "MPN" "RC0603FR-0710KL" (at 381.000 76.200 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R1") (unit 1)))))
 (symbol (lib_id "Device:C") (at 406.400 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cc2ff735-90ed-444e-be08-aefcad4b232a")
  (property "Reference" "C6" (at 416.560 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "1uF" (at 416.560 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 416.560 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C6") (unit 1)))))
+  (property "MPN" "GRM21BR71C105KA01L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C6") (unit 1)))))
 (symbol (lib_id "Switch:SW_Push") (at 381.000 101.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "042585ef-a399-488b-8e21-8cd0fb9744fc")
  (property "Reference" "SW1" (at 391.160 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "RESET" (at 391.160 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 391.160 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "TL3342F100QG" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "SW1") (unit 1)))))
 (symbol (lib_id "Device:R") (at 406.400 101.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a88f895a-1dba-47ad-a6eb-992dd31f75a6")
  (property "Reference" "R2" (at 416.560 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "10k" (at 416.560 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 416.560 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R2") (unit 1)))))
+ (property "MPN" "RC0603FR-0710KL" (at 406.400 101.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R2") (unit 1)))))
 (symbol (lib_id "Switch:SW_Push") (at 381.000 127.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1f8d7a1b-e942-4ca4-82b1-6ffde88d327f")
  (property "Reference" "SW2" (at 391.160 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "BOOT" (at 391.160 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 391.160 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "TL3342F100QG" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
  (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "SW2") (unit 1)))))
 (symbol (lib_id "Device:C") (at 381.000 152.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2762bb73-09e5-41ff-bd29-34bd2a65b112")
  (property "Reference" "C7" (at 391.160 146.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "10uF" (at 391.160 148.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 391.160 152.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C7") (unit 1)))))
+  (property "MPN" "GRM21BZ71E106KE15L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C7") (unit 1)))))
 (symbol (lib_id "Device:C") (at 406.400 152.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f13fef0b-ddfa-4f59-8cf2-c3f2cc0316f5")
  (property "Reference" "C8" (at 416.560 146.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 416.560 148.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 416.560 152.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C8") (unit 1)))))
+  (property "MPN" "C1608X7R1H104K080AA" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C8") (unit 1)))))
 (symbol (lib_id "Connector:USB_C_Receptacle_USB2.0_16P") (at 609.600 101.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8c793082-41d0-4e58-83b8-352bf4fe6ec4")
  (property "Reference" "J2" (at 619.760 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "TYPE-C-31-M-12" (at 619.760 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" (at 619.760 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J2") (unit 1)))))
+  (property "MPN" "TYPE-C-31-M-12" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J2") (unit 1)))))
 (symbol (lib_id "Device:R") (at 660.400 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a42a2311-e2ab-4d45-bf9a-30d288a2a11c")
  (property "Reference" "R3" (at 670.560 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "5.1k" (at 670.560 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 670.560 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R3") (unit 1)))))
+ (property "MPN" "RC0603FR-075K1L" (at 660.400 76.200 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R3") (unit 1)))))
 (symbol (lib_id "Device:R") (at 685.800 76.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9083bb0e-6953-4e1e-91ce-b6fbcebb8a24")
  (property "Reference" "R4" (at 695.960 69.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "5.1k" (at 695.960 72.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 695.960 76.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R4") (unit 1)))))
+ (property "MPN" "RC0603FR-075K1L" (at 685.800 76.200 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R4") (unit 1)))))
 (symbol (lib_id "Device:R") (at 660.400 101.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5faa7138-29c6-4463-bc03-195e122be23d")
  (property "Reference" "R5" (at 670.560 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "22R" (at 670.560 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 670.560 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R5") (unit 1)))))
+ (property "MPN" "RC0603FR-0722RL" (at 660.400 101.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R5") (unit 1)))))
 (symbol (lib_id "Device:R") (at 685.800 101.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0dd501df-13ae-4f33-8167-f9d30d8b0209")
  (property "Reference" "R6" (at 695.960 95.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "22R" (at 695.960 97.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 695.960 101.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R6") (unit 1)))))
+ (property "MPN" "RC0603FR-0722RL" (at 685.800 101.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R6") (unit 1)))))
 (symbol (lib_id "Power_Protection:USBLC6-2SC6") (at 660.400 127.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "74a5bce3-6bb1-4d14-bda5-3eacd8c99d4e")
  (property "Reference" "U3" (at 670.560 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "USBLC6-2SC6" (at 670.560 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 670.560 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U3") (unit 1)))))
+  (property "MPN" "USBLC6-2SC6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U3") (unit 1)))))
 (symbol (lib_id "Device:R") (at 685.800 127.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5b4b3c3c-762a-496d-b761-a9b65f5c0aac")
  (property "Reference" "R7" (at 695.960 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "68k" (at 695.960 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 695.960 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R7") (unit 1)))))
+ (property "MPN" "RC0603FR-0768KL" (at 685.800 127.000 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R7") (unit 1)))))
 (symbol (lib_id "Device:R") (at 711.200 127.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0a38992f-0a0a-4087-bcf1-5fe6a867229f")
  (property "Reference" "R8" (at 721.360 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "100k" (at 721.360 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 721.360 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R8") (unit 1)))))
+ (property "MPN" "RC0603FR-07100KL" (at 711.200 127.000 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R8") (unit 1)))))
 (symbol (lib_id "Device:C") (at 736.600 127.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ab41716a-a56b-4d6c-9c7f-4fe0e35df1f0")
- (property "Reference" "C9" (at 746.760 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "C1206C102KGRACTU" (at 746.760 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 746.760 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C9") (unit 1)))))
-(symbol (lib_id "Interface_Ethernet:W5500") (at 609.600 304.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "28281f22-16e0-4696-95d0-8917496073aa")
- (property "Reference" "U4" (at 619.760 298.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "W5500" (at 619.760 300.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm" (at 619.760 304.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U4") (unit 1)))))
-(symbol (lib_id "Device:FerriteBead") (at 711.200 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "58116359-27f2-446b-92b1-c62190d82b07")
- (property "Reference" "FB1" (at 721.360 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "BLM18AG121SN1D" (at 721.360 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 721.360 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "FB1") (unit 1)))))
-(symbol (lib_id "Device:C") (at 736.600 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cc394820-fe09-4587-9029-bd48039ea6d2")
- (property "Reference" "C10" (at 746.760 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 746.760 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 746.760 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C10") (unit 1)))))
-(symbol (lib_id "Device:C") (at 762.000 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "294e77a8-c916-4d2a-bdbf-241202f6f850")
- (property "Reference" "C11" (at 772.160 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 772.160 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 772.160 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C11") (unit 1)))))
-(symbol (lib_id "Device:C") (at 787.400 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e5b3a36c-1cf7-4b1c-894f-e85399690601")
- (property "Reference" "C12" (at 797.560 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 797.560 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 797.560 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C12") (unit 1)))))
-(symbol (lib_id "Device:C") (at 812.800 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1b37d88e-2aeb-443c-938a-1f5f8936b924")
- (property "Reference" "C13" (at 822.960 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 822.960 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 822.960 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C13") (unit 1)))))
-(symbol (lib_id "Device:C") (at 838.200 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0239cac6-ee2a-40e3-aa88-4095d2fbc559")
- (property "Reference" "C14" (at 848.360 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 848.360 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 848.360 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C14") (unit 1)))))
-(symbol (lib_id "Device:C") (at 863.600 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bb04345b-d95f-48e6-8b16-f1521b1d399b")
- (property "Reference" "C15" (at 873.760 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 873.760 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 873.760 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C15") (unit 1)))))
-(symbol (lib_id "Device:C") (at 889.000 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "db55164d-8897-4030-8748-c6dffcb09b78")
- (property "Reference" "C16" (at 899.160 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "10uF" (at 899.160 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 899.160 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C16") (unit 1)))))
-(symbol (lib_id "Device:C") (at 914.400 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ad0e6538-031f-4784-a0a6-08acd3313e87")
- (property "Reference" "C17" (at 924.560 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 924.560 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 924.560 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C17") (unit 1)))))
-(symbol (lib_id "Device:C") (at 939.800 203.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4411257e-e746-40db-af53-cce593cb5c39")
- (property "Reference" "C18" (at 949.960 196.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "10uF" (at 949.960 199.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 949.960 203.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C18") (unit 1)))))
-(symbol (lib_id "Device:R") (at 711.200 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5b6e3edb-26cc-4c06-aa23-2cc9e1058db5")
- (property "Reference" "R9" (at 721.360 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "12.4k" (at 721.360 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 721.360 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R9") (unit 1)))))
-(symbol (lib_id "Device:C") (at 736.600 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f81d091b-c9aa-429d-ad2d-dfb7850d8653")
- (property "Reference" "C19" (at 746.760 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "10nF" (at 746.760 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 746.760 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C19") (unit 1)))))
-(symbol (lib_id "Device:C") (at 762.000 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fbf527c0-bfde-4dd0-8d64-0b81b98745ed")
- (property "Reference" "C20" (at 772.160 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "4.7uF" (at 772.160 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 772.160 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C20") (unit 1)))))
+ (property "Reference" "C9" (at 746.760 120.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "1nF/2kV" (at 746.760 123.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 746.760 127.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "MPN" "C1206C102KGRACTU" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C9") (unit 1)))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (symbol (lib_id "Device:R") (at 787.400 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6f7d2b87-d2f2-4615-b556-0f2538115976")
  (property "Reference" "R10" (at 797.560 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "10k" (at 797.560 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 797.560 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R10") (unit 1)))))
+ (property "MPN" "RC0603FR-0710KL" (at 787.400 228.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R10") (unit 1)))))
 (symbol (lib_id "Device:R") (at 812.800 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1a302276-1c19-41ec-a14e-8fd61a3d2bf7")
  (property "Reference" "R11" (at 822.960 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "10k" (at 822.960 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 822.960 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R11") (unit 1)))))
+ (property "MPN" "RC0603FR-0710KL" (at 812.800 228.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R11") (unit 1)))))
 (symbol (lib_id "Device:R") (at 838.200 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "619af860-de80-4578-a005-db537629c194")
  (property "Reference" "R12" (at 848.360 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "10k" (at 848.360 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 848.360 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R12") (unit 1)))))
-(symbol (lib_id "Device:C") (at 863.600 228.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a982666a-e222-4d11-9f41-6c2cdd591eba")
- (property "Reference" "C21" (at 873.760 222.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 873.760 224.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 873.760 228.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C21") (unit 1)))))
-(symbol (lib_id "Device:Crystal_GND24") (at 711.200 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d619e806-9c60-4708-98fa-bb40ba68a6f7")
- (property "Reference" "Y1" (at 721.360 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "ABM8-25.000MHZ-10-D1G-T" (at 721.360 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" (at 721.360 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "Y1") (unit 1)))))
-(symbol (lib_id "Device:C") (at 736.600 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3b76bab4-f3d9-4e95-9cc4-0d50d9fd4841")
- (property "Reference" "C22" (at 746.760 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "18pF" (at 746.760 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 746.760 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C22") (unit 1)))))
-(symbol (lib_id "Device:C") (at 762.000 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0ae787cc-0d1c-4b60-b9b7-8b688f9d25e5")
- (property "Reference" "C23" (at 772.160 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "18pF" (at 772.160 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 772.160 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C23") (unit 1)))))
-(symbol (lib_id "FAC_IO:J1B1211CCD") (at 863.600 330.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "11dc745d-6a8b-4c5b-80e9-6cab54517195")
- (property "Reference" "J3" (at 873.760 323.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "J1B1211CCD" (at 873.760 326.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Connector_RJ:RJ45_Cetus_J1B1211CCD_Horizontal" (at 873.760 330.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J3") (unit 1)))))
-(symbol (lib_id "Device:R") (at 914.400 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "08cb9550-a4ef-46c3-861c-ba5d6b381d91")
- (property "Reference" "R13" (at 924.560 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "49.9R" (at 924.560 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 924.560 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R13") (unit 1)))))
-(symbol (lib_id "Device:R") (at 939.800 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "810fd066-d54b-49e9-97bc-65a966ddfabe")
- (property "Reference" "R14" (at 949.960 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "49.9R" (at 949.960 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 949.960 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R14") (unit 1)))))
-(symbol (lib_id "Device:R") (at 965.200 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5e049d33-fc31-4c39-845e-53e960bce25f")
- (property "Reference" "R15" (at 975.360 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "10R" (at 975.360 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 975.360 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R15") (unit 1)))))
-(symbol (lib_id "Device:C") (at 990.600 279.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4c2e845b-649c-447c-850a-9f497eeef7d8")
- (property "Reference" "C24" (at 1000.760 273.050 0) (effects (font (size 1.27 1.27)))) (property "Value" "22nF" (at 1000.760 275.590 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 1000.760 279.400 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C24") (unit 1)))))
-(symbol (lib_id "Device:C") (at 914.400 304.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "60743649-16f8-43cc-9006-8531ac0b7f2c")
- (property "Reference" "C25" (at 924.560 298.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "6.8nF" (at 924.560 300.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 924.560 304.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C25") (unit 1)))))
-(symbol (lib_id "Device:C") (at 939.800 304.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e32bd083-e6c5-4dcb-bbdc-9e5c3125d559")
- (property "Reference" "C26" (at 949.960 298.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "6.8nF" (at 949.960 300.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 949.960 304.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C26") (unit 1)))))
-(symbol (lib_id "Device:R") (at 965.200 304.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "47156f36-b5dc-4613-aa80-43c7c3cd73f9")
- (property "Reference" "R16" (at 975.360 298.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "49.9R" (at 975.360 300.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 975.360 304.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R16") (unit 1)))))
-(symbol (lib_id "Device:R") (at 990.600 304.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "092545e5-8c18-438f-a835-e274d2cf9029")
- (property "Reference" "R17" (at 1000.760 298.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "49.9R" (at 1000.760 300.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 1000.760 304.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R17") (unit 1)))))
-(symbol (lib_id "Device:C") (at 1016.000 304.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6c5a627a-46bc-4240-9c58-b66f9bd8d35d")
- (property "Reference" "C27" (at 1026.160 298.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "10nF" (at 1026.160 300.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 1026.160 304.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C27") (unit 1)))))
-(symbol (lib_id "Device:R") (at 914.400 330.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2bdb6fa0-d85d-4623-84c1-210440ad1ab2")
- (property "Reference" "R18" (at 924.560 323.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "330R" (at 924.560 326.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 924.560 330.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R18") (unit 1)))))
-(symbol (lib_id "Device:R") (at 939.800 330.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b9549294-823c-4e1c-9b73-2b9b5653c755")
- (property "Reference" "R19" (at 949.960 323.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "330R" (at 949.960 326.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 949.960 330.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R19") (unit 1)))))
-(symbol (lib_id "FAC_IO:SN74LV221ADR") (at 406.400 508.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d60fca52-3eae-41c8-8130-32909aa45256")
- (property "Reference" "U5" (at 416.560 501.650 0) (effects (font (size 1.27 1.27)))) (property "Value" "SN74LV221ADR" (at 416.560 504.190 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 416.560 508.000 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U5") (unit 1)))))
+ (property "MPN" "RC0603FR-0710KL" (at 838.200 228.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R12") (unit 1)))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (symbol (lib_id "Device:R") (at 482.600 431.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8712f50a-7cd1-4246-a1f7-afe96bfb3411")
  (property "Reference" "R20" (at 492.760 425.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "100k" (at 492.760 427.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 492.760 431.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R20") (unit 1)))))
+ (property "MPN" "RC0603FR-07100KL" (at 482.600 431.800 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R20") (unit 1)))))
 (symbol (lib_id "Device:R") (at 508.000 431.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a5f55708-4a16-439d-a5e3-1c0570f73ed4")
  (property "Reference" "R21" (at 518.160 425.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "100k" (at 518.160 427.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 518.160 431.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R21") (unit 1)))))
-(symbol (lib_id "Device:R") (at 533.400 431.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b1c264f0-9130-4944-bcfe-84e5b61cd6a5")
- (property "Reference" "R22" (at 543.560 425.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "100k" (at 543.560 427.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 543.560 431.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R22") (unit 1)))))
-(symbol (lib_id "Device:R") (at 482.600 457.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "bc992e00-87a4-4e72-be2d-b86e6db179bb")
- (property "Reference" "R23" (at 492.760 450.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "470k" (at 492.760 453.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 492.760 457.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R23") (unit 1)))))
-(symbol (lib_id "Device:C") (at 508.000 457.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "40a56f27-20f4-4150-b646-91db1edf705b")
- (property "Reference" "C28" (at 518.160 450.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "1uF/10V" (at 518.160 453.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 518.160 457.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C28") (unit 1)))))
-(symbol (lib_id "Device:R") (at 533.400 457.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a072d82d-13f0-4f6d-8625-053352abb471")
- (property "Reference" "R24" (at 543.560 450.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "470k" (at 543.560 453.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 543.560 457.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R24") (unit 1)))))
-(symbol (lib_id "Device:C") (at 558.800 457.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cc1e74d7-24a4-4150-95af-4ff634d614a6")
- (property "Reference" "C29" (at 568.960 450.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "1uF/10V" (at 568.960 453.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 568.960 457.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C29") (unit 1)))))
+ (property "MPN" "RC0603FR-07100KL" (at 508.000 431.800 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R21") (unit 1)))))
+
+
+
+
+
 (symbol (lib_id "Device:C") (at 584.200 457.200 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "873b2a65-c6f8-4713-94db-8d3bead31d35")
  (property "Reference" "C30" (at 594.360 450.850 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF" (at 594.360 453.390 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 594.360 457.200 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C30") (unit 1)))))
+  (property "MPN" "C1608X7R1H104K080AA" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C30") (unit 1)))))
 (symbol (lib_id "Relay:Omron_G6K-2") (at 584.200 558.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6938c0ea-5654-4585-83f8-d7db96a0d08d")
  (property "Reference" "K1" (at 594.360 552.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "G6K-2P-Y DC12" (at 594.360 554.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" (at 594.360 558.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "K1") (unit 1)))))
+  (property "MPN" "G6K-2P-Y DC12" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "K1") (unit 1)))))
 (symbol (lib_id "FAC_IO:AO3400A") (at 635.000 558.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9912b228-f9ab-4722-ab6d-0733740cb87a")
  (property "Reference" "Q1" (at 645.160 552.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "AO3400A" (at 645.160 554.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 645.160 558.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "Q1") (unit 1)))))
+  (property "MPN" "AO3400A" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "Q1") (unit 1)))))
 (symbol (lib_id "FAC_IO:1N4007") (at 660.400 558.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "445ee1c5-5ec0-49b3-afc5-87632cf6a7d7")
  (property "Reference" "D3" (at 670.560 552.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "1N4007G" (at 670.560 554.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 670.560 558.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D3") (unit 1)))))
+  (property "MPN" "1N4007G-T" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D3") (unit 1)))))
 (symbol (lib_id "Device:R") (at 584.200 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "dd42202a-490b-487d-960d-296c59c63e49")
  (property "Reference" "R25" (at 594.360 603.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "1k" (at 594.360 605.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 594.360 609.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R25") (unit 1)))))
+ (property "MPN" "RC0603FR-071KL" (at 584.200 609.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R25") (unit 1)))))
 (symbol (lib_id "Device:R") (at 609.600 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1aaec795-fffd-4c4b-baa8-cf969a0d8a1b")
  (property "Reference" "R26" (at 619.760 603.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "100k" (at 619.760 605.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 619.760 609.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R26") (unit 1)))))
-(symbol (lib_id "Connector_Generic:Conn_01x03") (at 635.000 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0c09739b-d122-491e-b80d-ae09fc8ab521")
+ (property "MPN" "RC0603FR-07100KL" (at 609.600 609.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R26") (unit 1)))))
+(symbol (lib_id "FAC_IO:TerminalBlock_CUI_1x03") (at 635.000 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0c09739b-d122-491e-b80d-ae09fc8ab521")
  (property "Reference" "J4" (at 645.160 603.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "TB007-508-03BE" (at 645.160 605.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-03_1x03_P5.08mm_Horizontal" (at 645.160 609.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J4") (unit 1)))))
+  (property "MPN" "TB007-508-03BE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J4") (unit 1)))))
 (symbol (lib_id "Relay:Omron_G6K-2") (at 863.600 558.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "875b5f1e-bfd2-4660-b024-af8a87c01d79")
  (property "Reference" "K2" (at 873.760 552.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "G6K-2P-Y DC12" (at 873.760 554.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" (at 873.760 558.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "K2") (unit 1)))))
+  (property "MPN" "G6K-2P-Y DC12" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "K2") (unit 1)))))
 (symbol (lib_id "FAC_IO:AO3400A") (at 914.400 558.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "252dbe18-2f13-401f-8826-fab243fda5bb")
  (property "Reference" "Q2" (at 924.560 552.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "AO3400A" (at 924.560 554.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 924.560 558.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "Q2") (unit 1)))))
+  (property "MPN" "AO3400A" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "Q2") (unit 1)))))
 (symbol (lib_id "FAC_IO:1N4007") (at 939.800 558.800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "64415389-a448-4ee6-acdc-f85d6f521ae8")
  (property "Reference" "D4" (at 949.960 552.450 0) (effects (font (size 1.27 1.27)))) (property "Value" "1N4007G" (at 949.960 554.990 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 949.960 558.800 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D4") (unit 1)))))
+  (property "MPN" "1N4007G-T" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "D4") (unit 1)))))
 (symbol (lib_id "Device:R") (at 863.600 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f261638a-db07-4b39-bf1e-723fb3dec3fb")
  (property "Reference" "R27" (at 873.760 603.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "1k" (at 873.760 605.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 873.760 609.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R27") (unit 1)))))
+ (property "MPN" "RC0603FR-071KL" (at 863.600 609.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R27") (unit 1)))))
 (symbol (lib_id "Device:R") (at 889.000 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "32eb1f7e-b211-4544-8f1a-c062f6fbab09")
  (property "Reference" "R28" (at 899.160 603.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "100k" (at 899.160 605.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 899.160 609.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R28") (unit 1)))))
-(symbol (lib_id "Connector_Generic:Conn_01x03") (at 914.400 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "de98c8b3-fbb4-44f8-bce0-1c279598f60a")
+ (property "MPN" "RC0603FR-07100KL" (at 889.000 609.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R28") (unit 1)))))
+(symbol (lib_id "FAC_IO:TerminalBlock_CUI_1x03") (at 914.400 609.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "de98c8b3-fbb4-44f8-bce0-1c279598f60a")
  (property "Reference" "J5" (at 924.560 603.250 0) (effects (font (size 1.27 1.27)))) (property "Value" "TB007-508-03BE" (at 924.560 605.790 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-03_1x03_P5.08mm_Horizontal" (at 924.560 609.600 0) (effects (font (size 1.27 1.27)) (hide yes)))
- (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J5") (unit 1)))))
+  (property "MPN" "TB007-508-03BE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "J5") (unit 1)))))
 (label "12V_IN" (at 71.120 76.200 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a3bad479-77c4-44cf-87c5-1208deb5f040"))
 (label "GND" (at 71.120 78.740 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "28e693e5-9d5d-40a3-9028-62c313cb9806"))
 (label "12V_IN" (at 101.600 72.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "51099876-3383-4889-84cb-0ed10b50a8b6"))
@@ -6162,7 +6758,7 @@
 (label "12V_IN" (at 76.200 101.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "1b2446b5-7f14-4cff-8aae-375a3a58ec45"))
 (label "12V_PROT" (at 101.600 101.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "2f34a482-9b4d-41d1-acf5-fc26182eb610"))
 (label "3V3" (at 127.000 101.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b60d3982-1d2d-40ef-af23-c66728c22cb3"))
-(label "3V3A" (at 152.400 101.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "304afdf9-22b7-4b20-a716-7125c48cba79"))
+
 (label "GND" (at 177.800 101.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "22d4600f-7bf0-4f25-b989-e1492ad8aaf4"))
 (label "3V3" (at 431.800 104.140 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d09a7314-ecf9-4530-8081-005cec357cbd"))
 (label "ESP_EN" (at 416.560 109.220 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a18a91bf-a3da-49d1-8882-268ef3304ebc"))
@@ -6174,7 +6770,7 @@
 (label "BOOT_N" (at 416.560 137.160 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "467345db-4e54-4691-bb5b-36df9a85bc9b"))
 (label "GND" (at 431.800 149.860 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "de8606c0-2f28-45f7-99a1-ee0350f948f2"))
 (label "ETH_INT_N" (at 416.560 139.700 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "679185d5-8feb-4828-a8bd-40883252df4c"))
-(label "PULSE_ARM" (at 447.040 109.220 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9692e9a4-58d8-4e2b-8473-bfab267cc44a"))
+
 (label "USB_VBUS_SENSE" (at 447.040 111.760 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "594eabe1-f78f-4e1a-9d19-8010d6d6ac55"))
 (label "USB_DM" (at 416.560 142.240 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "00a3e0f2-f9bd-4820-89e5-68632c167bfe"))
 (label "USB_DP" (at 416.560 144.780 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "01d6c62c-2f12-44bd-998e-228b03a6d3ff"))
@@ -6227,155 +6823,155 @@
 (label "GND" (at 711.200 130.810 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "4497b3c7-ed6b-4de7-9c88-8b3d039ea6ee"))
 (label "CHASSIS" (at 736.600 123.190 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a3850083-4edf-4eb8-99ca-25af0a93eb73"))
 (label "GND" (at 736.600 130.810 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "87ddfbda-93ef-41c3-bc8e-bf733b54ebd5"))
-(label "ETH_TXN" (at 624.840 279.400 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ead2e391-1585-4e26-9f1e-1bbc6854fcaf"))
-(label "ETH_TXP" (at 624.840 281.940 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e8417d6e-4fa4-4c15-ba0a-9d6bb36c0144"))
-(label "GND" (at 612.140 335.280 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "928b95ba-0cca-4a41-beb6-8a0fd3215894"))
-(label "3V3A" (at 612.140 274.320 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "126b8c53-da6f-4bad-9c02-61bc89b75007"))
-(label "ETH_RXN" (at 624.840 287.020 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a14838ea-82e3-48fe-b259-b11e402bf58b"))
-(label "ETH_RXP" (at 624.840 289.560 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "15355a8a-d642-4d3d-b778-e58cc278bdea"))
-(no_connect (at 622.300 294.640) (uuid "506a68c8-1cd8-4a05-ae0d-1ad11e4b52d5"))
-(label "ETH_EXRES" (at 624.840 322.580 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "314c3989-5d60-46d7-8b58-e7ddd2580e2f"))
-(no_connect (at 622.300 297.180) (uuid "c3bf9b69-eb75-49b7-8a70-4acbfe2dd3d2"))
-(no_connect (at 622.300 299.720) (uuid "b4d46353-5519-4289-8bc0-208cfff5be8e"))
-(no_connect (at 624.840 325.120) (uuid "4eec93a2-e565-445f-92b1-ac71074a1fb2"))
-(label "ETH_TOCAP" (at 624.840 327.660 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "78967894-d520-474a-b44f-83ca2494cbaa"))
-(label "ETH_1V2O" (at 624.840 330.200 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "54260b9e-21e0-4e49-bd64-1bd2d527a36a"))
-(no_connect (at 594.360 330.200) (uuid "9409b3dd-e7f3-41d8-a12f-edfff45dedbd"))
-(no_connect (at 624.840 309.880) (uuid "2c49d001-0047-4887-bc03-2e7cf8a6cb73"))
-(label "LINKLED_N" (at 624.840 312.420 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "0fa8b8b6-3bb1-4343-9b85-e3c95d41f9eb"))
-(no_connect (at 624.840 314.960) (uuid "206ceb2b-f065-42f7-8235-c6f30f32f8e7"))
-(label "ACTLED_N" (at 624.840 317.500 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "83245e7c-d725-40f2-af38-1c7d630541a8"))
-(label "3V3" (at 607.060 274.320 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "bddd1c9f-b6b9-4ba1-8756-ad23136e6fc7"))
-(label "GND" (at 607.060 335.280 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ebd05e33-0780-4f5d-9ccf-714b695aa337"))
-(label "ETH_XI" (at 594.360 307.340 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6762c79a-5a9b-4e04-b668-0b33391982d6"))
-(label "ETH_XO" (at 594.360 309.880 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9e04ece2-da48-490b-a569-d41fba332e7e"))
-(label "ETH_CS_N" (at 594.360 279.400 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ddf5708e-4d08-49ac-89d5-b7ad7f62db2b"))
-(label "ETH_SCK" (at 594.360 281.940 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "be155549-4e78-4404-8512-50a7e678ec72"))
-(label "ETH_MISO" (at 594.360 284.480 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "19e44e84-a640-4471-8dfb-3200c81f303f"))
-(label "ETH_MOSI" (at 594.360 287.020 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a3145f83-cfe1-4304-b1db-c93b89736c30"))
-(label "ETH_INT_N" (at 594.360 289.560 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "5bfe5102-13cc-4454-ab0a-2e43ece5c667"))
-(label "ETH_RESET_N" (at 594.360 292.100 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "0bf2cb24-7eac-44a8-b7f3-9582c1191115"))
-(no_connect (at 594.360 314.960) (uuid "905b4c48-7e07-484c-afa0-de609ef3771c"))
-(no_connect (at 594.360 317.500) (uuid "6433ae00-8694-40c3-81a4-6fd5615697a3"))
-(no_connect (at 594.360 320.040) (uuid "949717f9-9eae-4af4-afaa-158aff7de02b"))
-(no_connect (at 594.360 322.580) (uuid "b57c3f09-0391-479f-9306-def01ca3601a"))
-(no_connect (at 594.360 325.120) (uuid "8fb554af-8800-4f1d-a5a9-0cf966c51755"))
-(label "3V3" (at 594.360 302.260 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6776555d-3ef2-43d2-9a6a-3e47277d518b"))
-(label "3V3" (at 594.360 299.720 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a2df8166-86a5-4632-b32c-cac4233940da"))
-(label "3V3" (at 594.360 297.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "bfed942b-cd41-4a1e-9b03-4f2ff5f7276b"))
-(no_connect (at 622.300 302.260) (uuid "ecd45ab1-3adb-4fec-b3a2-902d86567c9f"))
-(no_connect (at 622.300 304.800) (uuid "3b386dbe-fd74-4920-92a8-014d585faf32"))
-(label "3V3" (at 711.200 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "42771353-793f-441d-80be-7a96ecd90964"))
-(label "3V3A" (at 711.200 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c564f3dd-79a6-487a-bdfb-cf6534770afe"))
-(label "3V3A" (at 736.600 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "235646c8-58a9-4760-860c-602270bee470"))
-(label "GND" (at 736.600 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8a884120-dd96-4038-b187-f5b6a4f8dce6"))
-(label "3V3A" (at 762.000 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f2f871b6-a5bb-4687-96c6-89d3d502da74"))
-(label "GND" (at 762.000 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "1ebdf4bc-6f8a-47e6-825b-6593bab6838d"))
-(label "3V3A" (at 787.400 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "0f57bf00-db65-4ae2-82fc-fbdef7e7305f"))
-(label "GND" (at 787.400 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "85c3840c-25d3-4549-ac79-c89d9c8f9760"))
-(label "3V3A" (at 812.800 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "5cc2b29d-e2ce-48fe-bb21-f9219887a15f"))
-(label "GND" (at 812.800 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d43ecf56-95da-49f1-a4a9-b46121b1bd22"))
-(label "3V3A" (at 838.200 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "02d328db-a20e-4104-9e9d-0754a6710911"))
-(label "GND" (at 838.200 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "becbd403-5f65-4875-8740-89c64cff81db"))
-(label "3V3A" (at 863.600 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a2316031-197f-4b3c-858b-cbc3bebf6a8e"))
-(label "GND" (at 863.600 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "80ae75f2-37a9-4d20-8bbd-737e3022ab49"))
-(label "3V3A" (at 889.000 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7e7c4786-1e65-4f0b-972f-10a95651c277"))
-(label "GND" (at 889.000 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b6c8927f-f8ce-4d7b-9d86-04fc0b8c88bd"))
-(label "3V3" (at 914.400 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "34006331-4e62-4912-8924-8bbf24bbe9b9"))
-(label "GND" (at 914.400 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b0c76bc6-d569-4d13-8b70-6c84877ea690"))
-(label "3V3" (at 939.800 199.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f4a186af-599a-433b-a8d9-280511c9c289"))
-(label "GND" (at 939.800 207.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f123106b-31af-41ac-87fb-483c3a2e8e34"))
-(label "ETH_EXRES" (at 711.200 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "90702598-82fe-4dfd-a1c8-d8b2035e2653"))
-(label "GND" (at 711.200 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c117a786-b43d-4388-b727-a60110e438e2"))
-(label "ETH_1V2O" (at 736.600 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "fd2cb869-1579-48be-bb20-56d79a7f2f31"))
-(label "GND" (at 736.600 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "2a5b59d7-3e82-48fd-9896-d0e3d788f1e1"))
-(label "ETH_TOCAP" (at 762.000 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a233a67d-54e9-4ce5-b03c-03917f42809f"))
-(label "GND" (at 762.000 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "41fcf1f1-85fc-4710-af11-f89f467dd6e1"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (label "3V3" (at 787.400 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "81cdf855-d865-416b-8167-c80aeb51aece"))
 (label "ETH_CS_N" (at 787.400 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "626cc8a8-f530-4abd-9ff5-90774e971f7c"))
 (label "3V3" (at 812.800 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "2ec96342-5f85-4a3b-91ee-fbd297d7a899"))
 (label "ETH_INT_N" (at 812.800 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f520a139-4897-4f6c-afeb-c0d4018f7af1"))
 (label "3V3" (at 838.200 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "730980a7-8615-4820-bca7-019d2fa04924"))
 (label "ETH_RESET_N" (at 838.200 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e819d7ec-7d4d-441e-861f-71c9b84aa330"))
-(label "ETH_RESET_N" (at 863.600 224.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b9413ee7-ceba-4c7d-a342-253c90bd6b56"))
-(label "GND" (at 863.600 232.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d3a51feb-e162-47a8-9d97-a276aa494b27"))
-(label "ETH_XI" (at 707.390 279.400 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "864f8275-8805-4e91-b683-613e498e24af"))
-(label "GND" (at 711.200 284.480 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "fa889bfb-f9c4-4210-947f-7576909a0e9c"))
-(label "ETH_XO" (at 715.010 279.400 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "2ddc47fd-d69f-42de-80b9-2492d824d311"))
-(label "ETH_XI" (at 736.600 275.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c2faa803-58db-46e0-b4a0-39a64678e02e"))
-(label "GND" (at 736.600 283.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "22a42247-4f67-4b2f-84b0-be3c52a6a259"))
-(label "ETH_XO" (at 762.000 275.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ae7f6c21-47c8-41f0-954f-149821ff48b6"))
-(label "GND" (at 762.000 283.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "2e89bcdf-f37c-45b4-8b6f-5c483a589850"))
-(label "ETH_TXP" (at 838.200 309.880 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "67c2de1c-0268-40ec-80b2-3ff1b8574638"))
-(label "ETH_TCT" (at 838.200 314.960 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "a024e959-1ee9-4d32-b0ff-d367e30d7159"))
-(label "ETH_TXN" (at 838.200 320.040 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b275f0ca-bde1-4146-be6e-b2e0429f680a"))
-(label "ETH_RD_PLUS" (at 838.200 325.120 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "882379e7-6e00-4d53-9bca-abb5ed8c17d3"))
-(label "ETH_RX_BIAS" (at 838.200 330.200 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d1a2f01f-1150-4307-b6ac-8863e0fd7243"))
-(label "ETH_RD_MINUS" (at 838.200 335.280 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ef58f4f0-2859-4657-bbcb-f6c0b3468bf0"))
-(no_connect (at 838.200 340.360) (uuid "ed5675df-1988-4ed0-ad7c-8803c6598586"))
-(no_connect (at 838.200 345.440) (uuid "f66de7ee-5c87-4009-b4c8-1ca1583c72ee"))
-(label "MAG_GREEN_NEG" (at 889.000 309.880 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "036f75e4-c08b-43c5-a448-a57941d2e633"))
-(label "3V3" (at 889.000 314.960 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e67910fe-2c93-4037-b6ef-e69ee0347502"))
-(label "MAG_YELLOW_NEG" (at 889.000 320.040 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "56f19ff4-32f2-4bb8-a5c6-488465ead3d4"))
-(label "3V3" (at 889.000 325.120 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "18a1ddd0-d69c-4b8d-bf72-ab44fefda2b2"))
-(label "CHASSIS" (at 889.000 330.200 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7b6011a3-0122-459e-b0b3-b6ae0da39238"))
-(label "3V3A" (at 914.400 275.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7d8e3266-8f3f-4247-85c9-5a161a9e1777"))
-(label "ETH_TXP" (at 914.400 283.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7b556e03-19c9-4c95-99dc-c0f543039093"))
-(label "3V3A" (at 939.800 275.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ee5c773f-b8c6-485c-b019-f1adfb2c8697"))
-(label "ETH_TXN" (at 939.800 283.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "03a8ac29-0552-4deb-89c8-4b1b3eb88ebc"))
-(label "3V3A" (at 965.200 275.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b9fde506-3379-4d01-8107-9491c574a390"))
-(label "ETH_TCT" (at 965.200 283.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c0a100c4-94be-498d-9273-a82c4c0a7ba3"))
-(label "ETH_TCT" (at 990.600 275.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d65d2e68-5a21-43cf-a821-d1226b53b390"))
-(label "GND" (at 990.600 283.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "3f31cd3d-87ec-4cdd-a4e4-ea45d9536a8f"))
-(label "ETH_RXP" (at 914.400 300.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b0f2c29d-08aa-4987-8a79-5959a8d5bb8e"))
-(label "ETH_RD_PLUS" (at 914.400 308.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "fdbe781e-f391-44e4-b630-be686f2c0b52"))
-(label "ETH_RXN" (at 939.800 300.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ce6d5dcc-1c34-4a11-b1de-41d1f0c75aea"))
-(label "ETH_RD_MINUS" (at 939.800 308.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e6493b84-09e6-481c-8981-96484f7238ae"))
-(label "ETH_RXP" (at 965.200 300.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "4cfe71b8-6689-4ecd-b8f6-d6486371aad1"))
-(label "ETH_RX_BIAS" (at 965.200 308.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "68192cdd-6ddf-48f7-a853-49c65db06617"))
-(label "ETH_RXN" (at 990.600 300.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d2b6f857-7735-49b1-b5d8-6f7ffe309a87"))
-(label "ETH_RX_BIAS" (at 990.600 308.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7833ffe6-2dc6-4b74-a486-20941861b755"))
-(label "ETH_RX_BIAS" (at 1016.000 300.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "195abdfe-5aa4-4257-819b-292f874eeb53"))
-(label "GND" (at 1016.000 308.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "73311b13-e4ed-40e7-bfcd-d88034f34e8e"))
-(label "LINKLED_N" (at 914.400 326.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8a1de1e3-a2ef-41f6-bb97-18a72c2abfae"))
-(label "MAG_GREEN_NEG" (at 914.400 334.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "49681d33-892c-4bd8-ad19-cecf6406fe67"))
-(label "ACTLED_N" (at 939.800 326.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "25ba796a-0f67-4cc0-9d00-3cade4643e83"))
-(label "MAG_YELLOW_NEG" (at 939.800 334.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "acd0a97b-e26e-4267-826e-6fe2bba88a5c"))
-(label "GND" (at 381.000 490.220 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "598246bc-04d4-4166-a43a-6d33dfe9a3ff"))
-(label "TRIG1" (at 381.000 495.300 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "0f8ccfc5-30b2-42d3-ad62-2e27f4aaa648"))
-(label "PULSE_ARM" (at 381.000 500.380 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "5dec5bfe-1708-48a1-bad9-ea9f2a18398e"))
-(no_connect (at 381.000 505.460) (uuid "e15a3b15-edd4-4a74-8e60-decfc10a04eb"))
-(label "PULSE2" (at 381.000 510.540 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "12809acf-f6fe-459f-9e65-7f4c44866638"))
-(label "TIMER2_CEXT" (at 381.000 515.620 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "589ad3e2-7cf1-42b2-8c56-b22b8b63a8ec"))
-(label "TIMER2_RC" (at 381.000 520.700 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "16137524-85a6-42ce-9a99-1e768dcded92"))
-(label "GND" (at 381.000 525.780 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "24a99e31-b71a-4ae4-a8a3-8a9af2a014e7"))
-(label "3V3" (at 431.800 490.220 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ef07d322-a524-448f-b630-f2509e3550c8"))
-(label "TIMER1_RC" (at 431.800 495.300 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e58d148b-1655-4b0b-aac9-61f28096d870"))
-(label "TIMER1_CEXT" (at 431.800 500.380 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6c40e394-4851-4980-9ae7-9be4a713d20b"))
-(label "PULSE1" (at 431.800 505.460 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c8415c28-e935-4ab5-8dda-ff58ac818b20"))
-(no_connect (at 431.800 510.540) (uuid "af771355-2fed-4722-8cce-0f65fbe7f18c"))
-(label "PULSE_ARM" (at 431.800 515.620 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "59bd4be0-49bd-4ccd-9a48-04849ec35b93"))
-(label "TRIG2" (at 431.800 520.700 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "880d10ae-9928-4e99-a261-cf76a4e66c4b"))
-(label "GND" (at 431.800 525.780 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "323638e6-7e0d-4af5-aeb2-13a35c43002f"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (label "TRIG1" (at 482.600 427.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "cb1a7b22-f05b-47f2-a4c8-76ad9a6525bc"))
 (label "GND" (at 482.600 435.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b2329b4d-2d4f-4fff-bcb1-9d82096279af"))
 (label "TRIG2" (at 508.000 427.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f349b4e9-b73f-46be-87b7-21eddcdea5ad"))
 (label "GND" (at 508.000 435.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "580fc8de-5023-4a52-aa8f-c60c7fd0399f"))
-(label "PULSE_ARM" (at 533.400 427.990 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "1d77475d-4d6f-4877-ac6b-0accec1307ef"))
-(label "GND" (at 533.400 435.610 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "fdedda6c-5169-412f-80c9-1d8ed79edc19"))
-(label "3V3" (at 482.600 453.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "70a55185-ae9a-4c79-bd81-c60d58597758"))
-(label "TIMER1_RC" (at 482.600 461.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "bae302fd-79e4-40c8-a2fe-b1afc15f82e8"))
-(label "TIMER1_RC" (at 508.000 453.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "fda29a3c-dfb8-4412-ac40-ed3721806662"))
-(label "TIMER1_CEXT" (at 508.000 461.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "82c363f9-361c-40ec-b4a9-8e0b12cbeaff"))
-(label "3V3" (at 533.400 453.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "3ca738a9-83b0-4839-9e0d-ad96027ee150"))
-(label "TIMER2_RC" (at 533.400 461.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e035b110-c5a7-4db1-99bd-7b06b8c14e8e"))
-(label "TIMER2_RC" (at 558.800 453.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9cd4d358-c6b8-47b3-b355-3762e596df80"))
-(label "TIMER2_CEXT" (at 558.800 461.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "90ac3575-84c0-49a7-a5e9-a7b5c525c081"))
+
+
+
+
+
+
+
+
+
+
 (label "3V3" (at 584.200 453.390 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f74ef2c2-26de-4ab9-b9d1-84cbd67d4891"))
 (label "GND" (at 584.200 461.010 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7bbee459-c846-40ab-a54a-b6b9ba203b85"))
-(label "OUT1_COM" (at 584.200 566.420 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6d2f4493-5602-4837-b25d-c919414373fb"))
-(label "OUT1_NC" (at 581.660 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8b9cd949-f195-4be9-ac81-e282206f5bdf"))
-(label "OUT1_NO" (at 586.740 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9a37296f-b57c-44c8-8539-fd62391032b6"))
+(label "OPEN_COM" (at 584.200 566.420 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6d2f4493-5602-4837-b25d-c919414373fb"))
+(label "OPEN_NC" (at 581.660 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8b9cd949-f195-4be9-ac81-e282206f5bdf"))
+(label "OPEN_NO" (at 586.740 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9a37296f-b57c-44c8-8539-fd62391032b6"))
 (no_connect (at 594.360 566.420) (uuid "0435dc06-61eb-4fa9-badb-1231199fd0b5"))
 (no_connect (at 591.820 551.180) (uuid "ad4b28a7-a64b-4f4f-92d1-e704d6e1752f"))
 (no_connect (at 596.900 551.180) (uuid "4ce51923-42f6-4d73-9879-139f1f6e5edd"))
@@ -6390,12 +6986,12 @@
 (label "GATE1" (at 584.200 613.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "490d9cee-836b-477b-a302-437ef826c16c"))
 (label "GATE1" (at 609.600 605.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6e285d19-b5bd-4531-9a56-f816132ce5f1"))
 (label "GND" (at 609.600 613.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b26d3059-4f8e-4a59-80ba-f1ff225b9772"))
-(label "OUT1_NC" (at 629.920 607.060 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d44ff521-f23a-42a9-8377-20afbfd708e3"))
-(label "OUT1_COM" (at 629.920 609.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "41b83e44-4b54-45cb-a118-01c9946e939b"))
-(label "OUT1_NO" (at 629.920 612.140 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "38510578-3fad-47ff-8763-b7f0a99b8ecc"))
-(label "OUT2_COM" (at 863.600 566.420 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "12ea320f-702e-4b53-a98c-1bd844df53d3"))
-(label "OUT2_NC" (at 861.060 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "dcc002ef-294c-4a75-b7b3-f1df4769cb9c"))
-(label "OUT2_NO" (at 866.140 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f55575c7-c245-4e69-b0fd-60f4a28ac265"))
+(label "OPEN_NC" (at 629.920 607.060 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "d44ff521-f23a-42a9-8377-20afbfd708e3"))
+(label "OPEN_COM" (at 629.920 609.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "41b83e44-4b54-45cb-a118-01c9946e939b"))
+(label "OPEN_NO" (at 629.920 612.140 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "38510578-3fad-47ff-8763-b7f0a99b8ecc"))
+(label "CLOSE_COM" (at 863.600 566.420 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "12ea320f-702e-4b53-a98c-1bd844df53d3"))
+(label "CLOSE_NC" (at 861.060 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "dcc002ef-294c-4a75-b7b3-f1df4769cb9c"))
+(label "CLOSE_NO" (at 866.140 551.180 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "f55575c7-c245-4e69-b0fd-60f4a28ac265"))
 (no_connect (at 873.760 566.420) (uuid "f12b99ac-c55f-4f9c-8dc1-6ff1b9865656"))
 (no_connect (at 871.220 551.180) (uuid "6a42f709-80f9-4148-89e5-1de4f6b19201"))
 (no_connect (at 876.300 551.180) (uuid "2703ed4c-43e9-4d1f-91ad-5d6079e105d2"))
@@ -6410,7 +7006,61 @@
 (label "GATE2" (at 863.600 613.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "b64ff9c3-cba3-4557-8297-03dd8dcec1fc"))
 (label "GATE2" (at 889.000 605.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "91b79967-6f6e-484e-bc3a-4723173c4d8a"))
 (label "GND" (at 889.000 613.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "22baa924-8a57-4526-b6b6-a60d033d6b7d"))
-(label "OUT2_NC" (at 909.320 607.060 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "03edfd07-b97b-42e0-8298-8c36a59ab353"))
-(label "OUT2_COM" (at 909.320 609.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c412edd4-f818-4904-9f47-5ff42141d040"))
-(label "OUT2_NO" (at 909.320 612.140 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c9e3647d-096c-48d5-820d-a094f9f8360b"))
+(label "CLOSE_NC" (at 909.320 607.060 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "03edfd07-b97b-42e0-8298-8c36a59ab353"))
+(label "CLOSE_COM" (at 909.320 609.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c412edd4-f818-4904-9f47-5ff42141d040"))
+(label "CLOSE_NO" (at 909.320 612.140 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "c9e3647d-096c-48d5-820d-a094f9f8360b"))
+
+
+
+
+
+
+
+
+
+
+
+
+(symbol (lib_id "Timer:LTC6993xS6-1") (at 406.400 482.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7f8ee5c7-1cf8-426b-9b36-5a09eead1b58")
+ (property "Reference" "U5" (at 416.560 478.790 0) (effects (font (size 1.27 1.27)))) (property "Value" "LTC6993IS6-1" (at 416.560 481.330 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6" (at 406.400 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc6993-6993-1-6993-2-6993-3-6993-4.pdf" (at 406.400 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "LTC6993IS6-1#TRMPBF" (at 406.400 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U5") (unit 1)))))
+(label "TRIG1" (at 396.240 482.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "704e6cc5-06a3-4904-b4cd-3604660051e3"))
+(label "GND" (at 406.400 490.220 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "851980ba-5671-4eff-803a-1ce61510e645"))
+(label "SET1" (at 396.240 485.140 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "8df6089e-4db4-4cb8-a6d7-3a51d78690fe"))
+(label "TIMER_DIV" (at 396.240 480.060 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "6d2eca5c-574d-499a-8fca-952787af12fb"))
+(label "3V3" (at 406.400 474.980 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "87954820-9d1d-4df1-b534-84db83646dec"))
+(label "PULSE1" (at 416.560 482.600 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "35b4833f-aaa9-4ff7-82cc-977064e7c651"))
+(symbol (lib_id "Timer:LTC6993xS6-1") (at 406.400 533.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a0e31ad8-070f-4d88-8306-4d3c1bdd1557")
+ (property "Reference" "U6" (at 416.560 529.590 0) (effects (font (size 1.27 1.27)))) (property "Value" "LTC6993IS6-1" (at 416.560 532.130 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6" (at 406.400 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc6993-6993-1-6993-2-6993-3-6993-4.pdf" (at 406.400 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "LTC6993IS6-1#TRMPBF" (at 406.400 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "U6") (unit 1)))))
+(label "TRIG2" (at 396.240 533.400 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "2477a354-3d6d-4847-b1dc-bd470f73749f"))
+(label "GND" (at 406.400 541.020 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "07f2acad-4548-4ef1-86ae-387ec9edc61e"))
+(label "SET2" (at 396.240 535.940 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "409a120a-3788-44e0-a069-d91fcb6abe02"))
+(label "TIMER_DIV" (at 396.240 530.860 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "9d49dff5-75bf-4587-921e-5dd74b36f320"))
+(label "3V3" (at 406.400 525.780 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "3a2eb4ba-7a9a-4509-a784-60c9dbd990af"))
+(label "PULSE2" (at 416.560 533.400 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7060dd26-2d82-4a13-b209-bc635080a5de"))
+(symbol (lib_id "Device:R") (at 482.600 482.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "f7597757-491d-41f4-824e-2697ead08ee1")
+ (property "Reference" "R23" (at 492.760 478.790 0) (effects (font (size 1.27 1.27)))) (property "Value" "768k" (at 492.760 481.330 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 482.600 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "RC0603FR-07768KL" (at 482.600 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R23") (unit 1)))))
+(label "SET1" (at 482.600 478.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "eb8e725a-89b1-47e0-baba-1a80f64f6a53"))
+(label "GND" (at 482.600 486.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "10c08951-dd5d-4be6-9044-1d9abe10d493"))
+(symbol (lib_id "Device:R") (at 482.600 533.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "aa2e059e-f18e-4a0f-86a0-68d87bc56376")
+ (property "Reference" "R24" (at 492.760 529.590 0) (effects (font (size 1.27 1.27)))) (property "Value" "768k" (at 492.760 532.130 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 482.600 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "RC0603FR-07768KL" (at 482.600 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R24") (unit 1)))))
+(label "SET2" (at 482.600 529.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "4dc0b347-f4b7-4c59-b7c5-7e78e95c93a2"))
+(label "GND" (at 482.600 537.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "16dd8d64-6f4a-485e-9e99-0691b7c8581f"))
+(symbol (lib_id "Device:R") (at 533.400 482.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "085c2de3-273a-439c-a2ad-c27fbb41bc69")
+ (property "Reference" "R29" (at 543.560 478.790 0) (effects (font (size 1.27 1.27)))) (property "Value" "1M" (at 543.560 481.330 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 533.400 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "RC0603FR-071ML" (at 533.400 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R29") (unit 1)))))
+(label "3V3" (at 533.400 478.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "1f21dc45-f09d-48e2-9de3-59e49dd6548c"))
+(label "TIMER_DIV" (at 533.400 486.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "dd3de9bb-4709-4ee5-95b8-eced954aeb9f"))
+(symbol (lib_id "Device:R") (at 533.400 508.000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "04433126-f273-453b-86ed-e4c283923c8a")
+ (property "Reference" "R30" (at 543.560 504.190 0) (effects (font (size 1.27 1.27)))) (property "Value" "523k" (at 543.560 506.730 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 533.400 508.000 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "RC0603FR-07523KL" (at 533.400 508.000 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "R30") (unit 1)))))
+(label "TIMER_DIV" (at 533.400 504.190 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "157c34bb-780d-407a-9730-412d008da866"))
+(label "GND" (at 533.400 511.810 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "ec9bb211-feeb-4bce-b30b-515acba81e91"))
+(symbol (lib_id "Device:C") (at 584.200 482.600 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2063f934-e4d0-4413-895c-e22109f5e8d0")
+ (property "Reference" "C28" (at 594.360 478.790 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF/100V" (at 594.360 481.330 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 584.200 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "C2012X7R2A104K125AA" (at 584.200 482.600 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C28") (unit 1)))))
+(label "3V3" (at 584.200 478.790 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "e230e93f-6b3c-4f77-bed9-946a154ed39f"))
+(label "GND" (at 584.200 486.410 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "26f6e13a-0ac1-4c5c-a2f1-b03567991da3"))
+(symbol (lib_id "Device:C") (at 584.200 533.400 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fe69d02c-2090-407a-8a08-fb7877a35fd0")
+ (property "Reference" "C29" (at 594.360 529.590 0) (effects (font (size 1.27 1.27)))) (property "Value" "100nF/100V" (at 594.360 532.130 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 584.200 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "MPN" "C2012X7R2A104K125AA" (at 584.200 533.400 0) (effects (font (size 1.27 1.27)) (hide yes))) (instances (project "FAC-IO-Mini-V1" (path "/fb2ece97-2116-485d-9aec-c155ec193d83" (reference "C29") (unit 1)))))
+(label "3V3" (at 584.200 529.590 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "4073a02c-efdb-4bf7-a584-feeef0f20f25"))
+(label "GND" (at 584.200 537.210 0) (effects (font (size 1.0 1.0)) (justify left bottom)) (uuid "7817551f-55e9-4801-be21-dd79392f3302"))
+
+(no_connect (at 447.040 109.220) (uuid "dcd2b958-9e29-4c32-a375-1ff111d13ca0"))
 )

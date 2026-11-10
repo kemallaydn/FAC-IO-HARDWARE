@@ -1,33 +1,23 @@
-# ESP32-C3 GPIO allocation — candidate v0.1
+# ESP32-C3 GPIO map — current schematic assignment
 
-**PROVISIONAL: Not electrically verified. Do not route or fabricate using this table without reviewing the exact ESP32-C3 module datasheet and reset/boot behavior.**
+**As-designed in `hardware/FAC-IO-Mini-V1.kicad_sch`; not firmware-frozen or bench-verified.** The WIZ850io uses the W5500 SPI host interface. Relay coils are not driven directly from ESP32 pins: the MCU triggers a dual monostable pulse-limiter, then independent MOSFET coil drivers.
 
-Assumed module: ESP32-C3-WROOM-02 family (exact flash size and antenna variant TBD). W5500 uses the ESP32-C3 GPIO matrix for SPI. This proposal deliberately reserves USB GPIO18/19 and boot strapping GPIO2/8/9.
+| Net / function | GPIO | Module symbol pin | Notes |
+|---|---:|---:|---|
+| ETH_SCK | 4 | 3 | WIZ850io J6.4 |
+| ETH_MOSI | 5 | 4 | WIZ850io J6.3 |
+| ETH_MISO | 6 | 5 | WIZ850io J7.6 |
+| ETH_CS_N | 7 | 6 | 10 kΩ pull-up to 3V3; WIZ850io J6.5 |
+| ETH_INT_N | 10 | 10 | 10 kΩ pull-up to 3V3; WIZ850io J6.6 |
+| ETH_RESET_N | 3 | 15 | 10 kΩ pull-up to 3V3; WIZ850io J7.5 |
+| TRIG1 | 0 | 18 | One-shot input for relay channel 1; 100 kΩ pulldown |
+| TRIG2 | 1 | 17 | One-shot input for relay channel 2; 100 kΩ pulldown |
+| Unused | — | 11 | GPIO20 / IO20 is not connected in current schematic; timer arm net removed |
+| USB_DM | 18 | 13 | USB-C D- path through series resistor/ESD |
+| USB_DP | 19 | 14 | USB-C D+ path through series resistor/ESD |
+| USB_VBUS_SENSE | 21 | 12 | USB VBUS sense through resistor divider |
+| BOOT_N | 9 | 8 | BOOT switch; ESP32-C3 strapping function |
+| ESP_EN | — | 2 | Reset enable network and switch |
+| GPIO2 / GPIO8 | — | 16 / 7 | Not connected in current schematic |
 
-| Net | Candidate GPIO | Notes |
-|---|---:|---|
-| W5500_SPI_SCK | 4 | SPI clock |
-| W5500_SPI_MOSI | 5 | SPI TX |
-| W5500_SPI_MISO | 6 | SPI RX |
-| W5500_SPI_CS_N | 7 | Active-low chip select, default pull-up |
-| W5500_INT_N | 10 | Input, active-low interrupt |
-| W5500_RESET_N | 3 | Output, reset network chip |
-| RELAY1_GATE | 0 | External strong gate pulldown; relay OFF in reset |
-| RELAY2_GATE | 1 | External strong gate pulldown; relay OFF in reset |
-| USB_D- | 18 | Native USB Serial/JTAG, verify module pinout |
-| USB_D+ | 19 | Native USB Serial/JTAG, verify module pinout |
-| STATUS_LED | 20 | Optional, check UART0 alternate function / boot logs |
-| SPARE | 21 | Reserved, check UART0 alternate function |
-| BOOT_STRAP | 2, 8, 9 | Reserved for strapping and recovery; do not drive relays |
-| FLASH_RESERVED | 12–17 | Used internally by flash/module; do not assign |
-
-## Review gates
-1. Verify **every** GPIO is exposed on the selected module footprint and that its boot/reset state is safe.
-2. Confirm relay gate pins GPIO0/1 do not emit unintended pulses during reset, bootloader, USB enumeration or crash. Scope both signals with relays disconnected.
-3. Check W5500 SPI frequency and whether GPIO4–7 routing is feasible with antenna keepout.
-4. Validate USB-JTAG recovery and GPIO9 BOOT procedure.
-5. Confirm external W5500 reset defaults asserted during MCU startup, and CS remains deselected.
-6. Review watchdog/brownout handling: relay hardware must default OFF independently of firmware.
-7. Any GPIO change must update schematic, firmware pin map and test plan together.
-
-This allocation is a **candidate**, not an approved pinout.
+Netlist checked with KiCad 10.0.8. ESP32-C3 GPIO4-7 also have JTAG alternate functions; debug/JTAG use must be handled in firmware. GPIO20/21 alternate UART functions are also available on the module; GPIO20 is currently unused and GPIO21 is USB VBUS sense. U5/U6 one-shot reset/startup behavior and trigger levels require scope verification on the first article; do not infer relay-off safety from the static netlist alone.

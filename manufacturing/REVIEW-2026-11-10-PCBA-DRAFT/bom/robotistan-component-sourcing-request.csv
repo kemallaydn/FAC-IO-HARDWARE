@@ -1,0 +1,7 @@
+Reference,Manufacturer,Exact MPN,Quantity for 5 boards,Required value/package,Request
+C1,TDK,C3225X7R1H226M250AC,5,22uF 50V X7R 1210,Source exact MPN and provide RobotistanPro/LCSC code; no substitution without engineering review
+C2,TDK,CGA5L1X7R1H106K160AC,5,10uF 50V X7R 1206,Source exact MPN and provide RobotistanPro/LCSC code; no substitution without engineering review
+L1,Coilcraft,XAL5050-472MEC,5,4.7uH shielded power inductor XAL5050 footprint,Source exact MPN and provide RobotistanPro/LCSC code; preserve current rating and saturation behavior; no substitution without engineering review
+SW1,E-Switch,TL3342F100QG,5,Reset tact switch compatible with TL3342 footprint,Source exact MPN and provide RobotistanPro/LCSC code; no substitution without engineering review
+SW2,E-Switch,TL3342F100QG,5,Boot tact switch compatible with TL3342 footprint,Source exact MPN and provide RobotistanPro/LCSC code; no substitution without engineering review
+EXT1,WIZnet,WIZ850io,5,WIZ850io Ethernet module C134462,Source five modules and perform factory insertion into J6/J7 on each board; do not ship loose for customer installation

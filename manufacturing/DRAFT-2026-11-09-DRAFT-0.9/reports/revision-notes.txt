@@ -1,0 +1,8 @@
+DRAFT-0.9 revision notes
+
+- Source revision: DRAFT-0.9.
+- D2 schematic symbol now explicitly represents the unidirectional SMCJ15A: pin 1/K is /12V_PROT and pin 2/A is /GND.
+- Added F.SilkS, F.Fab and F.CrtYd geometry for the Samtec 1x6 sockets from the installed KiCad socket-strip reference dimensions. Moved the external WIZ850io 23 x 25 mm envelope to one non-fabrication Dwgs.User drawing; removed duplicated large module outlines from both socket footprints.
+- Re-generated Gerber, Excellon, assembly positions, schematic BOM, schematic PDF, board render and ZIP from the current CAD.
+- Follow-up on 2026-11-09: refreshed ERC/DRC reports; netlist, ERC, DRC/parity, GPIO static check, ZIP integrity and git diff whitespace checks pass. Internal Gerbonara SVG visual sanity scan done for major copper/silkscreen/outline layers; this does not replace supplier CAM acceptance or independent electrical/mechanical review. Release gate remains blocked.
+- The package remains a draft and is not approved for fabrication.

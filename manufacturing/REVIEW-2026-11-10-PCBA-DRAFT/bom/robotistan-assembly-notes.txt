@@ -1,0 +1,20 @@
+Robotistan PCBA assembly instructions — quotation/review draft
+
+Deliverable requested: complete assembled FAC-IO Mini V1 board, with all BOM
+parts populated and the WIZnet WIZ850io Ethernet module installed in J6/J7.
+Do not ship EXT1 loose for customer installation.
+
+WIZ850io sourcing reference: LCSC C134462, manufacturer WIZnet, MPN WIZ850io.
+The parent PCB has two factory-installed Samtec SSQ-106-03-G-S sockets. After
+PCB assembly and inspection, insert the WIZ850io module into J6/J7 in the
+documented orientation and verify the module sits fully in both sockets. This
+is a low-volume manual/THT final assembly operation; it is not represented as a
+57th PCB centroid.
+
+Before order acceptance, confirm that Robotistan can source C134462 and perform
+this module insertion. The exact catalog codes for C1, C2, L1, SW1 and SW2 are
+still unresolved in the online BOM. Quote exact manufacturer MPNs first; do not
+substitute without written engineering approval and synchronized CAD/BOM.
+
+This board order does not include firmware flashing, network provisioning,
+security-key provisioning, enclosure or first-article functional acceptance.

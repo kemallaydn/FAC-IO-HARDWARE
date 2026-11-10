@@ -1,0 +1,9 @@
+DRAFT-1.1 revision notes
+
+- Source revision: DRAFT-1.1.
+- Corrected the project connector symbol definitions for the selected CUI TB007-508 2/3-position terminal blocks and WIZ850io host sockets. These are now project-library symbols with footprint filters naming the actual selected footprints; the schematic no longer modifies KiCad's stock Connector_Generic symbol cache.
+- Raised the KiCad footprint-filter mismatch rule from ignore to warning. KiCad 10.0.8 DRC with zone refill and schematic parity now reports 0 DRC violations, 0 unconnected pads, 0 footprint errors, 0 parity issues and no ignored DRC checks. ERC reports 0 errors and 0 warnings; netlist export succeeds.
+- Included KiCad JSON DRC evidence with empty violations, unconnected items, schematic-parity issues and ignored-check lists.
+- The physical PCB geometry and placements did not change from DRAFT-1.0. Gerber, Excellon, schematic PDF, assembly drawing and 3D board render were regenerated from DRAFT-1.1 CAD. BOM and position CSVs are carried forward because the connector symbol-library cleanup changes neither references, MPNs, nets, footprints nor board placements; reference-set reconciliation remains 56/56.
+- Gerbonara Excellon G90-after-header warning remains unresolved; supplier CAM interpretation is required. DRAFT outputs are not approved for manufacture.
+- Production blockers remain: validated 12 V and ambient/load envelope, PTC/buck thermal margin, supplier part codes/stock and THT/SMT/stackup/CAM acceptance, physical module/socket/enclosure fit, independent electrical/DFM review, exact controller terminal confirmation and first-article tests.

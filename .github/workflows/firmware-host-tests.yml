@@ -13,11 +13,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Compile and execute pure C++ tests
+      - name: Install Mbed TLS host-test dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libmbedtls-dev
+      - name: Compile and execute C++ host tests
         run: |
           set -eu
-          for source in firmware/test/test_*.cpp; do
-            binary="/tmp/$(basename "$source" .cpp)"
-            g++ -std=c++17 -Wall -Wextra -Werror -pedantic "$source" -o "$binary"
-            "$binary"
-          done
+          cxx_flags="-std=c++17 -Wall -Wextra -Werror -pedantic"
+
+          g++ $cxx_flags firmware/test/test_command_policy.cpp -o /tmp/test_command_policy
+          /tmp/test_command_policy
+
+          g++ $cxx_flags firmware/test/test_pulse_http_parser.cpp firmware/src/pulse_http_parser.cpp firmware/src/request_auth.cpp -o /tmp/test_pulse_http_parser
+          /tmp/test_pulse_http_parser
+
+          g++ $cxx_flags firmware/test/test_relay_state_machine.cpp -o /tmp/test_relay_state_machine
+          /tmp/test_relay_state_machine
+
+          g++ $cxx_flags firmware/test/test_request_auth.cpp firmware/src/request_auth.cpp firmware/src/request_auth_mbedtls.cpp -lmbedcrypto -o /tmp/test_request_auth
+          /tmp/test_request_auth
+
+          g++ $cxx_flags firmware/test/test_sequence_reservation.cpp -o /tmp/test_sequence_reservation
+          /tmp/test_sequence_reservation

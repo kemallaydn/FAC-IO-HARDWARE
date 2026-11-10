@@ -1,0 +1,57 @@
+FAC-IO secure-build test evidence (not a manufacturing or deployment artifact)
+Date: 2026-11-10
+Command: uvx --from platformio pio run -e fac_io_c3_security_test
+Build exit code: 0
+
+Build log summary:
+PLATFORM: Espressif 32 (8.0.0) > Espressif ESP32-C3-DevKitM-1
+HARDWARE: ESP32C3 160MHz, 320KB RAM, 4MB Flash
+ - framework-arduinoespressif32 @ 4.30312.261024 (3.3.12) 
+ - framework-espidf @ 4.50505.0 (5.5.5) 
+ - tool-esptool @ 2.50400.0 (5.4.0) 
+Warning: The Flash Encryption key is not set!
+Generating signed image .pio/build/fac_io_c3_security_test/partitions-signed.bin from .pio/build/fac_io_c3_security_test/partitions.bin
+Generating signed image .pio/build/fac_io_c3_security_test/bootloader-signed.bin from .pio/build/fac_io_c3_security_test/bootloader.bin
+RAM:   [          ]   4.6% (used 15172 bytes from 327680 bytes)
+Flash: [===       ]  33.8% (used 354812 bytes from 1048576 bytes)
+Generating signed image .pio/build/fac_io_c3_security_test/firmware-signed.bin from .pio/build/fac_io_c3_security_test/firmware.bin
+======================== [SUCCESS] Took 135.62 seconds ========================
+fac_io_c3_security_test  SUCCESS   00:02:15.619
+
+SDKConfig checks:
+CONFIG_IDF_TARGET="esp32c3"
+CONFIG_SECURE_BOOT=y
+CONFIG_SECURE_BOOT_V2_ENABLED=y
+CONFIG_SECURE_BOOT_BUILD_SIGNED_BINARIES=y
+CONFIG_SECURE_FLASH_ENC_ENABLED=y
+CONFIG_SECURE_FLASH_ENCRYPTION_MODE_RELEASE=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+CONFIG_AUTOSTART_ARDUINO=y
+CONFIG_ESP32C3_REV_MIN_3=y
+CONFIG_FREERTOS_HZ=1000
+
+Signature verification:
+firmware/.pio/build/fac_io_c3_security_test/bootloader-signed.bin size=28672 sha256=88da7924ab7f8d26cdbcc840ee4dc83bc5005083601f3247f91679d2d3e9d46b
+verify exit=0
+  Signature block 0 is valid (RSA).
+  Signature block 0 verification successful using the supplied key (RSA).
+  Signature block 1 invalid. Skipping.
+  Signature block 2 invalid. Skipping.
+firmware/.pio/build/fac_io_c3_security_test/firmware-signed.bin size=397312 sha256=fc589557cc3802ad35a91b4bb8aed2bb7706357585622485f09094b4729430aa
+verify exit=0
+  Signature block 0 is valid (RSA).
+  Signature block 0 verification successful using the supplied key (RSA).
+  Signature block 1 invalid. Skipping.
+  Signature block 2 invalid. Skipping.
+firmware/.pio/build/fac_io_c3_security_test/partitions-signed.bin size=8192 sha256=05b73f33de958b002036feae6b9e97eb06b54d6a13faf7362518b0474080b115
+verify exit=0
+  Signature block 0 is valid (RSA).
+  Signature block 0 verification successful using the supplied key (RSA).
+  Signature block 1 invalid. Skipping.
+  Signature block 2 invalid. Skipping.
+
+Temporary RSA-3072 key: deleted after build and signature verification
+Signed test images: deleted after signature verification; hashes above are retained only as build evidence
+Flash encryption: no flash-encryption key supplied; not an encrypted release image
+Device actions: no flash/upload/eFuse operation performed
+Disposition: test-only evidence; never flash or distribute these artifacts

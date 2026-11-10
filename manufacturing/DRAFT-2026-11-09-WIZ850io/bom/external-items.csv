@@ -1,0 +1,2 @@
+Reference,Quantity,Manufacturer,MPN,Description,Mounting,Status
+EXT1,1,WIZnet,WIZ850io,"Off-board W5500 Ethernet module with PHY, magnetics and RJ45 MAG-JACK",Plug-in to PCB host sockets J6/J7,Not included in CAD BOM or pick-and-place; verify mating sample and purchasing source

@@ -8,3 +8,7 @@ build/
 dist/
 .pio/
 .DS_Store
+
+# ESP-IDF generated local outputs
+firmware/managed_components/
+firmware/sdkconfig.fac_io_c3_security_test

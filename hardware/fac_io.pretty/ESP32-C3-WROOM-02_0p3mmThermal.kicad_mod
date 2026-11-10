@@ -793,7 +793,7 @@
 			(footprints not_allowed)
 		)
 		(placement
-			(enabled no)
+			(enabled yes)
 			(sheetname "")
 		)
 		(fill

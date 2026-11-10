@@ -1,0 +1,9 @@
+DRAFT-1.0 revision notes
+
+- Source revision: DRAFT-1.0.
+- Widened the seven /12V_IN and /12V_FUSED routed segments between J1, F1 and D1 from 0.20 mm to 0.45 mm. Added a project DRC rule requiring 0.45 mm minimum width on both nets.
+- The D2 unidirectional SMCJ15A symbol correction and WIZ850io host socket courtyard/Fab/silkscreen plus external module envelope are carried forward from DRAFT-0.9.
+- KiCad 10.0.8 source ERC: 0 errors/warnings. DRC with zone refill and schematic parity: 0 violations, 0 unconnected pads/parity issues. Gerber/Excellon, BOM, positions, schematic PDF, assembly drawing, board render and ZIP were regenerated from DRAFT-1.0 CAD.
+- Assembly drawing is a visually checked 2:1 A4 view of F.Fab, Edge.Cuts and Dwgs.User; component values are excluded to keep reference designators and the WIZ850io module envelope legible.
+- Gerbonara 1.6.3 parsed 11 Gerbers and two Excellon outputs. Board outline: 110.10 x 77.10 mm; PTH: 181 objects, including 4 slots; NPTH: 6. Both Excellon files still produce a non-fatal G90-after-header warning. Supplier CAM acceptance remains open.
+- NOT APPROVED FOR MANUFACTURE. This draft does not close supplier sourcing/assembly, input power/thermal margin, physical fit, independent review, controller compatibility or first-article tests.

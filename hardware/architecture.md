@@ -1,42 +1,33 @@
-# FAC-IO Mini V1: Electrical architecture (pre-schematic)
+# FAC-IO Mini V1: current electrical architecture
 
-**Status: design specification only. Block-level/experimental KiCad drafts exist, but there is no integrated electrical schematic, complete routed PCB or approved Gerber. See `PROJECT_STATUS.md` for actual KiCad check results.**
+**Status: integrated DRAFT-1.2 CAD; not released for manufacturing.** Latest KiCad 10.0.8 ERC and PCB DRC with zone refill and schematic parity pass with zero reported violations and zero unconnected pads. Footprint-filter checks are enabled, and the PCB DRC report contains no ignored checks. Electrical behavior, mechanical fit, sourcing, independent CAM review and a physical first article remain unverified.
 
-## Power tree
-12V_IN -> resettable fuse / protection -> reverse polarity protection -> TVS -> protected 12V rail.
-Protected 12V -> relay coils (if 12V coil MPN chosen).
-Protected 12V -> 3.3V switching regulator -> ESP32-C3 + W5500 + Ethernet PHY support.
-Include regulator headroom for ESP32 radio startup even if Wi-Fi is disabled. Power from USB must not backfeed 12V or relay supply. The USB power/data scheme must be chosen and checked against the actual module design.
+## Power
+
+- Nominal 12 V DC enters through a two-position terminal, resettable fuse, reverse-polarity protection, and transient suppressor.
+- Protected input feeds the 3.3 V buck and the two 12 V relay coils.
+- ESP32-C3-WROOM-02-N4 and WIZ850io use the 3.3 V logic rail. WIZ850io current demand and rail margin still need worst-case thermal/load verification.
+- USB-C provides programming/debug; USB-only and 12 V + USB power cases need bench verification for backfeed and reset behavior.
 
 ## Ethernet
-ESP32-C3 SPI <-> W5500 <-> matched Ethernet magnetics <-> RJ45.
-Use WIZnet reference hardware design, not a generic unmagnetized RJ45. Verify W5500 reference voltage, oscillator/crystal, reset, decoupling, SPI signal integrity, center taps, chassis/shield and ESD from datasheets.
 
-## Relay output, repeated twice
-MCU GPIO -> gate resistor -> low-side MOSFET -> relay coil -> protected 12V.
-Flyback diode across coil. MOSFET gate pulldown ensures OFF while MCU is in reset or unprogrammed.
-Contacts brought to isolated NO/COM/NC terminal block. No shared contact supply. Keep coil traces separate from contact terminals. Contact ratings must match the intended barrier controller input and environmental conditions. **No mains or motor loads.**
+- ESP32-C3 connects to the WIZ850io using SPI, reset, interrupt, 3.3 V, and ground through two 1x6 host sockets.
+- WIZ850io contains the W5500, Ethernet PHY, transformer/magnetics, and RJ45. The carrier therefore has no bare W5500 MDI pair or RJ45 layout.
+- Carrier sockets use the Samtec SSQ-106-03-G-S candidate and local 1x6 footprints with socket body/Fab/silkscreen/courtyard geometry. A single 23×25 mm external WIZ850io envelope is drawn on Dwgs.User and is not included in manufacturing Gerbers. Mating compatibility, solder process, module retention, module height and enclosure clearance still require a physical sample review.
+- The current four-layer draft includes a connected GND copper zone on In2.Cu, with clearances around routed nets and the ESP32 antenna cutout. KiCad refilled DRC reports 0 violations; selected board stackup, return-path/EMC behavior and fabrication CAM still require independent verification.
 
-## Programming and recovery
-ESP32-C3 USB Serial/JTAG capability may be used after checking exact module pins, USB-C D+/D- routing, CC resistors, ESD and BOOT/reset requirements. Keep accessible recovery pads. Security fuses must remain unset during first-article bring-up.
+## Barrier outputs
 
-## Indicative logical signals (NOT pin assignments)
-W5500: SPI_SCK, SPI_MOSI, SPI_MISO, SPI_CS, ETH_INT, ETH_RESET.
-Relays: RELAY1_EN, RELAY2_EN.
-Status: LED_PWR, LED_NET (may derive from W5500 LINK), optional LED_R1, LED_R2 (may derive from relay drive).
-USB: USB_DP, USB_DM.
-Programming: EN, BOOT strap, GND, 3V3.
-**GPIO allocation is a blocking design task**: check ESP32-C3 strapping, USB pins, SPI peripherals and startup behavior before assigning GPIOs. Never connect relay gates to strapping pins without proving reset-safe levels.
+- K1 and K2 are separate Omron G6K-2P-Y DC12 signal relays. Each uses one pole for its own COM/NO/NC terminal; unused poles are unconnected.
+- MOSFET low-side coil drivers, gate pulldowns, and flyback diodes are represented in the schematic.
+- Two LTC6993-1 single-shot timers are specified in the schematic as independent pulse-width limiters (nominal 503 ms); the routed PCB now contains both timer channels, their shared DIVCODE network and the required local bypass capacitors. Their startup/trigger behavior and actual contact pulse must be verified with a scope and continuity meter on a first article.
+- Connect only the isolated dry contacts across the physically labelled barrier command pair. Never connect FAC-IO power, ground, motor, mains or traffic-light terminals to those contacts.
+- Hikvision's 42-Series brochure calls the third-party inputs **Rising Control ±** and **Falling Control ±**, and warns that CLOSE/Falling supports pulsed signals only; a continuous closing signal can lock the barrier. The DS-TMG42X user manual instructs connecting the opening and closing command pairs to the corresponding Access ANPR camera command outputs, but publishes no electrical voltage/current limits, minimum contact load or acceptable pulse-width window. The nominal 503 ms hardware one-shot is therefore only a design value until worst-case pulse and exact controller compatibility are measured on a first article. The Omron signal relay remains an unverified compatibility candidate. ([Hikvision 42-Series brochure](https://www.hikvision.com/content/dam/hikvision/en/brochures-download/product-brochures/Leaflet--Barrier-Gate-42-Series.pdf))
 
-## Mechanical
-Two independent 3-way screw terminals, 2-way power terminal, RJ45, USB-C, four mounting holes. Reserve keepout around module antenna even if Wi-Fi disabled. Design to fit a selected DIN-rail enclosure.
+## Release blockers
 
-## Open blockers
-1. Exact relay MPN, footprint, coil current and contact ratings.
-2. Exact ESP32-C3 module MPN, GPIO allocation and antenna keepout.
-3. Exact W5500 reference design and RJ45 magnetics part/footprint.
-4. Regulator, fuse, reverse polarity, TVS and USB power arrangement.
-5. Enclosure dimensions and terminal block placement.
-6. ESD, EMC, isolation/creepage and production-test fixture requirements.
-
-No manufacturing release until these are resolved and independent schematic/PCB review is complete.
+1. Freeze exact manufacturer ordering codes for every passive, fuse, protection device, connector and assembly item; reconcile the procurement BOM.
+2. Confirm WIZ850io, Samtec socket and ESP32 module physical fit/orientation with actual samples and the selected enclosure.
+3. Obtain Robotistan's accepted four-layer stackup, finish, drill/slot rules, THT assembly capability and procurement agreement; confirm the Gerber job matches that quote.
+4. Independently review power, relay isolation/fail-safe paths, protection, antenna clearance, test points and manufacturing package.
+5. Assemble a first article and execute `docs/validation.md`; no lab or barrier-system tests are claimed as complete.
