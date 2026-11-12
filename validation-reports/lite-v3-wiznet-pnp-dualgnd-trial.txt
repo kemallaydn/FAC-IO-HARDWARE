@@ -1,0 +1,9 @@
+KiCad 10.0.8 DRC exploratory candidate — NOT FOR MANUFACTURING
+
+Candidate: WIZnet PnP-oriented J7/U6 placement with 0402 MDI passives, FreeRouting imported traces, widened tracks, bottom GND plane with magjack keepout, and a top GND zone configured for solid pad connection.
+Source board was not modified. This isolated candidate has not passed schematic parity, electrical review, CAM review, or Robotistan acceptance.
+
+Error-level DRC: 8 clearance violations; 5 unconnected zone-island items. No manufacturing data may be generated from this candidate.
+Clearance shortfalls: four pairs are 0.1986 mm against 0.200 mm, relay OPEN_COM/OPEN_NC pair is 0.1786 mm, and PULSE2/TRIG2 pair is 0.1517 mm. The top GND zone generated disconnected islands even with island removal requested; it is rejected.
+
+The earlier bottom-only candidate had 8 clearance violations and 16 unconnected GND items. This top-pour variant reduced the unconnected count to 5 but did not eliminate island DRC, so neither variant is acceptable.

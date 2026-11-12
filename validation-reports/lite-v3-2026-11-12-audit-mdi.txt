@@ -1,0 +1,10 @@
+/ETH_TXP: 59.19 mm; 3 vias
+/ETH_TXN: 49.11 mm; 3 vias
+/ETH_RXP_PHY: 39.48 mm; 4 vias
+/ETH_RXN_PHY: 40.41 mm; 4 vias
+/ETH_RXP_CABLE: 42.33 mm; 1 vias
+/ETH_RXN_CABLE: 36.79 mm; 1 vias
+Combined across the 6.8 nF series coupling capacitors:
+RX P: 39.48 + 42.33 = 81.81 mm; 5 vias across the separated nets
+RX N: 40.41 + 36.79 = 77.20 mm; 5 vias across the separated nets
+WIZnet Hardware Design Guide maximum: 75 mm; vias/layer changes are prohibited.

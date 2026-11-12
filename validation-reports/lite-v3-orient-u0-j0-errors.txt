@@ -1,0 +1,160 @@
+** Drc report for orient-U0-J0-routed.kicad_pcb **
+** Created on 2026-11-11T18:27:24 **
+** Report includes: Errors **
+
+** Found 42 DRC violations **
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(196.3051 mm, 133.3040 mm): Yol [/3V3] F.Cu üzerinde, uzunluk 0.1581 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(141.4068 mm, 136.2358 mm): Yol [/3V3] F.Cu üzerinde, uzunluk 1.3990 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(140.7783 mm, 133.0950 mm): Yol [/3V3] F.Cu üzerinde, uzunluk 2.2533 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(141.1871 mm, 133.0950 mm): Yol [/3V3] F.Cu üzerinde, uzunluk 0.4088 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(142.8058 mm, 136.2358 mm): Yol [/3V3] F.Cu üzerinde, uzunluk 0.9464 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(196.3051 mm, 133.5871 mm): Yol [/3V3] F.Cu üzerinde, uzunluk 0.2831 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(118.2117 mm, 142.6508 mm): Yol [/12V_PROT] F.Cu üzerinde, uzunluk 0.4938 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(118.9636 mm, 142.6508 mm): Yol [/12V_PROT] F.Cu üzerinde, uzunluk 0.7519 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(186.8870 mm, 131.7995 mm): Yol [/3V3A] F.Cu üzerinde, uzunluk 0.0700 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(187.7793 mm, 131.7995 mm): Yol [/3V3A] F.Cu üzerinde, uzunluk 0.8923 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(195.2120 mm, 135.7005 mm): Yol [/LINKLED_K] F.Cu üzerinde, uzunluk 0.0700 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(196.8098 mm, 135.7005 mm): Yol [/LINKLED_K] F.Cu üzerinde, uzunluk 1.5978 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(144.7922 mm, 131.1558 mm): Yol [/TIMER1_RX] F.Cu üzerinde, uzunluk 0.6480 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(144.1442 mm, 131.1558 mm): Yol [/TIMER1_RX] F.Cu üzerinde, uzunluk 0.9464 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(119.2500 mm, 117.5000 mm): Yol [/ETH_MOSI] F.Cu üzerinde, uzunluk 1.0267 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(120.5110 mm, 117.7343 mm): Yol [/ETH_MOSI] F.Cu üzerinde, uzunluk 0.3314 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(136.7500 mm, 123.5000 mm): Yol [/UART_RX] F.Cu üzerinde, uzunluk 1.0267 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(137.7767 mm, 123.5000 mm): Yol [/UART_RX] F.Cu üzerinde, uzunluk 0.2343 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(137.7767 mm, 122.0000 mm): Yol [/UART_TX] F.Cu üzerinde, uzunluk 0.2343 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(136.7500 mm, 122.0000 mm): Yol [/UART_TX] F.Cu üzerinde, uzunluk 1.0267 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(136.7500 mm, 117.5000 mm): Yol [/ETH_RESET_N] F.Cu üzerinde, uzunluk 0.9384 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(138.5265 mm, 113.7502 mm): Yol [/TRIG2] F.Cu üzerinde, uzunluk 1.0604 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(136.7500 mm, 114.5000 mm): Yol [/TRIG2] F.Cu üzerinde, uzunluk 1.0267 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(138.5575 mm, 113.7502 mm): Yol [/TRIG2] F.Cu üzerinde, uzunluk 0.0310 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(139.1926 mm, 131.1574 mm): Yol [/TRIG1] F.Cu üzerinde, uzunluk 0.6342 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(138.5250 mm, 131.8250 mm): Yol [/TRIG1] F.Cu üzerinde, uzunluk 0.9441 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(192.5814 mm, 133.2995 mm): Yol [/W5500_XI] F.Cu üzerinde, uzunluk 2.5316 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(195.1130 mm, 133.2995 mm): Yol [/W5500_XI] F.Cu üzerinde, uzunluk 0.0700 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(195.1130 mm, 132.7995 mm): Yol [/W5500_XO] F.Cu üzerinde, uzunluk 0.0700 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(193.8676 mm, 132.7995 mm): Yol [/W5500_XO] F.Cu üzerinde, uzunluk 1.2454 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: netclass 'Default' (fark çifti); error
+    @(188.0862 mm, 130.7500 mm): Yol [/ETH_TXP] F.Cu üzerinde, uzunluk 0.0249 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: netclass 'Default' (fark çifti); error
+    @(186.8375 mm, 130.7500 mm): Yol [/ETH_TXP] F.Cu üzerinde, uzunluk 1.0510 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(194.1137 mm, 134.7995 mm): Yol [/ACTLED_K] F.Cu üzerinde, uzunluk 0.9993 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(195.1130 mm, 134.7995 mm): Yol [/ACTLED_K] F.Cu üzerinde, uzunluk 0.0700 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(121.3100 mm, 142.6508 mm): Yol [/BUCK_SW] F.Cu üzerinde, uzunluk 0.8233 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(120.4867 mm, 142.6508 mm): Yol [/BUCK_SW] F.Cu üzerinde, uzunluk 0.4938 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(144.1442 mm, 132.4258 mm): Yol [/TIMER1_CX] F.Cu üzerinde, uzunluk 0.9464 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(144.7857 mm, 132.4258 mm): Yol [/TIMER1_CX] F.Cu üzerinde, uzunluk 0.6415 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(182.3355 mm, 140.3412 mm): Yol [/ETH_RX_MATCH] F.Cu üzerinde, uzunluk 0.3383 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(182.3355 mm, 140.2205 mm): Yol [/ETH_RX_MATCH] F.Cu üzerinde, uzunluk 0.1207 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(140.6924 mm, 137.5070 mm): Yol [/TIMER2_RX] F.Cu üzerinde, uzunluk 1.4994 mm
+[track_width]: Yol genişliği (tahta kurulum kısıtlamaları min genişlik 0.2000 mm; gerçek 0.1500 mm)
+    Rule: ağ sınıfı 'Default'; error
+    @(139.1930 mm, 137.5070 mm): Yol [/TIMER2_RX] F.Cu üzerinde, uzunluk 0.9447 mm
+
+** Found 4 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.8500 mm, 101.1000 mm): 1 için [/ESP_EN] SW1 ayak F.Cu
+    @(124.2224 mm, 119.0808 mm): Yol [/ESP_EN] B.Cu üzerinde, uzunluk 4.0612 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(156.1500 mm, 101.1000 mm): 1 için [/ESP_EN] SW1 ayak F.Cu
+    @(149.8500 mm, 101.1000 mm): 1 için [/ESP_EN] SW1 ayak F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(156.1500 mm, 101.1000 mm): 1 için [/ESP_EN] SW1 ayak F.Cu
+    @(173.3250 mm, 109.0000 mm): 2 için [/ESP_EN] R1 ayak F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(177.5500 mm, 104.5000 mm): 1 için [/ESP_EN] C6 ayak F.Cu
+    @(173.3250 mm, 109.0000 mm): 2 için [/ESP_EN] R1 ayak F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

@@ -1,0 +1,521 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-12T13:40:03",
+    "ignored_checks": [],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [],
+    "source": "routed.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R2 ayak F.Cu",
+                    "pos": {
+                        "x": 107.175,
+                        "y": 110.5
+                    },
+                    "uuid": "3e9771f1-df86-463d-a3ef-eb6da68e2e6e"
+                },
+                {
+                    "description": "1 için [/3V3] C30 ayak F.Cu",
+                    "pos": {
+                        "x": 107.225,
+                        "y": 107.5
+                    },
+                    "uuid": "6a533fa4-b648-40d5-ace1-fdbdd1a4c5c7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R2 ayak F.Cu",
+                    "pos": {
+                        "x": 107.175,
+                        "y": 110.5
+                    },
+                    "uuid": "3e9771f1-df86-463d-a3ef-eb6da68e2e6e"
+                },
+                {
+                    "description": "1 için [/3V3] U2 ayak F.Cu",
+                    "pos": {
+                        "x": 119.25,
+                        "y": 113.0
+                    },
+                    "uuid": "492c12be-9288-4cf2-92b6-78f794ebabf2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] U2 ayak F.Cu",
+                    "pos": {
+                        "x": 119.25,
+                        "y": 113.0
+                    },
+                    "uuid": "492c12be-9288-4cf2-92b6-78f794ebabf2"
+                },
+                {
+                    "description": "1 için [/3V3] C5 ayak F.Cu",
+                    "pos": {
+                        "x": 144.55,
+                        "y": 104.5
+                    },
+                    "uuid": "26e58b80-8199-4b45-9d26-8b0bfc985b22"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Yol [/3V3] F.Cu üzerinde, uzunluk 0.7225 mm",
+                    "pos": {
+                        "x": 139.0359,
+                        "y": 133.6059
+                    },
+                    "uuid": "62de2b28-1c14-4f78-9eb2-37c4962c3524"
+                },
+                {
+                    "description": "Yol [/3V3] B.Cu üzerinde, uzunluk 5.4501 mm",
+                    "pos": {
+                        "x": 123.638,
+                        "y": 143.558
+                    },
+                    "uuid": "c51f5c6a-b926-491c-8236-6913b5a19dc1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "16 için [/3V3] U5 ayak F.Cu",
+                    "pos": {
+                        "x": 143.475,
+                        "y": 130.555
+                    },
+                    "uuid": "cd465464-d995-4d0b-8a4f-aa1861e6c09c"
+                },
+                {
+                    "description": "1 için [/3V3] FB1 ayak F.Cu",
+                    "pos": {
+                        "x": 164.2125,
+                        "y": 123.0
+                    },
+                    "uuid": "15ea26a5-b955-48c4-bdd2-f23883af7c3a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "2 için [/3V3] R23 ayak F.Cu",
+                    "pos": {
+                        "x": 155.325,
+                        "y": 107.5
+                    },
+                    "uuid": "68aedd16-44f5-48f0-b94b-605453fabaae"
+                },
+                {
+                    "description": "1 için [/3V3] C5 ayak F.Cu",
+                    "pos": {
+                        "x": 144.55,
+                        "y": 104.5
+                    },
+                    "uuid": "26e58b80-8199-4b45-9d26-8b0bfc985b22"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "2 için [/3V3] R24 ayak F.Cu",
+                    "pos": {
+                        "x": 159.825,
+                        "y": 107.5
+                    },
+                    "uuid": "3cc569ee-2cb5-4af5-9f3c-74367c8b7993"
+                },
+                {
+                    "description": "2 için [/3V3] R23 ayak F.Cu",
+                    "pos": {
+                        "x": 155.325,
+                        "y": 107.5
+                    },
+                    "uuid": "68aedd16-44f5-48f0-b94b-605453fabaae"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R1 ayak F.Cu",
+                    "pos": {
+                        "x": 171.675,
+                        "y": 109.0
+                    },
+                    "uuid": "da3c0912-8c2e-4843-99ee-744794894f78"
+                },
+                {
+                    "description": "1 için [/3V3] C4 ayak F.Cu",
+                    "pos": {
+                        "x": 173.05,
+                        "y": 103.0
+                    },
+                    "uuid": "583258d1-1029-4200-a5a7-411416f93df4"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R1 ayak F.Cu",
+                    "pos": {
+                        "x": 171.675,
+                        "y": 109.0
+                    },
+                    "uuid": "da3c0912-8c2e-4843-99ee-744794894f78"
+                },
+                {
+                    "description": "28 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 178.3375,
+                        "y": 109.75
+                    },
+                    "uuid": "c72e2a6e-4fc0-4dd7-8f59-e9b9d7124e93"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R1 ayak F.Cu",
+                    "pos": {
+                        "x": 171.675,
+                        "y": 109.0
+                    },
+                    "uuid": "da3c0912-8c2e-4843-99ee-744794894f78"
+                },
+                {
+                    "description": "2 için [/3V3] R24 ayak F.Cu",
+                    "pos": {
+                        "x": 159.825,
+                        "y": 107.5
+                    },
+                    "uuid": "3cc569ee-2cb5-4af5-9f3c-74367c8b7993"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R1 ayak F.Cu",
+                    "pos": {
+                        "x": 171.675,
+                        "y": 109.0
+                    },
+                    "uuid": "da3c0912-8c2e-4843-99ee-744794894f78"
+                },
+                {
+                    "description": "1 için [/3V3] FB1 ayak F.Cu",
+                    "pos": {
+                        "x": 164.2125,
+                        "y": 123.0
+                    },
+                    "uuid": "15ea26a5-b955-48c4-bdd2-f23883af7c3a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "28 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 178.3375,
+                        "y": 109.75
+                    },
+                    "uuid": "c72e2a6e-4fc0-4dd7-8f59-e9b9d7124e93"
+                },
+                {
+                    "description": "1 için [/3V3] C7 ayak F.Cu",
+                    "pos": {
+                        "x": 182.05,
+                        "y": 104.5
+                    },
+                    "uuid": "51440741-2d5e-47a7-af15-2d4b4584e172"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "28 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 178.3375,
+                        "y": 109.75
+                    },
+                    "uuid": "c72e2a6e-4fc0-4dd7-8f59-e9b9d7124e93"
+                },
+                {
+                    "description": "43 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 182.75,
+                        "y": 115.1625
+                    },
+                    "uuid": "9659ab1a-1ba1-4886-a72d-32228a24d0b9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "44 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 183.25,
+                        "y": 115.1625
+                    },
+                    "uuid": "a04b01de-6f03-4b0f-b6a5-8fc7c09fc19f"
+                },
+                {
+                    "description": "43 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 182.75,
+                        "y": 115.1625
+                    },
+                    "uuid": "9659ab1a-1ba1-4886-a72d-32228a24d0b9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "44 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 183.25,
+                        "y": 115.1625
+                    },
+                    "uuid": "a04b01de-6f03-4b0f-b6a5-8fc7c09fc19f"
+                },
+                {
+                    "description": "45 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 183.75,
+                        "y": 115.1625
+                    },
+                    "uuid": "6a7f4540-568d-46b4-b597-8fc207722ff1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "45 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 183.75,
+                        "y": 115.1625
+                    },
+                    "uuid": "6a7f4540-568d-46b4-b597-8fc207722ff1"
+                },
+                {
+                    "description": "Yol [/3V3] B.Cu üzerinde, uzunluk 1.1196 mm",
+                    "pos": {
+                        "x": 195.4517,
+                        "y": 117.9383
+                    },
+                    "uuid": "ab96bc5b-9e1d-4589-bd6e-659888db4e9d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] C44 ayak F.Cu",
+                    "pos": {
+                        "x": 184.225,
+                        "y": 145.0
+                    },
+                    "uuid": "1dec3620-17f1-4432-816c-87a15d41bddd"
+                },
+                {
+                    "description": "1 için [/3V3] C43 ayak F.Cu",
+                    "pos": {
+                        "x": 180.05,
+                        "y": 145.0
+                    },
+                    "uuid": "ffa130f7-f153-4545-9f2d-635aaa8febca"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] C44 ayak F.Cu",
+                    "pos": {
+                        "x": 184.225,
+                        "y": 145.0
+                    },
+                    "uuid": "1dec3620-17f1-4432-816c-87a15d41bddd"
+                },
+                {
+                    "description": "1 için [/3V3] R36 ayak F.Cu",
+                    "pos": {
+                        "x": 192.175,
+                        "y": 133.0
+                    },
+                    "uuid": "71e6b9e6-79ed-4c01-b8e6-88eecc1b7531"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R36 ayak F.Cu",
+                    "pos": {
+                        "x": 192.175,
+                        "y": 133.0
+                    },
+                    "uuid": "71e6b9e6-79ed-4c01-b8e6-88eecc1b7531"
+                },
+                {
+                    "description": "1 için [/3V3] R37 ayak F.Cu",
+                    "pos": {
+                        "x": 196.175,
+                        "y": 133.0
+                    },
+                    "uuid": "d9e9e0b0-a733-497f-8090-af3345a73f3a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] R37 ayak F.Cu",
+                    "pos": {
+                        "x": 196.175,
+                        "y": 133.0
+                    },
+                    "uuid": "d9e9e0b0-a733-497f-8090-af3345a73f3a"
+                },
+                {
+                    "description": "Yol [/3V3] B.Cu üzerinde, uzunluk 1.1196 mm",
+                    "pos": {
+                        "x": 195.4517,
+                        "y": 117.9383
+                    },
+                    "uuid": "ab96bc5b-9e1d-4589-bd6e-659888db4e9d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Yol [/3V3] B.Cu üzerinde, uzunluk 2.7574 mm",
+                    "pos": {
+                        "x": 199.08,
+                        "y": 109.0
+                    },
+                    "uuid": "14bcbe74-9908-48be-9def-ece88ef087ff"
+                },
+                {
+                    "description": "1 için [/3V3] C8 ayak F.Cu",
+                    "pos": {
+                        "x": 206.225,
+                        "y": 103.0
+                    },
+                    "uuid": "6784d848-3997-4d32-b34d-093c40cc8eb3"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Geçit [/W5500_TOCAP] F.Cu - B.Cu üzerinde",
+                    "pos": {
+                        "x": 176.9487,
+                        "y": 134.6013
+                    },
+                    "uuid": "fd5a629e-96b3-4155-97ba-691dcc63b4c3"
+                },
+                {
+                    "description": "20 için [/W5500_TOCAP] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 181.75,
+                        "y": 106.8375
+                    },
+                    "uuid": "736a7405-b1ce-4f66-95ac-02e72ae2caa2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

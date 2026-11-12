@@ -1,0 +1,175 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-11T20:55:45",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [],
+    "source": "v3-place-j-fullpower-routed-3v3planes-020.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                },
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                },
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                },
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Yol [/3V3] F.Cu üzerinde, uzunluk 10.1100 mm",
+                    "pos": {
+                        "x": 198.77,
+                        "y": 117.73
+                    },
+                    "uuid": "9aa06431-6773-41d2-be5d-5eb4fc36c819"
+                },
+                {
+                    "description": "45 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 195.1625,
+                        "y": 131.75
+                    },
+                    "uuid": "6a7f4540-568d-46b4-b597-8fc207722ff1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "1 için [/3V3] C8 ayak F.Cu",
+                    "pos": {
+                        "x": 206.225,
+                        "y": 103.0
+                    },
+                    "uuid": "6784d848-3997-4d32-b34d-093c40cc8eb3"
+                },
+                {
+                    "description": "5'in Delik İçi Kaplamalı Geçit pedi [/3V3] J7",
+                    "pos": {
+                        "x": 193.08,
+                        "y": 108.0
+                    },
+                    "uuid": "34c4f516-0484-4b00-acb6-7a3edadea3f1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Bölgeye termal rölyef bağlantısı eksik (katman F.Cu; bölge bağlantı kolu sayısı 2; gerçek 1)",
+            "items": [
+                {
+                    "description": "Bölge [/3V3] F.Cu üzerinde, öncelik 1",
+                    "pos": {
+                        "x": 101.0,
+                        "y": 98.0
+                    },
+                    "uuid": "b2c01e6a-8a0d-4b8d-9952-29a8da4de271"
+                },
+                {
+                    "description": "28 için [/3V3] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 189.75,
+                        "y": 137.1625
+                    },
+                    "uuid": "c72e2a6e-4fc0-4dd7-8f59-e9b9d7124e93"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        }
+    ]
+}

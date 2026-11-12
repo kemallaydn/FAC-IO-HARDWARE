@@ -1,0 +1,24 @@
+Lite V3 placement/routing experiment — rejected
+Date: 2026-11-11
+Tool: KiCad 10.0.8, FreeRouting 2.5.0
+
+Temporary placement
+- U6 W5500: (191, 133), 270 degrees
+- J7 J1B1211CCD: (188, 108), 0 degrees
+- RX series capacitors changed in the trial to KiCad 0402 footprints. This experiment did not verify the replacement capacitor MPN or assembly sourcing.
+
+Router result
+- FreeRouting left 16 unrouted connections at both 30 and 100 passes.
+- The router's remaining list was dominated by 3V3 connections, plus TRIG1 and LED/power ties.
+- KiCad DRC after SES import: 34 track-width errors, 22 unconnected items (20 on 3V3, 1 TRIG1, 1 ACTLED), 14 dangling-via warnings. This report is a temporary candidate, not source-board evidence.
+
+Measured MDI conductors after import
+- TXP: 34.28 mm, 2 vias
+- TXN: 28.28 mm, 1 via
+- RXP_PHY: 13.92 mm, 1 via
+- RXN_PHY: 27.89 mm, 0 vias (13.97 mm mismatch to RXP_PHY)
+- RXP_CABLE: 21.72 mm, 1 via
+- RXN_CABLE: 21.53 mm, 1 via
+
+Decision
+Rejected. This does not meet WIZnet's equal-pair and no-via guidance; KiCad DRC also found open connections and undersized traces. No source PCB or production files were changed/exported from this trial. Current source still has ERC 0, error-level DRC 0 and parity 0, but its full DRC reports 389 silkscreen warnings and its current MDI routing is not acceptable for release.

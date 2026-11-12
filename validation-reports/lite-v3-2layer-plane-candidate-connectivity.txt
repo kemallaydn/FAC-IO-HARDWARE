@@ -1,0 +1,3 @@
+392 ihlal bulundu
+5 bağlantısız öge bulundu
+DRC (Tasarım Kuralı Kontrolü) Raporu validation-reports/lite-v3-2layer-plane-candidate-connectivity.json olarak kaydedildi

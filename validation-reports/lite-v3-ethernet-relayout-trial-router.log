@@ -1,0 +1,516 @@
+2026-11-11 21:37:31.835 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-11 21:37:31.837 DEBUG  [startup] user-data path : /tmp/fr-v3-relayout  (source: CLI argument --user_data_path)
+2026-11-11 21:37:31.837 DEBUG  [startup] log file       : /tmp/fr-v3-relayout/logs/freerouting.log
+2026-11-11 21:37:31.840 DEBUG  No freerouting.json found at '/tmp/fr-v3-relayout/freerouting.json' — will create one with default settings.
+2026-11-11 21:37:31.893 DEBUG  Default settings saved to '/tmp/fr-v3-relayout/freerouting.json'.
+2026-11-11 21:37:32.115 INFO   Hardware: 8 CPU cores, 383 CPU score, 4096 MB RAM
+2026-11-11 21:37:32.115 DEBUG  UTC Time: 2026-11-11T18:37:31.893827Z
+2026-11-11 21:37:32.120 DEBUG  GUI Language: tr_TR
+2026-11-11 21:37:32.120 DEBUG  Host: N/A
+2026-11-11 21:37:32.121 DEBUG  Screen: 1440x900, 127 DPI
+2026-11-11 21:37:33.197 DEBUG  Loaded router settings from: /tmp/fr-v3-relayout/freerouting.json
+2026-11-11 21:37:33.198 DEBUG  Applied CLI router setting: router.autorouter.max_passes = 100
+2026-11-11 21:37:33.198 DEBUG  Applied CLI router setting: router.optimizer.enabled = false
+2026-11-11 21:37:33.198 DEBUG  Applied CLI router setting: router.autorouter.enabled = true (implicit from -de/-do batch mode)
+2026-11-11 21:37:33.198 DEBUG  No router settings found in environment variables
+2026-11-11 21:37:33.209 INFO   Opening '/tmp/v3-ethernet-relayout-trackless.dsn'...
+2026-11-11 21:37:33.247 DEBUG  Set DEFAULT clearance (all layers): 2000 (0.05 mm) from DSN value 200.0
+2026-11-11 21:37:33.249 DEBUG  Set clearance (all layers): smd_smd = 500 (0.0125 mm), classes [2,2]
+2026-11-11 21:37:33.250 DEBUG  Set default trace width (all layers): DSN=200.0 → board=2000 (0.05 mm)
+2026-11-11 21:37:33.260 DEBUG  Loaded router settings from DSN file: v3-ethernet-relayout-trackless.dsn (2 layers)
+2026-11-11 21:37:33.261 DEBUG  Merging settings from 6 sources:
+2026-11-11 21:37:33.261 DEBUG    - Default Settings (priority 0): base settings
+2026-11-11 21:37:33.262 DEBUG    - freerouting.json (priority 10): 0 fields changed
+2026-11-11 21:37:33.262 DEBUG    - DSN file: v3-ethernet-relayout-trackless.dsn (priority 20): 5 fields changed
+2026-11-11 21:37:33.262 DEBUG    - Environment Variables (priority 55): 0 fields changed
+2026-11-11 21:37:33.263 DEBUG    - CLI Arguments (priority 60): 2 fields changed
+2026-11-11 21:37:33.263 DEBUG    - GUI Settings (priority 65): 0 fields changed
+2026-11-11 21:37:33.263 DEBUG  Settings merged successfully from 6 source(s)
+2026-11-11 21:37:33.748 DEBUG  No new version available. Current version is up to date: v2.5.0
+2026-11-11 21:37:34.073 INFO   [5A4E6C\999432] Loading board file 'v3-ethernet-relayout-trackless.dsn'...
+2026-11-11 21:37:34.078 DEBUG  Set DEFAULT clearance (all layers): 2000 (0.05 mm) from DSN value 200.0
+2026-11-11 21:37:34.078 DEBUG  Set clearance (all layers): smd_smd = 500 (0.0125 mm), classes [2,2]
+2026-11-11 21:37:34.078 DEBUG  Set default trace width (all layers): DSN=200.0 → board=2000 (0.05 mm)
+2026-11-11 21:37:34.127 DEBUG  applyBoardSpecificOptimizations changed parameters:
+  Layer 0: bendCost: null -> 0.0; preferredDirectionHorizontal: null -> true; undesiredDirectionTraceCost: 1.0 -> 2.4000000000000004;
+  Layer 1: bendCost: null -> 0.0; preferredDirectionHorizontal: null -> false; undesiredDirectionTraceCost: 1.0 -> 1.7000000000000002;
+2026-11-11 21:37:34.136 DEBUG  Applied copper-to-edge clearance override: 250.0 um (2500 board units).
+2026-11-11 21:37:34.136 DEBUG  Applied plane_as_obstacle override: false
+2026-11-11 21:37:34.137 DEBUG  Applied clearance tolerance: 1.0 um.
+2026-11-11 21:37:34.145 DEBUG  Merging settings from 6 sources:
+2026-11-11 21:37:34.145 DEBUG    - Default Settings (priority 0): base settings
+2026-11-11 21:37:34.145 DEBUG    - freerouting.json (priority 10): 0 fields changed
+2026-11-11 21:37:34.145 DEBUG    - DSN file: v3-ethernet-relayout-trackless.dsn (priority 20): 5 fields changed
+2026-11-11 21:37:34.146 DEBUG    - Environment Variables (priority 55): 0 fields changed
+2026-11-11 21:37:34.146 DEBUG    - CLI Arguments (priority 60): 2 fields changed
+2026-11-11 21:37:34.146 DEBUG    - GUI Settings (priority 65): 45 fields changed
+2026-11-11 21:37:34.147 DEBUG  Settings merged successfully from 6 source(s)
+2026-11-11 21:37:39.376 DEBUG  Merging settings from 6 sources:
+2026-11-11 21:37:39.376 DEBUG    - Default Settings (priority 0): base settings
+2026-11-11 21:37:39.377 DEBUG    - freerouting.json (priority 10): 0 fields changed
+2026-11-11 21:37:39.377 DEBUG    - DSN file: v3-ethernet-relayout-trackless.dsn (priority 20): 5 fields changed
+2026-11-11 21:37:39.377 DEBUG    - Environment Variables (priority 55): 0 fields changed
+2026-11-11 21:37:39.377 DEBUG    - CLI Arguments (priority 60): 2 fields changed
+2026-11-11 21:37:39.378 DEBUG    - GUI Settings (priority 65): 46 fields changed
+2026-11-11 21:37:39.378 DEBUG  Settings merged successfully from 6 source(s)
+2026-11-11 21:37:39.396 INFO   [5A4E6C\999432] Starting routing of 'v3-ethernet-relayout-trackless' on 7 threads...
+2026-11-11 21:37:39.447 INFO   [5A4E6C\999432] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=7.
+2026-11-11 21:37:39.450 DEBUG  [5A4E6C\999432] Checking fanout pre-pass. settings.fanout.enabled=true, smdPins=213
+2026-11-11 21:37:39.515 INFO   [5A4E6C\999432] Fanout stage started on board 'b277d2babb1f836442d8f3222528f31f' with 194 of 213 SMD pins needing fanout (19 already connected, 0 netless).
+2026-11-11 21:37:41.386 INFO   [5A4E6C\999432] Fanout pass #1 on board '1d2d98ceab64fd130c30e77173d64568' completed in 1.83 seconds with 194 SMD pins fanouted, 0 not routed, 0 insert errors, +94 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-11-11 21:37:41.916 INFO   [5A4E6C\999432] Fanout pass #2 on board '0baa8b65c3b25aaaacbe0131684b144d' completed in 0.52 seconds with 35 SMD pins fanouted, 0 not routed, 0 insert errors, +8 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-11-11 21:37:42.156 INFO   [5A4E6C\999432] Fanout pass #3 on board '72852c4a4dcf42a6d7f41f49f272304f' completed in 0.23 seconds with 12 SMD pins fanouted, 0 not routed, 0 insert errors, +5 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-11-11 21:37:42.378 INFO   [5A4E6C\999432] Fanout pass #4 on board '672223ab3fac0d9fbb64bb1a83c6593d' completed in 0.21 seconds with 8 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-11-11 21:37:42.430 DEBUG  FoundConnectionInserter: insert trace failed for net #44 at corner 7/12 on layer 0, trace width: 1000, from corner: 6, okPoint: (1784989,-1217382), target: (1790500,-1222893)
+2026-11-11 21:37:42.601 INFO   [5A4E6C\999432] Fanout pass #5 on board '107a85d8ac6c395ffc34076379fa372a' completed in 0.21 seconds with 10 SMD pins fanouted, 0 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=500).
+2026-11-11 21:37:42.752 INFO   [5A4E6C\999432] Fanout pass #6 on board '69ce7a2b78fa26d8d5b45b8514081116' completed in 0.14 seconds with 5 SMD pins fanouted, 0 not routed, 0 insert errors, +2 extra vias (0 SMD pins still to check in pass, ripup costs=600).
+2026-11-11 21:37:42.882 INFO   [5A4E6C\999432] Fanout pass #7 on board '88d0e36d7fa760bd9ce8f7c1407649e8' completed in 0.12 seconds with 3 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=700).
+2026-11-11 21:37:42.978 INFO   [5A4E6C\999432] Fanout pass #8 on board '229d668324a75403101903722a37f915' completed in 0.08 seconds with 2 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=800).
+2026-11-11 21:37:43.083 INFO   [5A4E6C\999432] Fanout pass #9 on board '5867e00ae0383933a74bd883a738128f' completed in 0.09 seconds with 2 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=900).
+2026-11-11 21:37:43.167 INFO   [5A4E6C\999432] Fanout pass #10 on board '92b51a15b59f31de16acac9215780338' completed in 0.08 seconds with 2 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1000).
+2026-11-11 21:37:43.249 INFO   [5A4E6C\999432] Fanout pass #11 on board 'bea82b0cc15e862e789635d5e20a976a' completed in 0.07 seconds with 2 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=1100).
+2026-11-11 21:37:43.250 INFO   Fanout stopped after 11 passes: no progress for 3 consecutive passes.
+2026-11-11 21:37:43.260 INFO   [5A4E6C\999432] Fanout stage completed: started with 213 total SMD pins, completed in 3.72 seconds, escaped pins: 193/213 (90.6%), using 3.63 total CPU seconds, 3.11 GB total allocated, and 185.7 MB peak heap usage.
+2026-11-11 21:37:43.302 INFO   [5A4E6C\999432] Auto-routing stage started on board 'bea82b0cc15e862e789635d5e20a976a' with baseline score 287.18 for 111 unrouted items.
+2026-11-11 21:37:43.336 DEBUG  Queuing item for routing: Pin on net '/BUCK_BST' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.336 DEBUG  Queuing item for routing: Pin on net '/BUCK_SW' (connected: 4/10, plane: false)
+2026-11-11 21:37:43.336 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 6/161, plane: false)
+2026-11-11 21:37:43.336 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 5/21, plane: false)
+2026-11-11 21:37:43.336 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/69, plane: false)
+2026-11-11 21:37:43.336 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/12V_IN' (connected: 1/4, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 42/161, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 3/21, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 36/161, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/CGND' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 3/161, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 3/21, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 6/69, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/TIMER1_RX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/TIMER1_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/TRIG2' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.337 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 5/161, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/TIMER2_RX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/TIMER2_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/PULSE2' (connected: 4/7, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/PULSE1' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/69, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/TRIG1' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/CGND' (connected: 1/6, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/CGND' (connected: 1/6, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 1/69, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/ACTLED_K' (connected: 1/7, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 1/69, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/7, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/CGND' (connected: 1/6, plane: false)
+2026-11-11 21:37:43.338 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 1/69, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_CABLE' (connected: 1/5, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/ETH_TXN' (connected: 1/7, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/ETH_TCT' (connected: 1/7, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 1/7, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/COIL1_LOW' (connected: 1/4, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 1/21, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/COIL2_LOW' (connected: 1/4, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 1/21, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/BOOT_N' (connected: 1/13, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/UART_RX' (connected: 1/4, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/UART_TX' (connected: 1/5, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 1/69, plane: false)
+2026-11-11 21:37:43.339 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/ESP_EN' (connected: 1/16, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 7/69, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/BUCK_SW' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/12V_IN' (connected: 3/4, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/ESP_EN' (connected: 5/16, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/BOOT_N' (connected: 5/13, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/COIL2_LOW' (connected: 3/4, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 1/21, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/CLOSE_NO' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/CLOSE_NC' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/CLOSE_COM' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.340 DEBUG  Queuing item for routing: Pin on net '/COIL1_LOW' (connected: 3/4, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 1/21, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/OPEN_NO' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/OPEN_NC' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/OPEN_COM' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 31/161, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 16/69, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ETH_RESET_N' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ETH_INT_N' (connected: 4/8, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 4/8, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 4/8, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/W5500_XO' (connected: 4/13, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/W5500_XI' (connected: 3/11, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 4/69, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/ACTLED_K' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.341 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 6/7, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/W5500_1V2O' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 10/50, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/W5500_TOCAP' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 8/50, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_PHY' (connected: 4/10, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/ETH_RXN_PHY' (connected: 6/9, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 4/50, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/ETH_TXN' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/W5500_XO' (connected: 9/13, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/W5500_XI' (connected: 8/11, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 14/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GATE2' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.342 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 3/161, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 5/161, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/161, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/TRIG1' (connected: 4/10, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/TRIG2' (connected: 4/10, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ETH_RESET_N' (connected: 4/7, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/UART_TX' (connected: 4/5, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/UART_RX' (connected: 3/4, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ETH_INT_N' (connected: 4/8, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/BOOT_N' (connected: 4/13, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 4/7, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 4/8, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 4/8, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/ESP_EN' (connected: 5/16, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 4/69, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/CLOSE_NO' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/CLOSE_COM' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/CLOSE_NC' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/OPEN_NO' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/OPEN_COM' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/OPEN_NC' (connected: 1/2, plane: false)
+2026-11-11 21:37:43.343 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 3/21, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_RX_MATCH' (connected: 3/8, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 20/50, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/69, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 3/161, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/W5500_1V2O' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/BUCK_SW' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/BUCK_BST' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 5/69, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_TCT' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_CABLE' (connected: 4/5, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_PHY' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/TRIG2' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/TIMER2_RX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/TRIG1' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_TCT' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 8/50, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/PULSE1' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/GATE2' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/PULSE2' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_TXN' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_RX_MATCH' (connected: 5/8, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_RXN_PHY' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_PHY' (connected: 3/10, plane: false)
+2026-11-11 21:37:43.344 DEBUG  Queuing item for routing: Pin on net '/ACTLED_K' (connected: 3/7, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 5/69, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/BOOT_N' (connected: 3/13, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/GATE2' (connected: 3/9, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/ESP_EN' (connected: 5/16, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/TIMER1_RX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/69, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 3/21, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/69, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/TIMER1_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/69, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/TIMER2_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.345 DEBUG  Queuing item for routing: Pin on net '/W5500_TOCAP' (connected: 3/6, plane: false)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432] Pass #1: 111 incompletes across 160 items to route
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/3V3' has 16 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/GND' has 22 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/12V_PROT' has 8 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/3V3A' has 4 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/LINKLED_K' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_RXP_PHY' has 2 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_RXP_CABLE' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/OPEN_NC' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/OPEN_COM' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/OPEN_NO' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/TIMER1_RX' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_TCT' has 2 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ESP_EN' has 3 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_SCK' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_MOSI' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_MISO' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_CS_N' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/BOOT_N' has 3 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_INT_N' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/UART_RX' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/UART_TX' has 1 incomplete(s)
+2026-11-11 21:37:43.358 DEBUG  [5A4E6C\999432]   Net '/ETH_RESET_N' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/TRIG2' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/TRIG1' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/GATE1' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/COIL1_LOW' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/W5500_TOCAP' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/W5500_XI' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/W5500_XO' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/TIMER2_CX' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/ETH_TXN' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/ETH_TXP' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/ETH_RXN_PHY' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/W5500_1V2O' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/ACTLED_K' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/GATE2' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/12V_IN' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/BUCK_SW' has 2 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/CLOSE_COM' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/CLOSE_NC' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/CLOSE_NO' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/COIL2_LOW' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/TIMER1_CX' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/ETH_RX_MATCH' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/BUCK_BST' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/CGND' has 3 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/PULSE1' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/PULSE2' has 1 incomplete(s)
+2026-11-11 21:37:43.359 DEBUG  [5A4E6C\999432]   Net '/TIMER2_RX' has 1 incomplete(s)
+2026-11-11 21:37:47.861 DEBUG  FoundConnectionInserter: insert trace failed for net #4 at corner 28/28 on layer 0, trace width: 1000, from corner: 27, okPoint: (1925620,-1302382), target: (1929876,-1298126)
+2026-11-11 21:37:47.866 DEBUG  [5A4E6C\999432] Autorouter Failed to route connection between polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, pin of component #26, pin of component #23, pin of component #22 and polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, pin #20 of component #55, pin #16 of component #55, pin #14 of component #55, pin #10 of component #55, pin #7 of component #55, pin #3 of component #55, pin of component #46, pin of component #45, pin of component #44, pin of component #38, pin of component #37, pin of component #31, pin #1 of component #11, pin of component #5, because the new connection could not be inserted.
+2026-11-11 21:37:49.753 INFO   [5A4E6C\999432] Auto-routing pass #1 on board 'bea82b0cc15e862e789635d5e20a976a' was completed in 6.42 seconds with score 788.03 (31 unrouted and 0 violations), using 9.81 CPU seconds and the job allocated 10.99 GB of memory so far.
+2026-11-11 21:37:49.791 DEBUG  Queuing item for routing: Pin on net '/BUCK_BST' (connected: 3/6, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 57/174, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 11/26, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 17/92, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 12/174, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 10/26, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 54/174, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 45/92, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/TRIG2' (connected: 3/11, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/ACTLED_K' (connected: 1/8, plane: false)
+2026-11-11 21:37:49.792 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/3, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/ETH_TCT' (connected: 1/8, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 5/8, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/COIL1_LOW' (connected: 1/4, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 26/174, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/12V_PROT' (connected: 5/26, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/COIL1_LOW' (connected: 3/4, plane: false)
+2026-11-11 21:37:49.793 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 20/92, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/ETH_INT_N' (connected: 1/5, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 1/5, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 1/5, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 3/7, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 13/174, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/ACTLED_K' (connected: 7/8, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/3, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 22/47, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 3/174, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 1/174, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/W5500_EXRES' (connected: 1/4, plane: false)
+2026-11-11 21:37:49.794 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 1/47, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 5/174, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 7/10, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/TRIG2' (connected: 8/11, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_INT_N' (connected: 4/5, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 4/7, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 4/5, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 4/5, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 24/47, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 3/174, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/BUCK_BST' (connected: 3/6, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_TCT' (connected: 7/8, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 7/92, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 3/10, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 3/8, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 3/92, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/W5500_EXRES' (connected: 3/4, plane: false)
+2026-11-11 21:37:49.795 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/3, plane: false)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432] Pass #2: 31 incompletes across 49 items to route
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/3V3' has 4 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/GND' has 8 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/12V_PROT' has 2 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/3V3A' has 2 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/LINKLED_K' has 2 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_TCT' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_SCK' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_MOSI' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_MISO' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_CS_N' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_INT_N' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/TRIG2' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/GATE1' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/COIL1_LOW' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/W5500_EXRES' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ETH_TXP' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/ACTLED_K' has 1 incomplete(s)
+2026-11-11 21:37:49.811 DEBUG  [5A4E6C\999432]   Net '/BUCK_BST' has 1 incomplete(s)
+2026-11-11 21:37:51.851 DEBUG  FoundConnectionInserter: insert trace failed for net #17 at corner 3/34 on layer 0, trace width: 1000, from corner: 2, okPoint: (1209103,-1195108), target: (1209103,-1208590)
+2026-11-11 21:37:51.855 DEBUG  [5A4E6C\999432] Autorouter Failed to route connection between polylinetrace, via, pin #33 of component #55 and polylinetrace, via, pin #4 of component #51, because the new connection could not be inserted.
+2026-11-11 21:37:52.674 INFO   [5A4E6C\999432] Auto-routing pass #2 on board '3baf90d4e1b3abd309ef6a5540e79891' was completed in 2.88 seconds with score 856.41 (21 unrouted and 0 violations), using 12.79 CPU seconds and the job allocated 15.02 GB of memory so far.
+2026-11-11 21:37:52.709 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 122/186, plane: false)
+2026-11-11 21:37:52.710 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 76/92, plane: false)
+2026-11-11 21:37:52.710 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 46/186, plane: false)
+2026-11-11 21:37:52.710 DEBUG  Queuing item for routing: Pin on net '/TIMER1_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:52.710 DEBUG  Queuing item for routing: Pin on net '/TIMER2_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:52.710 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/3, plane: false)
+2026-11-11 21:37:52.711 DEBUG  Queuing item for routing: Pin on net '/BOOT_N' (connected: 8/16, plane: false)
+2026-11-11 21:37:52.711 DEBUG  Queuing item for routing: Pin on net '/ESP_EN' (connected: 18/21, plane: false)
+2026-11-11 21:37:52.711 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 5/92, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_RESET_N' (connected: 3/7, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_INT_N' (connected: 1/2, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 1/5, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 1/5, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 1/5, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 18/186, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 1/92, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/3, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 13/47, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/3V3A' (connected: 34/47, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_PHY' (connected: 8/11, plane: false)
+2026-11-11 21:37:52.712 DEBUG  Queuing item for routing: Pin on net '/ETH_RXN_PHY' (connected: 5/8, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_RESET_N' (connected: 4/7, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_INT_N' (connected: 1/2, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/BOOT_N' (connected: 8/16, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 4/5, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 4/5, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 4/5, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 9/92, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_RXN_PHY' (connected: 3/8, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ETH_RXP_PHY' (connected: 3/11, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/ESP_EN' (connected: 3/21, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 1/92, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/3, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/TIMER1_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:52.713 DEBUG  Queuing item for routing: Pin on net '/TIMER2_CX' (connected: 3/6, plane: false)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432] Pass #3: 21 incompletes across 37 items to route
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/3V3' has 4 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/GND' has 2 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/3V3A' has 1 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/LINKLED_K' has 2 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/ETH_RXP_PHY' has 1 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/ESP_EN' has 1 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/ETH_SCK' has 1 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/ETH_MOSI' has 1 incomplete(s)
+2026-11-11 21:37:52.734 DEBUG  [5A4E6C\999432]   Net '/ETH_MISO' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/ETH_CS_N' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/BOOT_N' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/ETH_INT_N' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/ETH_RESET_N' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/TIMER2_CX' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/ETH_RXN_PHY' has 1 incomplete(s)
+2026-11-11 21:37:52.735 DEBUG  [5A4E6C\999432]   Net '/TIMER1_CX' has 1 incomplete(s)
+2026-11-11 21:37:55.718 INFO   [5A4E6C\999432] Auto-routing pass #3 on board '50d5774dcb20d87b436fec95e3480600' was completed in 3.01 seconds with score 931.62 (10 unrouted and 0 violations), using 15.73 CPU seconds and the job allocated 19.06 GB of memory so far.
+2026-11-11 21:37:55.760 DEBUG  Queuing item for routing: Pin on net '/BUCK_BST' (connected: 3/6, plane: false)
+2026-11-11 21:37:55.760 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 116/183, plane: false)
+2026-11-11 21:37:55.761 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 78/94, plane: false)
+2026-11-11 21:37:55.761 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 42/183, plane: false)
+2026-11-11 21:37:55.761 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 5/8, plane: false)
+2026-11-11 21:37:55.761 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 7/94, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 1/2, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 1/5, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 7/10, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 25/183, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/6, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_MOSI' (connected: 1/2, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 4/5, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 9/94, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/BUCK_BST' (connected: 3/6, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/GATE1' (connected: 3/10, plane: false)
+2026-11-11 21:37:55.762 DEBUG  Queuing item for routing: Pin on net '/ETH_TXP' (connected: 3/8, plane: false)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432] Pass #4: 10 incompletes across 18 items to route
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/3V3' has 2 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/GND' has 2 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/ETH_SCK' has 1 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/ETH_MOSI' has 1 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/ETH_MISO' has 1 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/GATE1' has 1 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/ETH_TXP' has 1 incomplete(s)
+2026-11-11 21:37:55.786 DEBUG  [5A4E6C\999432]   Net '/BUCK_BST' has 1 incomplete(s)
+2026-11-11 21:37:58.027 INFO   [5A4E6C\999432] Auto-routing pass #4 on board 'a78f3512eb7ed09fc040b107699404d0' was completed in 2.27 seconds with score 979.49 (3 unrouted and 0 violations), using 17.72 CPU seconds and the job allocated 21.82 GB of memory so far.
+2026-11-11 21:37:58.079 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 1/4, plane: false)
+2026-11-11 21:37:58.080 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 1/5, plane: false)
+2026-11-11 21:37:58.080 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 1/5, plane: false)
+2026-11-11 21:37:58.080 DEBUG  Queuing item for routing: Pin on net '/LINKLED_K' (connected: 3/4, plane: false)
+2026-11-11 21:37:58.080 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 4/5, plane: false)
+2026-11-11 21:37:58.080 DEBUG  Queuing item for routing: Pin on net '/ETH_SCK' (connected: 4/5, plane: false)
+2026-11-11 21:37:58.116 DEBUG  [5A4E6C\999432] Pass #5: 3 incompletes across 6 items to route
+2026-11-11 21:37:58.116 DEBUG  [5A4E6C\999432]   Net '/LINKLED_K' has 1 incomplete(s)
+2026-11-11 21:37:58.116 DEBUG  [5A4E6C\999432]   Net '/ETH_SCK' has 1 incomplete(s)
+2026-11-11 21:37:58.116 DEBUG  [5A4E6C\999432]   Net '/ETH_CS_N' has 1 incomplete(s)
+2026-11-11 21:37:58.457 DEBUG  FoundConnectionInserter: insert trace failed for net #5 at corner 3/37 on layer 0, trace width: 1000, from corner: 2, okPoint: (1816403,-1140791), target: (1800181,-1140791)
+2026-11-11 21:37:58.462 DEBUG  [5A4E6C\999432] Autorouter Failed to route connection between pin #8 of component #65 and polylinetrace, pin #24 of component #55, pin #1 of component #12, because the new connection could not be inserted.
+2026-11-11 21:37:59.540 INFO   [5A4E6C\999432] Auto-routing pass #5 on board '7be72fd07ba5a50163512c991162b199' was completed in 1.46 seconds with score 979.49 (3 unrouted and 0 violations), using 18.72 CPU seconds and the job allocated 23.18 GB of memory so far.
+2026-11-11 21:37:59.584 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 144/186, plane: false)
+2026-11-11 21:37:59.584 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 100/105, plane: false)
+2026-11-11 21:37:59.584 DEBUG  Queuing item for routing: Pin on net '/GND' (connected: 42/186, plane: false)
+2026-11-11 21:37:59.585 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 5/105, plane: false)
+2026-11-11 21:37:59.585 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 1/4, plane: false)
+2026-11-11 21:37:59.586 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/4, plane: false)
+2026-11-11 21:37:59.613 DEBUG  [5A4E6C\999432] Pass #6: 3 incompletes across 6 items to route
+2026-11-11 21:37:59.614 DEBUG  [5A4E6C\999432]   Net '/3V3' has 1 incomplete(s)
+2026-11-11 21:37:59.614 DEBUG  [5A4E6C\999432]   Net '/GND' has 1 incomplete(s)
+2026-11-11 21:37:59.614 DEBUG  [5A4E6C\999432]   Net '/ETH_MISO' has 1 incomplete(s)
+2026-11-11 21:38:00.260 DEBUG  FoundConnectionInserter: via placement blocked by clearance/shove limits for net #2
+2026-11-11 21:38:00.266 DEBUG  [5A4E6C\999432] Autorouter Failed to route connection between polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, pin #3 of component #71, pin #1 of component #70, pin #1 of component #68, pin #1 of component #67, pin #8 of component #66, pin #7 of component #66, pin of component #66, pin #1 of component #62, pin #47 of component #55, pin #28 of component #55, pin #22 of component #55, pin #18 of component #55, pin #15 of component #55, pin #13 of component #55, pin #8 of component #55, pin #2 of component #55, pin #3 of component #54, pin #1 of component #54, pin #1 of component #53, pin #1 of component #52, pin #30 of component #51, pin #29 of component #51, pin #28 of component #51, pin #27 of component #51, pin #26 of component #51, pin #25 of component #51, pin #24 of component #51, pin #23 of component #51, pin #22 of component #51, pin #21 of component #51, pin #20 of component #51, pin #19 of component #51, pin #18 of component #51, pin #8 of component #51, pin #1 of component #47, pin #1 of component #46, pin #1 of component #45, pin #1 of component #44, pin #1 of component #43, pin #1 of component #42, pin #1 of component #40, pin #1 of component #39, pin #1 of component #38, pin #1 of component #37, pin #1 of component #34, pin #1 of component #33, pin #1 of component #31, pin #1 of component #14, pin #1 of component #5, pin #1 of component #3, pin #1 of component #2 and polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, pin #1 of component #69, pin #3 of component #59, pin #2 of component #59, pin #3 of component #58, pin #2 of component #58, pin #1 of component #41, pin #1 of component #29, pin #1 of component #27, pin #1 of component #17, pin #1 of component #16, pin #1 of component #10, pin #1 of component #9, pin #1 of component #8, pin #1 of component #7, pin #1 of component #6, pin #1 of component #4, pin #1 of component #1, because the new connection could not be inserted.
+2026-11-11 21:38:00.267 DEBUG  [5A4E6C\999432] Pass #6: Failed to route Pin on net '/GND' (4 items remaining, 1 failures). State: FAILED
+2026-11-11 21:38:01.173 INFO   [5A4E6C\999432] Auto-routing pass #6 on board 'e5f6bdba68f18b230ff55d2e06b0fe4a' was completed in 1.59 seconds with score 986.32 (2 unrouted and 0 violations), using 20.71 CPU seconds and the job allocated 25.99 GB of memory so far.
+2026-11-11 21:38:01.228 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 100/105, plane: false)
+2026-11-11 21:38:01.229 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 5/105, plane: false)
+2026-11-11 21:38:01.229 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 1/5, plane: false)
+2026-11-11 21:38:01.230 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 4/5, plane: false)
+2026-11-11 21:38:01.266 DEBUG  [5A4E6C\999432] Pass #7: 2 incompletes across 4 items to route
+2026-11-11 21:38:01.266 DEBUG  [5A4E6C\999432]   Net '/3V3' has 1 incomplete(s)
+2026-11-11 21:38:01.266 DEBUG  [5A4E6C\999432]   Net '/ETH_CS_N' has 1 incomplete(s)
+2026-11-11 21:38:02.227 INFO   [5A4E6C\999432] Auto-routing pass #7 on board 'f7637908a0f287cd47c03b8861a341f1' was completed in 1.00 seconds with score 986.32 (2 unrouted and 0 violations), using 21.70 CPU seconds and the job allocated 27.28 GB of memory so far.
+2026-11-11 21:38:02.279 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 100/105, plane: false)
+2026-11-11 21:38:02.280 DEBUG  Queuing item for routing: Pin on net '/3V3' (connected: 5/105, plane: false)
+2026-11-11 21:38:02.280 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 1/4, plane: false)
+2026-11-11 21:38:02.281 DEBUG  Queuing item for routing: Pin on net '/ETH_MISO' (connected: 3/4, plane: false)
+2026-11-11 21:38:02.316 DEBUG  [5A4E6C\999432] Pass #8: 2 incompletes across 4 items to route
+2026-11-11 21:38:02.316 DEBUG  [5A4E6C\999432]   Net '/3V3' has 1 incomplete(s)
+2026-11-11 21:38:02.316 DEBUG  [5A4E6C\999432]   Net '/ETH_MISO' has 1 incomplete(s)
+2026-11-11 21:38:02.714 DEBUG  FoundConnectionInserter: insert trace failed for net #1 at corner 31/31 on layer 0, trace width: 1000, from corner: 5, okPoint: (1798551,-1142995), target: (1814625,-1207500)
+2026-11-11 21:38:02.720 DEBUG  [5A4E6C\999432] Autorouter Failed to route connection between polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, via, polylinetrace, polylinetrace, polylinetrace, via, via, via, via, polylinetrace, via, via, polylinetrace, polylinetrace, via, pin of component #71, pin #15 of component #66, pin #10 of component #66, pin #2 of component #66, pin #11 of component #65, pin #9 of component #65, pin #4 of component #65, pin #2 of component #62, pin #1 of component #61, pin #27 of component #55, pin of component #51, pin of component #41, pin of component #40, pin of component #34, pin #1 of component #28, pin of component #19, pin of component #18, pin of component #15, pin #1 of component #13, pin of component #12, pin of component #11, pin of component #9, pin of component #6, pin of component #3, pin of component #1 and polylinetrace, polylinetrace, pin #44 of component #55, pin #43 of component #55, pin #42 of component #55, because the new connection could not be inserted.
+2026-11-11 21:38:02.720 DEBUG  [5A4E6C\999432] Pass #8: Failed to route Pin on net '/3V3' (4 items remaining, 1 failures). State: FAILED
+2026-11-11 21:38:03.761 INFO   [5A4E6C\999432] Auto-routing pass #8 on board '6744305e411edd50eae3551074aab42d' was completed in 1.48 seconds with score 993.16 (1 unrouted and 0 violations), using 23.70 CPU seconds and the job allocated 30.10 GB of memory so far.
+2026-11-11 21:38:03.816 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 1/5, plane: false)
+2026-11-11 21:38:03.817 DEBUG  Queuing item for routing: Pin on net '/ETH_CS_N' (connected: 4/5, plane: false)
+2026-11-11 21:38:03.854 DEBUG  [5A4E6C\999432] Pass #9: 1 incompletes across 2 items to route
+2026-11-11 21:38:03.854 DEBUG  [5A4E6C\999432]   Net '/ETH_CS_N' has 1 incomplete(s)
+2026-11-11 21:38:04.686 INFO   [5A4E6C\999432] Auto-routing pass #9 on board 'fa81788786117894bf2f683835fe522a' was completed in 0.87 seconds with score 1000.00 (0 unrouted and 0 violations), using 24.70 CPU seconds and the job allocated 31.40 GB of memory so far.
+2026-11-11 21:38:04.796 INFO   [5A4E6C\999432] Auto-routing pass #10 on board 'ae554f65cf5db2902ebbe35f3ca73a8d' was completed in 0.04 seconds with score 1000.00 (0 unrouted and 0 violations), using 24.70 CPU seconds and the job allocated 31.40 GB of memory so far.
+2026-11-11 21:38:04.904 DEBUG  === Performance Profile ===
+2026-11-11 21:38:04.904 DEBUG  === Routing Parameters ===
+2026-11-11 21:38:04.904 DEBUG    Via Costs: 50, Plane Via Costs: 5
+2026-11-11 21:38:04.904 DEBUG    Layer Costs (Preferred / Against):
+2026-11-11 21:38:04.904 DEBUG      Layer 1: 1,0 / 2,4
+2026-11-11 21:38:04.904 DEBUG      Layer 2: 1,0 / 1,7
+2026-11-11 21:38:04.904 DEBUG  
+2026-11-11 21:38:04.905 DEBUG    autoroute_item                          :    18166 ms total,      286 calls,     63 ms avg
+2026-11-11 21:38:04.905 DEBUG  
+2026-11-11 21:38:04.905 DEBUG  === Pass History ===
+2026-11-11 21:38:04.906 DEBUG    Pass 1  :   31 unrouted items,     6,40 s,   100 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 2  :   21 unrouted items,     2,86 s,   200 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 3  :   10 unrouted items,     2,98 s,   300 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 4  :    3 unrouted items,     2,23 s,   400 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 5  :    3 unrouted items,     1,43 s,   500 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 6  :    2 unrouted items,     1,55 s,   600 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 7  :    2 unrouted items,     0,96 s,   700 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 8  :    1 unrouted items,     1,44 s,   800 ripup cost
+2026-11-11 21:38:04.906 DEBUG    Pass 9  :    0 unrouted items,     0,83 s,   900 ripup cost
+2026-11-11 21:38:04.906 DEBUG  ===========================
+2026-11-11 21:38:04.950 INFO   [5A4E6C\999432] Auto-routing stage completed: started with 195 unrouted nets, completed in 25.55 seconds, final score: 1000.00 (0 unrouted and 0 violations), using 24.70 total CPU seconds, 31.40 GB total allocated, and 241.1 MB peak heap usage.
+2026-11-11 21:38:05.059 INFO   Saving '/tmp/v3-ethernet-relayout-trackless.ses'...
+2026-11-11 21:38:05.078 INFO   Saved 89640 bytes to '/tmp/v3-ethernet-relayout-trackless.ses'.

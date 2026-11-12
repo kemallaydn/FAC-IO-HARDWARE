@@ -1,0 +1,335 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-11T21:38:53",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [],
+    "source": "v3-ethernet-relayout-wide.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1821 mm)",
+            "items": [
+                {
+                    "description": "Yol [/GND] F.Cu üzerinde, uzunluk 0.0994 mm",
+                    "pos": {
+                        "x": 175.5677,
+                        "y": 141.5151
+                    },
+                    "uuid": "13c5466b-0698-42e9-b8c1-b983dfe49f13"
+                },
+                {
+                    "description": "1 için [/3V3A] C38 ayak F.Cu",
+                    "pos": {
+                        "x": 176.225,
+                        "y": 141.0
+                    },
+                    "uuid": "3a8121e1-eca3-40df-bcdc-e0247f625e4f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1821 mm)",
+            "items": [
+                {
+                    "description": "1 için [/3V3A] C38 ayak F.Cu",
+                    "pos": {
+                        "x": 176.225,
+                        "y": 141.0
+                    },
+                    "uuid": "3a8121e1-eca3-40df-bcdc-e0247f625e4f"
+                },
+                {
+                    "description": "Yol [/GND] F.Cu üzerinde, uzunluk 0.1422 mm",
+                    "pos": {
+                        "x": 175.5677,
+                        "y": 141.6573
+                    },
+                    "uuid": "9a3d9c42-7925-4401-8f7b-58c33182af36"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1786 mm)",
+            "items": [
+                {
+                    "description": "Yol [/OPEN_NC] B.Cu üzerinde, uzunluk 0.3261 mm",
+                    "pos": {
+                        "x": 155.6714,
+                        "y": 155.6025
+                    },
+                    "uuid": "31dea357-702c-4ac6-8784-f0caf6f3e763"
+                },
+                {
+                    "description": "Yol [/OPEN_COM] B.Cu üzerinde, uzunluk 0.3789 mm",
+                    "pos": {
+                        "x": 156.05,
+                        "y": 155.413
+                    },
+                    "uuid": "c432bc28-2152-4aef-84c7-a46d15117fbe"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1786 mm)",
+            "items": [
+                {
+                    "description": "Yol [/OPEN_NC] B.Cu üzerinde, uzunluk 0.0327 mm",
+                    "pos": {
+                        "x": 155.6483,
+                        "y": 155.5793
+                    },
+                    "uuid": "27d4616c-3f82-4441-8bf8-713d49688aab"
+                },
+                {
+                    "description": "Yol [/OPEN_COM] B.Cu üzerinde, uzunluk 0.3789 mm",
+                    "pos": {
+                        "x": 156.05,
+                        "y": 155.413
+                    },
+                    "uuid": "c432bc28-2152-4aef-84c7-a46d15117fbe"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1786 mm)",
+            "items": [
+                {
+                    "description": "Yol [/OPEN_NC] B.Cu üzerinde, uzunluk 0.0001 mm",
+                    "pos": {
+                        "x": 155.6714,
+                        "y": 155.6024
+                    },
+                    "uuid": "7984067e-203f-43f0-9748-19ed4e46c756"
+                },
+                {
+                    "description": "Yol [/OPEN_COM] B.Cu üzerinde, uzunluk 0.3789 mm",
+                    "pos": {
+                        "x": 156.05,
+                        "y": 155.413
+                    },
+                    "uuid": "c432bc28-2152-4aef-84c7-a46d15117fbe"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1799 mm)",
+            "items": [
+                {
+                    "description": "Yol [/ETH_SCK] F.Cu üzerinde, uzunluk 1.8625 mm",
+                    "pos": {
+                        "x": 179.5505,
+                        "y": 118.2005
+                    },
+                    "uuid": "1b532a91-017d-4ca9-b6ca-f952f97ce9b3"
+                },
+                {
+                    "description": "Geçit [/ETH_MISO] F.Cu - B.Cu üzerinde",
+                    "pos": {
+                        "x": 179.1854,
+                        "y": 117.75
+                    },
+                    "uuid": "30008b11-7e21-41c2-a53d-b342f96d14ea"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1844 mm)",
+            "items": [
+                {
+                    "description": "Geçit [/ETH_MOSI] F.Cu - B.Cu üzerinde",
+                    "pos": {
+                        "x": 138.4016,
+                        "y": 114.2258
+                    },
+                    "uuid": "a7833aec-a492-4195-82ce-c68cb6adf1d7"
+                },
+                {
+                    "description": "Yol [/TRIG2] F.Cu üzerinde, uzunluk 0.1447 mm",
+                    "pos": {
+                        "x": 138.7428,
+                        "y": 113.7514
+                    },
+                    "uuid": "dab518e7-83a4-4141-99f7-005d8f846ea0"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1767 mm)",
+            "items": [
+                {
+                    "description": "Geçit [/ETH_MISO] F.Cu - B.Cu üzerinde",
+                    "pos": {
+                        "x": 179.1854,
+                        "y": 117.75
+                    },
+                    "uuid": "30008b11-7e21-41c2-a53d-b342f96d14ea"
+                },
+                {
+                    "description": "Yol [/ETH_SCK] F.Cu üzerinde, uzunluk 2.8266 mm",
+                    "pos": {
+                        "x": 176.5977,
+                        "y": 118.3267
+                    },
+                    "uuid": "f43b8b10-a918-4e6f-8c5d-bd25201973db"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1766 mm)",
+            "items": [
+                {
+                    "description": "Yol [/TRIG2] F.Cu üzerinde, uzunluk 0.5460 mm",
+                    "pos": {
+                        "x": 138.1628,
+                        "y": 113.6491
+                    },
+                    "uuid": "7ca683a5-cc16-4d7c-bd13-444cabea94bb"
+                },
+                {
+                    "description": "Geçit [/ETH_MOSI] F.Cu - B.Cu üzerinde",
+                    "pos": {
+                        "x": 138.4016,
+                        "y": 114.2258
+                    },
+                    "uuid": "a7833aec-a492-4195-82ce-c68cb6adf1d7"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1844 mm)",
+            "items": [
+                {
+                    "description": "Yol [/TRIG2] F.Cu üzerinde, uzunluk 3.2750 mm",
+                    "pos": {
+                        "x": 142.0178,
+                        "y": 113.7514
+                    },
+                    "uuid": "9f9bf8e6-9b55-4d50-883e-cfd44424a42c"
+                },
+                {
+                    "description": "Geçit [/ETH_MOSI] F.Cu - B.Cu üzerinde",
+                    "pos": {
+                        "x": 138.4016,
+                        "y": 114.2258
+                    },
+                    "uuid": "a7833aec-a492-4195-82ce-c68cb6adf1d7"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1977 mm)",
+            "items": [
+                {
+                    "description": "Yol [/ACTLED_K] F.Cu üzerinde, uzunluk 1.1879 mm",
+                    "pos": {
+                        "x": 181.5148,
+                        "y": 121.3023
+                    },
+                    "uuid": "1dc603d4-8964-4d53-ac30-98734f442769"
+                },
+                {
+                    "description": "26 için [unconnected-(U6-DUPLED-Pad26)] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 181.4625,
+                        "y": 121.75
+                    },
+                    "uuid": "80e7a626-2b9c-4b72-ab15-5ce9e7075b75"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1768 mm)",
+            "items": [
+                {
+                    "description": "Yol [/ACTLED_K] F.Cu üzerinde, uzunluk 1.9192 mm",
+                    "pos": {
+                        "x": 160.7903,
+                        "y": 129.1882
+                    },
+                    "uuid": "c788166a-732f-4e13-b397-13f6e576900c"
+                },
+                {
+                    "description": "8'in Delik İçi Kaplamalı Geçit pedi [/CGND] J7",
+                    "pos": {
+                        "x": 159.04,
+                        "y": 128.89
+                    },
+                    "uuid": "f28d4473-ff44-4da1-b44c-35bcd6f39a21"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Boşluk ihlali ( açıklık 0.2000 mm; şu anki 0.1977 mm)",
+            "items": [
+                {
+                    "description": "26 için [unconnected-(U6-DUPLED-Pad26)] U6 ayak F.Cu",
+                    "pos": {
+                        "x": 181.4625,
+                        "y": 121.75
+                    },
+                    "uuid": "80e7a626-2b9c-4b72-ab15-5ce9e7075b75"
+                },
+                {
+                    "description": "Yol [/ACTLED_K] F.Cu üzerinde, uzunluk 0.0740 mm",
+                    "pos": {
+                        "x": 181.4625,
+                        "y": 121.25
+                    },
+                    "uuid": "e2a1bcfe-45cb-4514-a4ad-ee4fcafcd332"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        }
+    ]
+}

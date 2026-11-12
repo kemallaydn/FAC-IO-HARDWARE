@@ -1,0 +1,118 @@
+2026-11-12 13:40:38.359 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-11-12 13:40:38.633 INFO   Hardware: 8 CPU cores, 345 CPU score, 4096 MB RAM
+2026-11-12 13:40:38.634 WARN   Deprecated settings path '-mp / --router.max_passes'; use '--router.autorouter.max_passes' instead. The old path will be removed in a future release.
+2026-11-12 13:40:39.698 WARN   Deprecated settings path 'router.max_passes'; use 'router.autorouter.max_passes' instead. The old path will be removed in a future release.
+2026-11-12 13:40:39.712 INFO   Opening 'validation-reports/candidates/lite-v3-mdialign30/routed.dsn'...
+2026-11-12 13:40:41.303 INFO   [D1351E\D789C3] Loading board file 'routed.dsn'...
+2026-11-12 13:40:41.448 WARN   DSN file 'routed.dsn' was loaded with 1 warning(s).
+2026-11-12 13:40:43.386 INFO   [D1351E\D789C3] Starting routing of 'routed' on 1 thread...
+2026-11-12 13:40:43.451 INFO   [D1351E\D789C3] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=1.
+2026-11-12 13:40:43.606 INFO   [D1351E\D789C3] Fanout stage started on board '12465edc39f5f9890812c593d183531d' with 164 of 213 SMD pins needing fanout (49 already connected, 0 netless).
+2026-11-12 13:40:48.114 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '/ETH_INT_N' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-12 13:40:51.671 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '/ETH_MOSI' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-12 13:40:56.757 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '/3V3' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-12 13:40:56.937 INFO   [D1351E\D789C3] Fanout pass #1 on board '052c0dda19a3a292850731be3e5d2275' completed in 13.26 seconds with 71 SMD pins fanouted, 4 not routed, 0 insert errors, +13 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-11-12 13:41:00.359 WARN   BasicBoard.normalizeTraces: reached 2000 iterations for net '/ETH_RX_MATCH' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-11-12 13:41:00.483 INFO   [D1351E\D789C3] Fanout pass #2 on board '56f34990174b1cdaf0e9ed0ef6094607' completed in 3.53 seconds with 48 SMD pins fanouted, 0 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=200).
+2026-11-12 13:41:00.813 INFO   [D1351E\D789C3] Fanout pass #3 on board '0f5506dadc13c1c40c98b5f29f1e6a8d' completed in 0.32 seconds with 47 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-11-12 13:41:01.217 INFO   [D1351E\D789C3] Fanout pass #4 on board 'ffd083dff5b4a20e63f2af31999e6c9a' completed in 0.38 seconds with 47 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-11-12 13:41:01.575 INFO   [D1351E\D789C3] Fanout pass #5 on board '04e60373e074d3b10b545bf6ee13f82a' completed in 0.34 seconds with 47 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=500).
+2026-11-12 13:41:01.881 INFO   [D1351E\D789C3] Fanout pass #6 on board '5c4f6905a14c01a9c711c03387b339ff' completed in 0.29 seconds with 47 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=600).
+2026-11-12 13:41:01.881 INFO   Fanout stopped after 6 passes: no progress for 3 consecutive passes.
+2026-11-12 13:41:01.915 INFO   [D1351E\D789C3] Fanout stage completed: started with 213 total SMD pins, completed in 18.26 seconds, escaped pins: 157/213 (73.7%), using 16.68 total CPU seconds, 17.53 GB total allocated, and 184.7 MB peak heap usage.
+2026-11-12 13:41:02.049 INFO   [D1351E\D789C3] Auto-routing stage started on board '5c4f6905a14c01a9c711c03387b339ff' with baseline score 617.09 for 56 unrouted items.
+2026-11-12 13:41:04.962 INFO   [D1351E\D789C3] Auto-routing pass #1 on board '5c4f6905a14c01a9c711c03387b339ff' was completed in 2.84 seconds with score 760.68 (35 unrouted and 0 violations), using 19.01 CPU seconds and the job allocated 19.22 GB of memory so far.
+2026-11-12 13:41:06.809 INFO   [D1351E\D789C3] Auto-routing pass #2 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 1.76 seconds with score 685.47 (46 unrouted and 0 violations), using 20.85 CPU seconds and the job allocated 20.73 GB of memory so far.
+2026-11-12 13:41:09.416 INFO   [D1351E\D789C3] Auto-routing pass #3 on board '66088064cab95aa5feb1b8ddcdbd55de' was completed in 2.53 seconds with score 671.79 (48 unrouted and 0 violations), using 22.65 CPU seconds and the job allocated 22.10 GB of memory so far.
+2026-11-12 13:41:11.445 INFO   [D1351E\D789C3] Auto-routing pass #4 on board 'a3a695a286fb2a3ed596b3c8b7d7d70b' was completed in 1.94 seconds with score 664.96 (49 unrouted and 0 violations), using 24.42 CPU seconds and the job allocated 23.77 GB of memory so far.
+2026-11-12 13:41:13.198 INFO   [D1351E\D789C3] Auto-routing pass #5 on board '7fce92ba11fa5be5cfef01ca58df6f4b' was completed in 1.68 seconds with score 664.96 (49 unrouted and 0 violations), using 26.24 CPU seconds and the job allocated 25.33 GB of memory so far.
+2026-11-12 13:41:14.986 INFO   [D1351E\D789C3] Auto-routing pass #6 on board 'fc84b041ccd5a94632d443559e30c303' was completed in 1.73 seconds with score 678.63 (47 unrouted and 0 violations), using 28.22 CPU seconds and the job allocated 27.55 GB of memory so far.
+2026-11-12 13:41:16.624 INFO   [D1351E\D789C3] Auto-routing pass #7 on board '8ae1ae9a62a4230e50767f00281ae052' was completed in 1.58 seconds with score 671.79 (48 unrouted and 0 violations), using 30.18 CPU seconds and the job allocated 29.61 GB of memory so far.
+2026-11-12 13:41:18.432 INFO   [D1351E\D789C3] Auto-routing pass #8 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 0.00 seconds with score 760.68 (35 unrouted and 0 violations), using 31.17 CPU seconds and the job allocated 30.60 GB of memory so far.
+2026-11-12 13:41:19.769 INFO   [D1351E\D789C3] Auto-routing pass #9 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 1.32 seconds with score 685.47 (46 unrouted and 0 violations), using 33.15 CPU seconds and the job allocated 32.87 GB of memory so far.
+2026-11-12 13:41:21.439 INFO   [D1351E\D789C3] Auto-routing pass #10 on board '6ac9b0c76cec5f14f0a786ce49adb21f' was completed in 1.61 seconds with score 671.79 (48 unrouted and 0 violations), using 34.14 CPU seconds and the job allocated 33.85 GB of memory so far.
+2026-11-12 13:41:23.275 INFO   [D1351E\D789C3] Auto-routing pass #11 on board '02ec678c33a6e3ca8401afefa8bc87e1' was completed in 1.73 seconds with score 671.79 (48 unrouted and 0 violations), using 36.10 CPU seconds and the job allocated 35.90 GB of memory so far.
+2026-11-12 13:41:25.084 INFO   [D1351E\D789C3] Auto-routing pass #12 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 0.00 seconds with score 760.68 (35 unrouted and 0 violations), using 38.06 CPU seconds and the job allocated 38.07 GB of memory so far.
+2026-11-12 13:41:27.196 INFO   [D1351E\D789C3] Auto-routing pass #13 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 2.10 seconds with score 685.47 (46 unrouted and 0 violations), using 39.80 CPU seconds and the job allocated 39.67 GB of memory so far.
+2026-11-12 13:41:29.082 INFO   [D1351E\D789C3] Auto-routing pass #14 on board '6ac9b0c76cec5f14f0a786ce49adb21f' was completed in 1.86 seconds with score 671.79 (48 unrouted and 0 violations), using 41.59 CPU seconds and the job allocated 41.23 GB of memory so far.
+2026-11-12 13:41:31.382 INFO   [D1351E\D789C3] Auto-routing pass #15 on board 'd244129f9cfc2f6292fdbc43971c72e0' was completed in 2.23 seconds with score 671.79 (48 unrouted and 0 violations), using 43.50 CPU seconds and the job allocated 42.93 GB of memory so far.
+2026-11-12 13:41:33.586 INFO   [D1351E\D789C3] Auto-routing pass #16 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 0.00 seconds with score 760.68 (35 unrouted and 0 violations), using 46.29 CPU seconds and the job allocated 45.42 GB of memory so far.
+2026-11-12 13:41:35.047 INFO   [D1351E\D789C3] Auto-routing pass #17 on board '7519445056c0b329d8b479f2cb0a8575' was completed in 1.45 seconds with score 685.47 (46 unrouted and 0 violations), using 47.27 CPU seconds and the job allocated 46.36 GB of memory so far.
+2026-11-12 13:41:37.157 INFO   [D1351E\D789C3] Auto-routing pass #18 on board '6ac9b0c76cec5f14f0a786ce49adb21f' was completed in 2.10 seconds with score 671.79 (48 unrouted and 0 violations), using 49.07 CPU seconds and the job allocated 48.11 GB of memory so far.
+2026-11-12 13:41:37.176 INFO   [D1351E\D789C3] The router's best score (760.68) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (35 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net '/3V3' (21 unrouted connections):
+    - U6-43  ->  U6-44
+    - U6-44  ->  U6-45
+    - C30-1  ->  R2-1
+    - R37-1  ->  R36-1
+    - C44-1  ->  C43-1
+    - R24-2  ->  R23-2
+    - R1-1  ->  C4-1
+    - C7-1  ->  U6-28
+    - R1-1  ->  U6-28
+    - U6-43  ->  U6-28
+    - C8-1  ->  J7-5
+    - R23-2  ->  C5-1
+    - J7-10  ->  U6-45
+    - R24-2  ->  R1-1
+    - U2-1  ->  R2-1
+    - R37-1  ->  J7-10
+    - R36-1  ->  C44-1
+    - FB1-1  ->  R1-1
+    - via  ->  J6-3
+    - U5-16  ->  FB1-1
+    - C5-1  ->  U2-1
+  Net '/GND' (7 unrouted connections):
+    - U6-14  ->  U6-16
+    - U6-16  ->  U6-19
+    - U6-19  ->  U6-23
+    - U6-3  ->  U6-48
+    - U6-29  ->  U6-23
+    - R28-2  ->  Q2-2
+    - C40-2  ->  Q1-2
+  Net '/12V_PROT' (1 unrouted connection):
+    - U1-3  ->  U1-2
+  Net '/3V3A' (1 unrouted connection):
+    - U6-8  ->  U6-11
+  Net '/ETH_RXP_PHY' (2 unrouted connections):
+    - U6-6  ->  via
+    - R34-1  ->  via
+  Net '/ETH_SCK' (1 unrouted connection):
+    - via  ->  U6-33
+  Net '/ETH_MOSI' (1 unrouted connection):
+    - U2-4  ->  U6-35
+  Net '/ETH_MISO' (1 unrouted connection):
+    - via  ->  U6-34
+  Net '/ETH_CS_N' (1 unrouted connection):
+    - via  ->  U6-32
+  Net '/ETH_INT_N' (1 unrouted connection):
+    - U2-10  ->  U6-36
+  Net '/TRIG1' (1 unrouted connection):
+    - via  ->  via
+  Net '/COIL1_LOW' (1 unrouted connection):
+    - Q1-3  ->  K1-A2
+  Net '/W5500_TOCAP' (1 unrouted connection):
+    - C101-1  ->  U6-20
+  Net '/W5500_XI' (2 unrouted connections):
+    - U6-30  ->  via
+    - U6-30  ->  C103-1
+  Net '/ETH_TXP' (1 unrouted connection):
+    - via  ->  U6-2
+  Net '/ETH_RXN_PHY' (1 unrouted connection):
+    - via  ->  U6-5
+  Net '/W5500_1V2O' (1 unrouted connection):
+    - via  ->  U6-22
+  Net '/COIL2_LOW' (1 unrouted connection):
+    - Q2-3  ->  K2-A2
+  Net '/ETH_RX_MATCH' (1 unrouted connection):
+    - R34-2  ->  R35-2
+  Net '/CGND' (1 unrouted connection):
+    - J7-13@1  ->  J7-8
+2026-11-12 13:41:37.525 INFO   [D1351E\D789C3] Auto-routing stage completed: started with 72 unrouted nets, completed in 54.14 seconds, final score: 760.68 (35 unrouted and 0 violations), using 49.07 total CPU seconds, 48.11 GB total allocated, and 310.0 MB peak heap usage.
+2026-11-12 13:41:37.637 INFO   [D1351E\D789C3] Starting optimization on 1 thread...
+2026-11-12 13:41:37.766 INFO   [D1351E\D789C3] Skipping optimization stage: the board has 35 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-11-12 13:41:37.828 INFO   [D1351E\D789C3] Optimization was completed in 0.19 seconds with the score of 760.68 (35 unrouted and 0 violations).
+2026-11-12 13:41:37.839 WARN   [D1351E\D789C3] Invalid traces after autoroute: 66 traces not 45 degree
+2026-11-12 13:41:37.996 INFO   Saving 'validation-reports/candidates/lite-v3-mdialign30/routed-2.ses'...
+2026-11-12 13:41:38.020 INFO   Saved 119869 bytes to 'validation-reports/candidates/lite-v3-mdialign30/routed-2.ses'.

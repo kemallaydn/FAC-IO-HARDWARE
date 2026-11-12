@@ -1,0 +1,7 @@
+(version 1)
+(rule "Dry contact copper separation"
+    (condition "A.NetName == '/OPEN_NC' || A.NetName == '/OPEN_COM' || A.NetName == '/OPEN_NO' || A.NetName == '/CLOSE_NC' || A.NetName == '/CLOSE_COM' || A.NetName == '/CLOSE_NO'")
+    (constraint clearance (min 0.5mm)))
+(rule "Protected input path minimum width"
+    (condition "A.NetName == '/12V_IN' || A.NetName == '/12V_FUSED'")
+    (constraint track_width (min 0.45mm)))

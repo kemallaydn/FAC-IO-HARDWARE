@@ -1,0 +1,3 @@
+13 ihlal bulundu
+0 bağlantısız öge bulundu
+DRC (Tasarım Kuralı Kontrolü) Raporu /tmp/relayout-wide-errors.json olarak kaydedildi

@@ -1,5 +1,5 @@
 ** Drc report for FAC-IO-Mini-V1.kicad_pcb **
-** Created on 2026-11-10T13:37:09 **
+** Created on 2026-11-10T16:29:50 **
 ** Report includes: Errors, Warnings, Exclusions **
 
 ** Found 0 DRC violations **

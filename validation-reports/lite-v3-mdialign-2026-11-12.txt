@@ -1,0 +1,31 @@
+FAC-IO Lite V3 — isolated MDI layout trials (2026-11-12)
+KiCad: 10.0.8; FreeRouting: 2.5.0
+
+Source V3 baseline (not edited during trials)
+- ERC: 0 errors, 0 warnings.
+- Error-level DRC with schematic parity: 0 errors, 0 unconnected, 0 parity.
+- Full DRC: 389 warnings (silkscreen overlaps, silk over copper, silk edge).
+- MDI remains noncompliant: RX total over series coupling capacitors 81.81/77.20 mm; vias on all MDI routes.
+
+Trial mdialign19 (U6/J7 top-edge placement; old RX capacitor positions)
+- After 0.20 mm trace-width correction and local horizontal PHY-pin escape repair: KiCad error-level DRC 0 violations, 0 unconnected.
+- TXP/TXN: 30.78/43.88 mm, 2/0 vias.
+- RX PHY side: 40.35/39.77 mm, 2/3 vias.
+- RX magjack side: 37.81/34.14 mm, 1/1 vias.
+- RX total including both sides of series capacitors: 78.16/73.91 mm. RXP exceeds WIZnet 75 mm maximum. Rejected.
+
+Trial mdialign23 (RX capacitors in U6/J7 corridor; J7 shifted right)
+- Placement-only KiCad DRC: 0 physical errors.
+- FreeRouting, 200-pass setting: 26 unconnected items. KiCad after importing SES and widening 0.15 mm routes: 26 unconnected, 37 track-width violations before width correction. Rejected.
+- Approximate MDI: RX totals 44.40/44.90 mm but 2–3 vias/net; TX 35.50/31.79 mm and 1/0 vias. Not fully routed and fails no-via guidance.
+
+Trial mdialign26 (RX capacitors below magjack)
+- Placement-only KiCad DRC: 0 physical errors.
+- FreeRouting, 200-pass setting: 26 unconnected items. KiCad after import and 0.20 mm width correction: 26 unconnected, 2 clearance errors.
+- Approximate MDI: RX totals 59.91/63.86 mm; TX 42.05/33.25 mm; 1–3 vias/net. Rejected.
+
+No trial board was copied to source V3. No Gerber, drill, BOM or pick-and-place package was generated. None of these trials has schematic parity or CAM sign-off. This report is not manufacturing authorization.
+
+Hybrid experiment mdialign27
+- Attempted to retain the complete mdialign19 non-RX routing and replace only RX traces with mdialign23 traces after moving J7/coupling capacitors.
+- KiCad error-level DRC: 56 violations, 11 unconnected. Mixed-board track merging is invalid and the hybrid is rejected.

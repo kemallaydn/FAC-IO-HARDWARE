@@ -1,0 +1,27 @@
+connector_side,candidate_physical_pad,module_label,esp32_gpio,board_net,direction,purpose,status
+IO-header,4,EN,EN,WT32_EN,control,Reset/programming enable,do-not-drive from application
+IO-header,5,CFG,32,OPEN_TRIGGER,output,One-shot trigger for OPEN relay,selected candidate; confirm with firmware owner
+IO-header,6,485_EN,33,CLOSE_TRIGGER,output,One-shot trigger for CLOSE relay,selected candidate; confirm with firmware owner
+IO-header,7,RXD,5,NC,input,UART2 RX,unused
+IO-header,8,TXD,17,NC,output,UART2 TX,unused
+IO-header,9,GND,,GND,power,Ground,connect
+IO-header,10,3V3,,3V3,power,WT32 supply,3.3 V only; never populate 5 V input concurrently
+IO-header,11,GND,,GND,power,Ground,connect
+IO-header,12,5V,,NC,power,alternate WT32 supply,leave unconnected when 3V3 chosen
+IO-header,13,LINK,,NC,output,Link indicator signal,unused
+IO-header,14,GND,,GND,power,Ground,connect
+IO-header,22,IO39,39,NC,input,Input-only GPIO,unused
+IO-header,21,IO36,36,NC,input,Input-only GPIO,unused
+IO-header,20,IO15,15,NC,bidirectional,Strapping-sensitive GPIO,unused
+IO-header,19,IO14,14,NC,bidirectional,GPIO,unused
+IO-header,18,IO12,12,NC,bidirectional,Strapping-sensitive GPIO,unused
+IO-header,17,IO35,35,NC,input,Input-only GPIO,unused
+IO-header,16,IO4,4,NC,bidirectional,GPIO,unused
+IO-header,15,IO2,2,NC,bidirectional,Strapping-sensitive GPIO,unused
+IO-header,23,GND,,GND,power,Ground,connect
+DEBUG-header,1,EN,EN,WT32_EN,control,Reset/programming enable,service connector
+DEBUG-header,2,GND,,GND,power,Ground,service connector
+DEBUG-header,3,3V3,,3V3,power,3.3 V reference or module supply,do not connect to external 5 V adapter
+DEBUG-header,26,TXD/IO1,1,UART_TX,output,Programming UART TX,service connector
+DEBUG-header,25,RXD/IO3,3,UART_RX,input,Programming UART RX,service connector
+DEBUG-header,24,IO0,0,BOOT_N,control,Bootloader selection,service connector
